@@ -1,401 +1,356 @@
-#region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
-	int iLocal_2 = 0;
-	int iLocal_3 = 0;
-	int iLocal_4 = 0;
-	int iLocal_5 = 0;
-	int iLocal_6 = 0;
-	int iLocal_7 = 0;
-	int iLocal_8 = 0;
-	int iLocal_9 = 0;
-	int iLocal_10 = 0;
-	int iLocal_11 = 0;
-	float fLocal_12 = 0f;
-	var uLocal_13 = 0;
-	var uLocal_14 = 0;
-	int iLocal_15 = 0;
-	int iLocal_16 = 0;
-	int iLocal_17 = 0;
+#region Static Var
+	var Static_0 = 0;
+	var Static_1 = 0;
+	int Static_2 = 0;
+	int Static_3 = 0;
+	int Static_4 = 0;
+	int Static_5 = 0;
+	int Static_6 = 0;
+	int Static_7 = 0;
+	int Static_8 = 0;
+	int Static_9 = 0;
+	int Static_10 = 0;
+	int Static_11 = 0;
+	float Static_12 = 0f;
+	var Static_13 = 0;
+	var Static_14 = 0;
+	int Static_15 = 0;
+	int Static_16 = 0;
+	var Static_17 = 0;
 #endregion
 
-void __EntryFunction__()//Position - 0x0
+void main() // Position - 0x0
 {
-	iLocal_2 = 1;
-	iLocal_3 = 134;
-	iLocal_4 = 134;
-	iLocal_5 = 1;
-	iLocal_6 = 1;
-	iLocal_7 = 1;
-	iLocal_8 = 134;
-	iLocal_9 = 1;
-	iLocal_10 = 12;
-	iLocal_11 = 12;
-	fLocal_12 = 0.001f;
-	iLocal_15 = -1;
+	Static_2 = 1;
+	Static_3 = 134;
+	Static_4 = 134;
+	Static_5 = 1;
+	Static_6 = 1;
+	Static_7 = 1;
+	Static_8 = 134;
+	Static_9 = 1;
+	Static_10 = 12;
+	Static_11 = 12;
+	Static_12 = 0.001f;
+	Static_15 = -1;
+
 	if (CAM::IS_SCREEN_FADED_OUT())
-	{
 		CAM::DO_SCREEN_FADE_IN(500);
-	}
+
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
-	{
 		func_5();
-	}
-	iLocal_17 = GRAPHICS::REQUEST_SCALEFORM_MOVIE("instructional_buttons");
-	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_17))
+
+	Static_17 = GRAPHICS::REQUEST_SCALEFORM_MOVIE("instructional_buttons");
+
+	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Static_17))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
+
 	while (true)
 	{
-		GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_17, 255, 255, 255, 0, 0);
+		GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(Static_17, 255, 255, 255, 0, 0);
 		func_4();
-		func_1(iLocal_16, iLocal_17);
-		SYSTEM::WAIT(0);
+		func_1(Static_16, Static_17);
+		BUILTIN::WAIT(0);
 	}
 }
 
-void func_1(int iParam0, int iParam1)//Position - 0x8D
+void func_1(int iParam0, var uParam1) // Position - 0x8D
 {
 	switch (iParam0)
 	{
 		case 0:
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "CLEAR_ALL");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "CLEAR_ALL");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_CLEAR_SPACE");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_CLEAR_SPACE");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(200);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2 /*FRONTEND_CONTROL*/, 191 /*INPUT_FRONTEND_RDOWN*/, true));
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2, 191, 1));
 			func_2("PRESS A");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
-			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2 /*FRONTEND_CONTROL*/, 194 /*INPUT_FRONTEND_RRIGHT*/, true));
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2, 194, 1));
 			func_2("PRESS B");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(2);
-			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2 /*FRONTEND_CONTROL*/, 193 /*INPUT_FRONTEND_RLEFT*/, true));
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2, 193, 1));
 			func_2("PRESS X");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(3);
-			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2 /*FRONTEND_CONTROL*/, 192 /*INPUT_FRONTEND_RUP*/, true));
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2, 192, 1));
 			func_2("PRESS Y");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "DRAW_INSTRUCTIONAL_BUTTONS");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "DRAW_INSTRUCTIONAL_BUTTONS");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_BACKGROUND_COLOUR");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_BACKGROUND_COLOUR");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(80);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			iLocal_16 = -1;
+			Static_16 = -1;
 			break;
-		
+	
 		case 1:
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "CLEAR_ALL");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "CLEAR_ALL");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_CLEAR_SPACE");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_CLEAR_SPACE");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(200);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2 /*FRONTEND_CONTROL*/, 187 /*INPUT_FRONTEND_DOWN*/, true));
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2, 187, 1));
 			func_2("DOWN");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
-			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2 /*FRONTEND_CONTROL*/, 188 /*INPUT_FRONTEND_UP*/, true));
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2, 188, 1));
 			func_2("UP");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(2);
-			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2 /*FRONTEND_CONTROL*/, 190 /*INPUT_FRONTEND_RIGHT*/, true));
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2, 190, 1));
 			func_2("LEFT");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(3);
-			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2 /*FRONTEND_CONTROL*/, 189 /*INPUT_FRONTEND_LEFT*/, true));
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2, 189, 1));
 			func_2("RIGHT");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "DRAW_INSTRUCTIONAL_BUTTONS");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "DRAW_INSTRUCTIONAL_BUTTONS");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_BACKGROUND_COLOUR");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_BACKGROUND_COLOUR");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(80);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			iLocal_16 = -1;
+			Static_16 = -1;
 			break;
-		
+	
 		case 2:
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "CLEAR_ALL");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "CLEAR_ALL");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_CLEAR_SPACE");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_CLEAR_SPACE");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(200);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2 /*FRONTEND_CONTROL*/, 202 /*INPUT_FRONTEND_CANCEL*/, true));
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(2, 202, 1));
 			func_2("BACK");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "DRAW_INSTRUCTIONAL_BUTTONS");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "DRAW_INSTRUCTIONAL_BUTTONS");
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_BACKGROUND_COLOUR");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam1, "SET_BACKGROUND_COLOUR");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(80);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-			iLocal_16 = -1;
+			Static_16 = -1;
 			break;
-		
+	
 		default:
 			break;
 	}
 }
 
-void func_2(char* sParam0)//Position - 0x312
+void func_2(char* sParam0) // Position - 0x312
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 }
 
-void func_3(char* sParam0)//Position - 0x324
+void func_3(var uParam0) // Position - 0x324
 {
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(sParam0);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(uParam0);
 }
 
-void func_4()//Position - 0x332
+void func_4() // Position - 0x332
 {
-	if (Global_21045 == 0)
+	if (Global_21606 == false)
 	{
-		if (((((((((PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 189 /*INPUT_FRONTEND_LEFT*/) || PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 190 /*INPUT_FRONTEND_RIGHT*/)) || PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 188 /*INPUT_FRONTEND_UP*/)) || PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 187 /*INPUT_FRONTEND_DOWN*/)) || PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 205 /*INPUT_FRONTEND_LB*/)) || PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 206 /*INPUT_FRONTEND_RB*/)) || PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 207 /*INPUT_FRONTEND_LT*/)) || PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 208 /*INPUT_FRONTEND_RT*/)) || PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 201 /*INPUT_FRONTEND_ACCEPT*/)) || PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 202 /*INPUT_FRONTEND_CANCEL*/))
+		if (PAD::IS_CONTROL_PRESSED(2, 189) || PAD::IS_CONTROL_PRESSED(2, 190) || PAD::IS_CONTROL_PRESSED(2, 188) || PAD::IS_CONTROL_PRESSED(2, 187) || PAD::IS_CONTROL_PRESSED(2, 205) || PAD::IS_CONTROL_PRESSED(2, 206) || PAD::IS_CONTROL_PRESSED(2, 207) || PAD::IS_CONTROL_PRESSED(2, 208) || PAD::IS_CONTROL_PRESSED(2, 201) || PAD::IS_CONTROL_PRESSED(2, 202))
 		{
-			Global_21045 = 1;
-			SYSTEM::SETTIMERA(0);
+			Global_21606 = true;
+			BUILTIN::SETTIMERA(0);
 		}
 	}
-	else if (SYSTEM::TIMERA() > 50)
+	else if (BUILTIN::TIMERA() > 50)
 	{
-		Global_21045 = 0;
+		Global_21606 = false;
 	}
-	if (Global_21045 == 0)
+
+	if (Global_21606 == false)
 	{
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 217 /*INPUT_FRONTEND_SELECT*/))
-		{
-			iLocal_16 = 1;
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 189 /*INPUT_FRONTEND_LEFT*/))
-		{
-			iLocal_16 = 2;
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 190 /*INPUT_FRONTEND_RIGHT*/))
-		{
-			iLocal_16 = 2;
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 205 /*INPUT_FRONTEND_LB*/))
-		{
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 206 /*INPUT_FRONTEND_RB*/))
-		{
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 207 /*INPUT_FRONTEND_LT*/))
-		{
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 208 /*INPUT_FRONTEND_RT*/))
-		{
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 188 /*INPUT_FRONTEND_UP*/))
-		{
-			iLocal_16 = 2;
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 187 /*INPUT_FRONTEND_DOWN*/))
-		{
-			iLocal_16 = 2;
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 201 /*INPUT_FRONTEND_ACCEPT*/))
-		{
-			iLocal_16 = 1;
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 202 /*INPUT_FRONTEND_CANCEL*/))
-		{
-			iLocal_16 = 0;
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 203 /*INPUT_FRONTEND_X*/))
-		{
-			iLocal_16 = 1;
-		}
-		if (PAD::IS_CONTROL_PRESSED(2 /*FRONTEND_CONTROL*/, 204 /*INPUT_FRONTEND_Y*/))
-		{
-			iLocal_16 = 1;
-		}
+		if (PAD::IS_CONTROL_PRESSED(2, 217))
+			Static_16 = 1;
+	
+		if (PAD::IS_CONTROL_PRESSED(2, 189))
+			Static_16 = 2;
+	
+		if (PAD::IS_CONTROL_PRESSED(2, 190))
+			Static_16 = 2;
+	
+		PAD::IS_CONTROL_PRESSED(2, 205);
+		PAD::IS_CONTROL_PRESSED(2, 206);
+		PAD::IS_CONTROL_PRESSED(2, 207);
+		PAD::IS_CONTROL_PRESSED(2, 208);
+	
+		if (PAD::IS_CONTROL_PRESSED(2, 188))
+			Static_16 = 2;
+	
+		if (PAD::IS_CONTROL_PRESSED(2, 187))
+			Static_16 = 2;
+	
+		if (PAD::IS_CONTROL_PRESSED(2, 201))
+			Static_16 = 1;
+	
+		if (PAD::IS_CONTROL_PRESSED(2, 202))
+			Static_16 = 0;
+	
+		if (PAD::IS_CONTROL_PRESSED(2, 203))
+			Static_16 = 1;
+	
+		if (PAD::IS_CONTROL_PRESSED(2, 204))
+			Static_16 = 1;
 	}
 }
 
-void func_5()//Position - 0x47D
+void func_5() // Position - 0x47D
 {
-	func_6(0);
-	MISC::SET_GAME_PAUSED(false);
-	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_17);
+	func_6(false);
+	MISC::SET_GAME_PAUSED(0);
+	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&Static_17);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 
-void func_6(bool bParam0)//Position - 0x499
+void func_6(bool bParam0) // Position - 0x499
 {
 	if (bParam0)
 	{
 		func_13();
-		if (Global_21066.f_1 == 10 || Global_21066.f_1 == 9)
-		{
-			MISC::SET_BIT(&Global_8920, 16);
-		}
-		Global_21066.f_1 = 1;
+	
+		if (Global_21627.f_1 == 10 || Global_21627.f_1 == 9)
+			MISC::SET_BIT(&Global_9464, 16);
+	
+		Global_21627.f_1 = 1;
+	
 		if (func_12(0))
-		{
 			func_7(0);
-		}
 	}
-	else if (Global_21066.f_1 == 1)
+	else if (Global_21627.f_1 == 1)
 	{
-		if (!Global_21066.f_1 == 0)
-		{
-			Global_21066.f_1 = 3;
-		}
+		if (!(Global_21627.f_1 == 0))
+			Global_21627.f_1 = 3;
 	}
 }
 
-void func_7(int iParam0)//Position - 0x4FC
+void func_7(int iParam0) // Position - 0x4FC
 {
 	if (func_11())
-	{
 		return;
-	}
-	if (Global_21284)
-	{
+
+	if (Global_21859)
 		if (func_10())
-		{
-			func_9(1, 1);
-		}
+			func_9(true, true);
 		else
-		{
-			func_9(0, 0);
-		}
-	}
-	if (Global_21066.f_1 == 10 || Global_21066.f_1 == 9)
-	{
-		MISC::SET_BIT(&Global_8920, 16);
-	}
+			func_9(false, false);
+
+	if (Global_21627.f_1 == 10 || Global_21627.f_1 == 9)
+		MISC::SET_BIT(&Global_9464, 16);
+
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
-	{
-		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
-	}
-	Global_22425 = 5;
+		AUDIO::STOP_SCRIPTED_CONVERSATION(0);
+
+	Global_23000 = 5;
+
 	if (iParam0 == 1)
-	{
-		MISC::SET_BIT(&Global_8919, 30);
-	}
+		MISC::SET_BIT(&Global_9463, 30);
 	else
-	{
-		MISC::CLEAR_BIT(&Global_8919, 30);
-	}
+		MISC::CLEAR_BIT(&Global_9463, 30);
+
 	if (!func_8())
-	{
-		Global_21066.f_1 = 3;
-	}
+		Global_21627.f_1 = 3;
 }
 
-int func_8()//Position - 0x586
+bool func_8() // Position - 0x586
 {
-	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 0)
-	{
-		return 1;
-	}
-	return 0;
+	if (Global_21627.f_1 == 1 || Global_21627.f_1 == 0)
+		return true;
+
+	return false;
 }
 
-void func_9(bool bParam0, bool bParam1)//Position - 0x5AD
+void func_9(bool bParam0, bool bParam1) // Position - 0x5AD
 {
 	if (bParam0)
 	{
 		if (func_12(0))
 		{
-			Global_21284 = 1;
+			Global_21859 = true;
+		
 			if (bParam1)
-			{
-				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_21003);
-			}
-			Global_20994 = { Global_21012[Global_21011 /*3*/] };
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20994);
+				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_21564);
+		
+			Global_21555 = { Global_21573[Global_21572 /*3*/] };
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21555);
 		}
 	}
-	else if (Global_21284 == 1)
+	else if (Global_21859 == true)
 	{
-		Global_21284 = 0;
-		Global_20994 = { Global_21019[Global_21011 /*3*/] };
+		Global_21859 = false;
+		Global_21555 = { Global_21580[Global_21572 /*3*/] };
+	
 		if (bParam1)
-		{
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21003);
-		}
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21564);
 		else
-		{
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20994);
-		}
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21555);
 	}
 }
 
-bool func_10()//Position - 0x621
+bool func_10() // Position - 0x621
 {
-	return BitTest(Global_1957675, 5);
+	return IS_BIT_SET(Global_1964705, 5);
 }
 
-bool func_11()//Position - 0x62F
+bool func_11() // Position - 0x62F
 {
-	return BitTest(Global_1957675, 19);
+	return IS_BIT_SET(Global_1964705, 19);
 }
 
-int func_12(int iParam0)//Position - 0x63E
+bool func_12(int iParam0) // Position - 0x63E
 {
 	if (iParam0 == 1)
-	{
-		if (Global_21066.f_1 > 3)
-		{
-			if (BitTest(Global_8919, 14))
-			{
-				return 1;
-			}
+		if (Global_21627.f_1 > 3)
+			if (IS_BIT_SET(Global_9463, 14))
+				return true;
 			else
-			{
-				return 0;
-			}
-		}
+				return false;
 		else
-		{
-			return 0;
-		}
-	}
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) > 0)
-	{
-		return 1;
-	}
-	if (Global_21066.f_1 > 3)
-	{
-		return 1;
-	}
-	return 0;
+			return false;
+
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("CELLPHONE_FLASHHAND")) > 0)
+		return true;
+
+	if (Global_21627.f_1 > 3)
+		return true;
+
+	return false;
 }
 
-void func_13()//Position - 0x695
+void func_13() // Position - 0x695
 {
-	if (Global_21066.f_1 == 9 || Global_21066.f_1 == 10)
+	if (Global_21627.f_1 == 9 || Global_21627.f_1 == 10)
 	{
-		Global_22478 = 0;
-		Global_22474 = 1;
+		Global_23053 = false;
+		Global_23049 = 1;
 	}
 }
 

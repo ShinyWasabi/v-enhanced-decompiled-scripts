@@ -1,13 +1,13 @@
-#region Local Var
-	int iLocal_0 = 0;
-	int iLocal_1 = 0;
+#region Static Var
+	int Static_0 = 0;
+	int Static_1 = 0;
 #endregion
 
-void __EntryFunction__()//Position - 0x0
+void main() // Position - 0x0
 {
 	int iVar0;
-	
-	iLocal_0 = -1;
+
+	Static_0 = -1;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	STREAMING::REQUEST_IPL("prologue06_int");
 	STREAMING::REQUEST_IPL("prologue01");
@@ -39,86 +39,97 @@ void __EntryFunction__()//Position - 0x0
 	STREAMING::REQUEST_IPL("prologue03_grv_fun");
 	STREAMING::REMOVE_IPL("prologue03_grv_dug");
 	STREAMING::REMOVE_IPL("prologue_grv_torch");
-	STREAMING::SET_MAPDATACULLBOX_ENABLED("prologue", true);
-	STREAMING::REQUEST_MODEL(joaat("CSB_ProlSec"));
-	while (!STREAMING::HAS_MODEL_LOADED(joaat("CSB_ProlSec")))
+	STREAMING::SET_MAPDATACULLBOX_ENABLED("prologue", 1);
+	STREAMING::REQUEST_MODEL(joaat("CSB_PROLSEC"));
+
+	while (!STREAMING::HAS_MODEL_LOADED(joaat("CSB_PROLSEC")))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
-	PLAYER::SET_PLAYER_MODEL(PLAYER::PLAYER_ID(), joaat("CSB_ProlSec"));
-	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
+
+	PLAYER::SET_PLAYER_MODEL(PLAYER::PLAYER_ID(), joaat("CSB_PROLSEC"));
+
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 5313.8f, -5207.2f, 83.5f, true, false, false, true);
+		ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 5313.8f, -5207.2f, 83.5f, 1, 0, 0, 1);
 		ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 169.2f);
 	}
-	HUD::DISPLAY_RADAR(false);
-	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
+
+	HUD::DISPLAY_RADAR(0);
+	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), 0, 0);
 	STREAMING::NEW_LOAD_SCENE_START_SPHERE(5312.9956f, -5208.671f, 83.90526f, 10f, 0);
 	iVar0 = MISC::GET_GAME_TIMER() + 10000;
+
 	while (!STREAMING::IS_NEW_LOAD_SCENE_LOADED() && MISC::GET_GAME_TIMER() < iVar0)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
+
 	SCRIPT::SHUTDOWN_LOADING_SCREEN();
 	AUDIO::START_AUDIO_SCENE("MISSION_FAILED_SCENE");
 	CAM::DO_SCREEN_FADE_IN(2500);
 	STREAMING::NEW_LOAD_SCENE_STOP();
 	HUD::REQUEST_ADDITIONAL_TEXT("NG_INSTALL", 0);
+
 	while (true)
 	{
 		if (!CAM::IS_SCREEN_FADED_IN())
-		{
 			CAM::DO_SCREEN_FADE_IN(0);
-		}
-		GRAPHICS::DRAW_RECT(0.5f, 0.5f, 1f, 1f, 0, 0, 0, 255, false);
-		GRAPHICS::DRAW_RECT(0.5f, 0.5f, 0.8f, 0.8f, 20, 20, 20, 255, false);
+	
+		GRAPHICS::DRAW_RECT(0.5f, 0.5f, 1f, 1f, 0, 0, 0, 255, 0);
+		GRAPHICS::DRAW_RECT(0.5f, 0.5f, 0.8f, 0.8f, 20, 20, 20, 255, 0);
 		HUD::SET_TEXT_SCALE(0.5f, 0.5f);
-		HUD::SET_TEXT_CENTRE(true);
-		if (SYSTEM::TIMERA() > 10000 && HUD::HAS_ADDITIONAL_TEXT_LOADED(0))
+		HUD::SET_TEXT_CENTRE(1);
+	
+		if (BUILTIN::TIMERA() > 10000 && HUD::HAS_ADDITIONAL_TEXT_LOADED(0))
 		{
-			iLocal_0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 5);
-			if ((iLocal_0 - iLocal_1) != 0)
+			Static_0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 5);
+		
+			if (Static_0 - Static_1 != 0)
 			{
-				iLocal_1 = iLocal_0;
-				SYSTEM::SETTIMERA(0);
+				Static_1 = Static_0;
+				BUILTIN::SETTIMERA(0);
 			}
 		}
 		else
 		{
-			switch (iLocal_0)
+			switch (Static_0)
 			{
 				case 0:
-					func_1(0.5f, 0.4f, "NG_INST_TT_1", 0);
+					func_1(0.5f, 0.4f, "NG_INST_TT_1" /* GXT: Capture the beauty of Los Santos with the Snapmatic phone app. */, 0);
 					break;
-				
+			
 				case 1:
-					func_1(0.5f, 0.4f, "NG_INST_TT_2", 0);
+					func_1(0.5f, 0.4f, "NG_INST_TT_2" /* GXT: Use your iFruit phone to access your bank account, the stock market, contacts and more. */, 0);
 					break;
-				
+			
 				case 2:
-					func_1(0.5f, 0.4f, "NG_INST_TT_3", 0);
+					func_1(0.5f, 0.4f, "NG_INST_TT_3" /* GXT: Stock up on ammo and customize weapons at Ammu-Nation! */, 0);
 					break;
-				
+			
 				case 3:
-					func_1(0.5f, 0.4f, "NG_INST_TT_4", 0);
+					func_1(0.5f, 0.4f, "NG_INST_TT_4" /* GXT: Need a boost? Modify your car at Los Santos Customs. */, 0);
 					break;
-				
+			
 				case 4:
-					func_1(0.5f, 0.4f, "NG_INST_TT_5", 0);
+					func_1(0.5f, 0.4f, "NG_INST_TT_5" /* GXT: Add your personal touch to your iFruit phone by changing the cover to something more colorful. */, 0);
 					break;
-				}
+			}
 		}
+	
 		HUD::DISABLE_FRONTEND_THIS_FRAME();
+	
 		if (MISC::HAS_ASYNC_INSTALL_FINISHED())
 		{
 			MISC::CLEANUP_ASYNC_INSTALL();
 			return;
 		}
-		SYSTEM::WAIT(0);
+	
+		BUILTIN::WAIT(0);
 	}
 }
 
-void func_1(float fParam0, float fParam1, char* sParam2, int iParam3)//Position - 0x2F8
+void func_1(float fParam0, float fParam1, char* sParam2, int iParam3) // Position - 0x2F8
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(fParam0, fParam1, iParam3);

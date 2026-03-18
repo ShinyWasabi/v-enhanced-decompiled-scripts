@@ -1,8 +1,8 @@
-void __EntryFunction__()//Position - 0x0
+void main() // Position - 0x0
 {
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 }
 

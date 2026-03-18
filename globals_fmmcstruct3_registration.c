@@ -1,0 +1,5 @@
+// Program registers 49670 globals at index 20 starting from Global_5242880
+void main() // Position - 0x0
+{
+}
+

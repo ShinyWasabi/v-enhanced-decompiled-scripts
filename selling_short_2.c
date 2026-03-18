@@ -1,1454 +1,7538 @@
-#region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
-	int iLocal_2 = 0;
-	int iLocal_3 = 0;
-	int iLocal_4 = 0;
-	int iLocal_5 = 0;
-	int iLocal_6 = 0;
-	int iLocal_7 = 0;
-	int iLocal_8 = 0;
-	int iLocal_9 = 0;
-	int iLocal_10 = 0;
-	int iLocal_11 = 0;
-	float fLocal_12 = 0f;
-	var uLocal_13 = 0;
-	var uLocal_14 = 0;
-	int iLocal_15 = 0;
-	var uLocal_16 = 0;
-	var uLocal_17 = 0;
-	var uLocal_18 = 0;
-	struct<3> Local_19 = { 0, 0, 0 } ;
-	struct<18> Local_22 = { 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16 } ;
-	var uLocal_40 = 0;
-	var uLocal_41 = 0;
-	var uLocal_42 = 0;
-	var uLocal_43 = 0;
-	var uLocal_44 = 0;
-	var uLocal_45 = 0;
-	var uLocal_46 = 0;
-	var uLocal_47 = 0;
-	var uLocal_48 = 0;
-	var uLocal_49 = 0;
-	var uLocal_50 = 0;
-	var uLocal_51 = 0;
-	var uLocal_52 = 0;
-	var uLocal_53 = 0;
-	var uLocal_54 = 0;
-	var uLocal_55 = 0;
-	var uLocal_56 = 0;
-	int iLocal_57[29] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	int iLocal_87 = 0;
-	struct<178> Local_88[27];
-	var uLocal_4895 = 0;
-	struct<24> Local_4896[30];
-	var uLocal_5617 = 0;
-	struct<24> Local_5618[24];
-	var uLocal_6195 = 0;
-	var uLocal_6196 = 0;
-	float fLocal_6197 = 0f;
-	float fLocal_6198 = 0f;
-	int iLocal_6199 = 0;
-	int iLocal_6200 = 0;
-	int iLocal_6201 = 0;
-	int iLocal_6202 = 0;
-	bool bLocal_6203 = 0;
-	bool bLocal_6204 = 0;
-	int iLocal_6205 = 0;
-	int iLocal_6206 = 0;
-	int iLocal_6207 = 0;
-	int* iLocal_6208 = NULL;
-	var uLocal_6209 = 0;
-	var uLocal_6210 = 0;
-	int iLocal_6211 = 0;
-	bool bLocal_6212 = 0;
+#region Static Var
+	var Static_0 = 0;
+	var Static_1 = 0;
+	int Static_2 = 0;
+	int Static_3 = 0;
+	int Static_4 = 0;
+	int Static_5 = 0;
+	int Static_6 = 0;
+	int Static_7 = 0;
+	int Static_8 = 0;
+	int Static_9 = 0;
+	int Static_10 = 0;
+	int Static_11 = 0;
+	float Static_12 = 0f;
+	var Static_13 = 0;
+	var Static_14 = 0;
+	int Static_15 = 0;
+	var Static_16 = 0;
+	var Static_17 = 0;
+	var Static_18 = 0;
+	int Static_19 = 0;
+	var Static_20 = 0;
+	var Static_21 = 0;
+	var Static_22 = 16;
+	var Static_23 = 0;
+	var Static_24 = 0;
+	var Static_25 = 0;
+	var Static_26 = 0;
+	var Static_27 = 0;
+	var Static_28 = 0;
+	var Static_29 = 0;
+	var Static_30 = 0;
+	var Static_31 = 0;
+	var Static_32 = 0;
+	var Static_33 = 0;
+	var Static_34 = 0;
+	var Static_35 = 0;
+	var Static_36 = 0;
+	var Static_37 = 0;
+	var Static_38 = 0;
+	var Static_39 = 16;
+	var Static_40 = 0;
+	var Static_41 = 0;
+	var Static_42 = 0;
+	var Static_43 = 0;
+	var Static_44 = 0;
+	var Static_45 = 0;
+	var Static_46 = 0;
+	var Static_47 = 0;
+	var Static_48 = 0;
+	var Static_49 = 0;
+	var Static_50 = 0;
+	var Static_51 = 0;
+	var Static_52 = 0;
+	var Static_53 = 0;
+	var Static_54 = 0;
+	var Static_55 = 0;
+	int Static_56 = 0;
+	int Static_57 = 29;
+	var Static_58 = 0;
+	var Static_59 = 0;
+	var Static_60 = 0;
+	var Static_61 = 0;
+	var Static_62 = 0;
+	var Static_63 = 0;
+	var Static_64 = 0;
+	var Static_65 = 0;
+	var Static_66 = 0;
+	var Static_67 = 0;
+	var Static_68 = 0;
+	var Static_69 = 0;
+	var Static_70 = 0;
+	var Static_71 = 0;
+	var Static_72 = 0;
+	var Static_73 = 0;
+	var Static_74 = 0;
+	var Static_75 = 0;
+	var Static_76 = 0;
+	var Static_77 = 0;
+	var Static_78 = 0;
+	var Static_79 = 0;
+	var Static_80 = 0;
+	var Static_81 = 0;
+	var Static_82 = 0;
+	var Static_83 = 0;
+	var Static_84 = 0;
+	var Static_85 = 0;
+	var Static_86 = 0;
+	int Static_87 = 0;
+	int Static_88 = 27;
+	var Static_89 = 9;
+	var Static_90 = 0;
+	var Static_91 = 0;
+	var Static_92 = 0;
+	var Static_93 = 0;
+	var Static_94 = 0;
+	var Static_95 = 0;
+	var Static_96 = 6;
+	var Static_97 = 0;
+	var Static_98 = 0;
+	var Static_99 = 0;
+	var Static_100 = 6;
+	var Static_101 = 0;
+	var Static_102 = 0;
+	var Static_103 = 0;
+	var Static_104 = 0;
+	var Static_105 = 0;
+	var Static_106 = 0;
+	var Static_107 = 0;
+	var Static_108 = 0;
+	var Static_109 = 0;
+	var Static_110 = 0;
+	var Static_111 = 0;
+	var Static_112 = 0;
+	var Static_113 = 6;
+	var Static_114 = 0;
+	var Static_115 = 0;
+	var Static_116 = 0;
+	var Static_117 = 6;
+	var Static_118 = 0;
+	var Static_119 = 0;
+	var Static_120 = 0;
+	var Static_121 = 0;
+	var Static_122 = 0;
+	var Static_123 = 0;
+	var Static_124 = 0;
+	var Static_125 = 0;
+	var Static_126 = 0;
+	var Static_127 = 0;
+	var Static_128 = 0;
+	var Static_129 = 0;
+	var Static_130 = 6;
+	var Static_131 = 0;
+	var Static_132 = 0;
+	var Static_133 = 0;
+	var Static_134 = 6;
+	var Static_135 = 0;
+	var Static_136 = 0;
+	var Static_137 = 0;
+	var Static_138 = 0;
+	var Static_139 = 0;
+	var Static_140 = 0;
+	var Static_141 = 0;
+	var Static_142 = 0;
+	var Static_143 = 0;
+	var Static_144 = 0;
+	var Static_145 = 0;
+	var Static_146 = 0;
+	var Static_147 = 6;
+	var Static_148 = 0;
+	var Static_149 = 0;
+	var Static_150 = 0;
+	var Static_151 = 6;
+	var Static_152 = 0;
+	var Static_153 = 0;
+	var Static_154 = 0;
+	var Static_155 = 0;
+	var Static_156 = 0;
+	var Static_157 = 0;
+	var Static_158 = 0;
+	var Static_159 = 0;
+	var Static_160 = 0;
+	var Static_161 = 0;
+	var Static_162 = 0;
+	var Static_163 = 0;
+	var Static_164 = 6;
+	var Static_165 = 0;
+	var Static_166 = 0;
+	var Static_167 = 0;
+	var Static_168 = 6;
+	var Static_169 = 0;
+	var Static_170 = 0;
+	var Static_171 = 0;
+	var Static_172 = 0;
+	var Static_173 = 0;
+	var Static_174 = 0;
+	var Static_175 = 0;
+	var Static_176 = 0;
+	var Static_177 = 0;
+	var Static_178 = 0;
+	var Static_179 = 0;
+	var Static_180 = 0;
+	var Static_181 = 6;
+	var Static_182 = 0;
+	var Static_183 = 0;
+	var Static_184 = 0;
+	var Static_185 = 6;
+	var Static_186 = 0;
+	var Static_187 = 0;
+	var Static_188 = 0;
+	var Static_189 = 0;
+	var Static_190 = 0;
+	var Static_191 = 0;
+	var Static_192 = 0;
+	var Static_193 = 0;
+	var Static_194 = 0;
+	var Static_195 = 0;
+	var Static_196 = 0;
+	var Static_197 = 0;
+	var Static_198 = 6;
+	var Static_199 = 0;
+	var Static_200 = 0;
+	var Static_201 = 0;
+	var Static_202 = 6;
+	var Static_203 = 0;
+	var Static_204 = 0;
+	var Static_205 = 0;
+	var Static_206 = 0;
+	var Static_207 = 0;
+	var Static_208 = 0;
+	var Static_209 = 0;
+	var Static_210 = 0;
+	var Static_211 = 0;
+	var Static_212 = 0;
+	var Static_213 = 0;
+	var Static_214 = 0;
+	var Static_215 = 6;
+	var Static_216 = 0;
+	var Static_217 = 0;
+	var Static_218 = 0;
+	var Static_219 = 6;
+	var Static_220 = 0;
+	var Static_221 = 0;
+	var Static_222 = 0;
+	var Static_223 = 0;
+	var Static_224 = 0;
+	var Static_225 = 0;
+	var Static_226 = 0;
+	var Static_227 = 0;
+	var Static_228 = 0;
+	var Static_229 = 0;
+	var Static_230 = 0;
+	var Static_231 = 0;
+	var Static_232 = 6;
+	var Static_233 = 0;
+	var Static_234 = 0;
+	var Static_235 = 0;
+	var Static_236 = 6;
+	var Static_237 = 0;
+	var Static_238 = 0;
+	var Static_239 = 0;
+	var Static_240 = 0;
+	var Static_241 = 0;
+	var Static_242 = 0;
+	var Static_243 = 0;
+	var Static_244 = 2;
+	var Static_245 = 0;
+	var Static_246 = 0;
+	var Static_247 = 0;
+	var Static_248 = 0;
+	var Static_249 = 0;
+	var Static_250 = 0;
+	var Static_251 = 0;
+	var Static_252 = 0;
+	var Static_253 = 0;
+	var Static_254 = 0;
+	var Static_255 = 0;
+	var Static_256 = 0;
+	var Static_257 = 0;
+	var Static_258 = 0;
+	var Static_259 = 0;
+	var Static_260 = 0;
+	var Static_261 = 0;
+	var Static_262 = 0;
+	var Static_263 = 0;
+	var Static_264 = 0;
+	var Static_265 = 0;
+	var Static_266 = 0;
+	var Static_267 = 9;
+	var Static_268 = 0;
+	var Static_269 = 0;
+	var Static_270 = 0;
+	var Static_271 = 0;
+	var Static_272 = 0;
+	var Static_273 = 0;
+	var Static_274 = 6;
+	var Static_275 = 0;
+	var Static_276 = 0;
+	var Static_277 = 0;
+	var Static_278 = 6;
+	var Static_279 = 0;
+	var Static_280 = 0;
+	var Static_281 = 0;
+	var Static_282 = 0;
+	var Static_283 = 0;
+	var Static_284 = 0;
+	var Static_285 = 0;
+	var Static_286 = 0;
+	var Static_287 = 0;
+	var Static_288 = 0;
+	var Static_289 = 0;
+	var Static_290 = 0;
+	var Static_291 = 6;
+	var Static_292 = 0;
+	var Static_293 = 0;
+	var Static_294 = 0;
+	var Static_295 = 6;
+	var Static_296 = 0;
+	var Static_297 = 0;
+	var Static_298 = 0;
+	var Static_299 = 0;
+	var Static_300 = 0;
+	var Static_301 = 0;
+	var Static_302 = 0;
+	var Static_303 = 0;
+	var Static_304 = 0;
+	var Static_305 = 0;
+	var Static_306 = 0;
+	var Static_307 = 0;
+	var Static_308 = 6;
+	var Static_309 = 0;
+	var Static_310 = 0;
+	var Static_311 = 0;
+	var Static_312 = 6;
+	var Static_313 = 0;
+	var Static_314 = 0;
+	var Static_315 = 0;
+	var Static_316 = 0;
+	var Static_317 = 0;
+	var Static_318 = 0;
+	var Static_319 = 0;
+	var Static_320 = 0;
+	var Static_321 = 0;
+	var Static_322 = 0;
+	var Static_323 = 0;
+	var Static_324 = 0;
+	var Static_325 = 6;
+	var Static_326 = 0;
+	var Static_327 = 0;
+	var Static_328 = 0;
+	var Static_329 = 6;
+	var Static_330 = 0;
+	var Static_331 = 0;
+	var Static_332 = 0;
+	var Static_333 = 0;
+	var Static_334 = 0;
+	var Static_335 = 0;
+	var Static_336 = 0;
+	var Static_337 = 0;
+	var Static_338 = 0;
+	var Static_339 = 0;
+	var Static_340 = 0;
+	var Static_341 = 0;
+	var Static_342 = 6;
+	var Static_343 = 0;
+	var Static_344 = 0;
+	var Static_345 = 0;
+	var Static_346 = 6;
+	var Static_347 = 0;
+	var Static_348 = 0;
+	var Static_349 = 0;
+	var Static_350 = 0;
+	var Static_351 = 0;
+	var Static_352 = 0;
+	var Static_353 = 0;
+	var Static_354 = 0;
+	var Static_355 = 0;
+	var Static_356 = 0;
+	var Static_357 = 0;
+	var Static_358 = 0;
+	var Static_359 = 6;
+	var Static_360 = 0;
+	var Static_361 = 0;
+	var Static_362 = 0;
+	var Static_363 = 6;
+	var Static_364 = 0;
+	var Static_365 = 0;
+	var Static_366 = 0;
+	var Static_367 = 0;
+	var Static_368 = 0;
+	var Static_369 = 0;
+	var Static_370 = 0;
+	var Static_371 = 0;
+	var Static_372 = 0;
+	var Static_373 = 0;
+	var Static_374 = 0;
+	var Static_375 = 0;
+	var Static_376 = 6;
+	var Static_377 = 0;
+	var Static_378 = 0;
+	var Static_379 = 0;
+	var Static_380 = 6;
+	var Static_381 = 0;
+	var Static_382 = 0;
+	var Static_383 = 0;
+	var Static_384 = 0;
+	var Static_385 = 0;
+	var Static_386 = 0;
+	var Static_387 = 0;
+	var Static_388 = 0;
+	var Static_389 = 0;
+	var Static_390 = 0;
+	var Static_391 = 0;
+	var Static_392 = 0;
+	var Static_393 = 6;
+	var Static_394 = 0;
+	var Static_395 = 0;
+	var Static_396 = 0;
+	var Static_397 = 6;
+	var Static_398 = 0;
+	var Static_399 = 0;
+	var Static_400 = 0;
+	var Static_401 = 0;
+	var Static_402 = 0;
+	var Static_403 = 0;
+	var Static_404 = 0;
+	var Static_405 = 0;
+	var Static_406 = 0;
+	var Static_407 = 0;
+	var Static_408 = 0;
+	var Static_409 = 0;
+	var Static_410 = 6;
+	var Static_411 = 0;
+	var Static_412 = 0;
+	var Static_413 = 0;
+	var Static_414 = 6;
+	var Static_415 = 0;
+	var Static_416 = 0;
+	var Static_417 = 0;
+	var Static_418 = 0;
+	var Static_419 = 0;
+	var Static_420 = 0;
+	var Static_421 = 0;
+	var Static_422 = 2;
+	var Static_423 = 0;
+	var Static_424 = 0;
+	var Static_425 = 0;
+	var Static_426 = 0;
+	var Static_427 = 0;
+	var Static_428 = 0;
+	var Static_429 = 0;
+	var Static_430 = 0;
+	var Static_431 = 0;
+	var Static_432 = 0;
+	var Static_433 = 0;
+	var Static_434 = 0;
+	var Static_435 = 0;
+	var Static_436 = 0;
+	var Static_437 = 0;
+	var Static_438 = 0;
+	var Static_439 = 0;
+	var Static_440 = 0;
+	var Static_441 = 0;
+	var Static_442 = 0;
+	var Static_443 = 0;
+	var Static_444 = 0;
+	var Static_445 = 9;
+	var Static_446 = 0;
+	var Static_447 = 0;
+	var Static_448 = 0;
+	var Static_449 = 0;
+	var Static_450 = 0;
+	var Static_451 = 0;
+	var Static_452 = 6;
+	var Static_453 = 0;
+	var Static_454 = 0;
+	var Static_455 = 0;
+	var Static_456 = 6;
+	var Static_457 = 0;
+	var Static_458 = 0;
+	var Static_459 = 0;
+	var Static_460 = 0;
+	var Static_461 = 0;
+	var Static_462 = 0;
+	var Static_463 = 0;
+	var Static_464 = 0;
+	var Static_465 = 0;
+	var Static_466 = 0;
+	var Static_467 = 0;
+	var Static_468 = 0;
+	var Static_469 = 6;
+	var Static_470 = 0;
+	var Static_471 = 0;
+	var Static_472 = 0;
+	var Static_473 = 6;
+	var Static_474 = 0;
+	var Static_475 = 0;
+	var Static_476 = 0;
+	var Static_477 = 0;
+	var Static_478 = 0;
+	var Static_479 = 0;
+	var Static_480 = 0;
+	var Static_481 = 0;
+	var Static_482 = 0;
+	var Static_483 = 0;
+	var Static_484 = 0;
+	var Static_485 = 0;
+	var Static_486 = 6;
+	var Static_487 = 0;
+	var Static_488 = 0;
+	var Static_489 = 0;
+	var Static_490 = 6;
+	var Static_491 = 0;
+	var Static_492 = 0;
+	var Static_493 = 0;
+	var Static_494 = 0;
+	var Static_495 = 0;
+	var Static_496 = 0;
+	var Static_497 = 0;
+	var Static_498 = 0;
+	var Static_499 = 0;
+	var Static_500 = 0;
+	var Static_501 = 0;
+	var Static_502 = 0;
+	var Static_503 = 6;
+	var Static_504 = 0;
+	var Static_505 = 0;
+	var Static_506 = 0;
+	var Static_507 = 6;
+	var Static_508 = 0;
+	var Static_509 = 0;
+	var Static_510 = 0;
+	var Static_511 = 0;
+	var Static_512 = 0;
+	var Static_513 = 0;
+	var Static_514 = 0;
+	var Static_515 = 0;
+	var Static_516 = 0;
+	var Static_517 = 0;
+	var Static_518 = 0;
+	var Static_519 = 0;
+	var Static_520 = 6;
+	var Static_521 = 0;
+	var Static_522 = 0;
+	var Static_523 = 0;
+	var Static_524 = 6;
+	var Static_525 = 0;
+	var Static_526 = 0;
+	var Static_527 = 0;
+	var Static_528 = 0;
+	var Static_529 = 0;
+	var Static_530 = 0;
+	var Static_531 = 0;
+	var Static_532 = 0;
+	var Static_533 = 0;
+	var Static_534 = 0;
+	var Static_535 = 0;
+	var Static_536 = 0;
+	var Static_537 = 6;
+	var Static_538 = 0;
+	var Static_539 = 0;
+	var Static_540 = 0;
+	var Static_541 = 6;
+	var Static_542 = 0;
+	var Static_543 = 0;
+	var Static_544 = 0;
+	var Static_545 = 0;
+	var Static_546 = 0;
+	var Static_547 = 0;
+	var Static_548 = 0;
+	var Static_549 = 0;
+	var Static_550 = 0;
+	var Static_551 = 0;
+	var Static_552 = 0;
+	var Static_553 = 0;
+	var Static_554 = 6;
+	var Static_555 = 0;
+	var Static_556 = 0;
+	var Static_557 = 0;
+	var Static_558 = 6;
+	var Static_559 = 0;
+	var Static_560 = 0;
+	var Static_561 = 0;
+	var Static_562 = 0;
+	var Static_563 = 0;
+	var Static_564 = 0;
+	var Static_565 = 0;
+	var Static_566 = 0;
+	var Static_567 = 0;
+	var Static_568 = 0;
+	var Static_569 = 0;
+	var Static_570 = 0;
+	var Static_571 = 6;
+	var Static_572 = 0;
+	var Static_573 = 0;
+	var Static_574 = 0;
+	var Static_575 = 6;
+	var Static_576 = 0;
+	var Static_577 = 0;
+	var Static_578 = 0;
+	var Static_579 = 0;
+	var Static_580 = 0;
+	var Static_581 = 0;
+	var Static_582 = 0;
+	var Static_583 = 0;
+	var Static_584 = 0;
+	var Static_585 = 0;
+	var Static_586 = 0;
+	var Static_587 = 0;
+	var Static_588 = 6;
+	var Static_589 = 0;
+	var Static_590 = 0;
+	var Static_591 = 0;
+	var Static_592 = 6;
+	var Static_593 = 0;
+	var Static_594 = 0;
+	var Static_595 = 0;
+	var Static_596 = 0;
+	var Static_597 = 0;
+	var Static_598 = 0;
+	var Static_599 = 0;
+	var Static_600 = 2;
+	var Static_601 = 0;
+	var Static_602 = 0;
+	var Static_603 = 0;
+	var Static_604 = 0;
+	var Static_605 = 0;
+	var Static_606 = 0;
+	var Static_607 = 0;
+	var Static_608 = 0;
+	var Static_609 = 0;
+	var Static_610 = 0;
+	var Static_611 = 0;
+	var Static_612 = 0;
+	var Static_613 = 0;
+	var Static_614 = 0;
+	var Static_615 = 0;
+	var Static_616 = 0;
+	var Static_617 = 0;
+	var Static_618 = 0;
+	var Static_619 = 0;
+	var Static_620 = 0;
+	var Static_621 = 0;
+	var Static_622 = 0;
+	var Static_623 = 9;
+	var Static_624 = 0;
+	var Static_625 = 0;
+	var Static_626 = 0;
+	var Static_627 = 0;
+	var Static_628 = 0;
+	var Static_629 = 0;
+	var Static_630 = 6;
+	var Static_631 = 0;
+	var Static_632 = 0;
+	var Static_633 = 0;
+	var Static_634 = 6;
+	var Static_635 = 0;
+	var Static_636 = 0;
+	var Static_637 = 0;
+	var Static_638 = 0;
+	var Static_639 = 0;
+	var Static_640 = 0;
+	var Static_641 = 0;
+	var Static_642 = 0;
+	var Static_643 = 0;
+	var Static_644 = 0;
+	var Static_645 = 0;
+	var Static_646 = 0;
+	var Static_647 = 6;
+	var Static_648 = 0;
+	var Static_649 = 0;
+	var Static_650 = 0;
+	var Static_651 = 6;
+	var Static_652 = 0;
+	var Static_653 = 0;
+	var Static_654 = 0;
+	var Static_655 = 0;
+	var Static_656 = 0;
+	var Static_657 = 0;
+	var Static_658 = 0;
+	var Static_659 = 0;
+	var Static_660 = 0;
+	var Static_661 = 0;
+	var Static_662 = 0;
+	var Static_663 = 0;
+	var Static_664 = 6;
+	var Static_665 = 0;
+	var Static_666 = 0;
+	var Static_667 = 0;
+	var Static_668 = 6;
+	var Static_669 = 0;
+	var Static_670 = 0;
+	var Static_671 = 0;
+	var Static_672 = 0;
+	var Static_673 = 0;
+	var Static_674 = 0;
+	var Static_675 = 0;
+	var Static_676 = 0;
+	var Static_677 = 0;
+	var Static_678 = 0;
+	var Static_679 = 0;
+	var Static_680 = 0;
+	var Static_681 = 6;
+	var Static_682 = 0;
+	var Static_683 = 0;
+	var Static_684 = 0;
+	var Static_685 = 6;
+	var Static_686 = 0;
+	var Static_687 = 0;
+	var Static_688 = 0;
+	var Static_689 = 0;
+	var Static_690 = 0;
+	var Static_691 = 0;
+	var Static_692 = 0;
+	var Static_693 = 0;
+	var Static_694 = 0;
+	var Static_695 = 0;
+	var Static_696 = 0;
+	var Static_697 = 0;
+	var Static_698 = 6;
+	var Static_699 = 0;
+	var Static_700 = 0;
+	var Static_701 = 0;
+	var Static_702 = 6;
+	var Static_703 = 0;
+	var Static_704 = 0;
+	var Static_705 = 0;
+	var Static_706 = 0;
+	var Static_707 = 0;
+	var Static_708 = 0;
+	var Static_709 = 0;
+	var Static_710 = 0;
+	var Static_711 = 0;
+	var Static_712 = 0;
+	var Static_713 = 0;
+	var Static_714 = 0;
+	var Static_715 = 6;
+	var Static_716 = 0;
+	var Static_717 = 0;
+	var Static_718 = 0;
+	var Static_719 = 6;
+	var Static_720 = 0;
+	var Static_721 = 0;
+	var Static_722 = 0;
+	var Static_723 = 0;
+	var Static_724 = 0;
+	var Static_725 = 0;
+	var Static_726 = 0;
+	var Static_727 = 0;
+	var Static_728 = 0;
+	var Static_729 = 0;
+	var Static_730 = 0;
+	var Static_731 = 0;
+	var Static_732 = 6;
+	var Static_733 = 0;
+	var Static_734 = 0;
+	var Static_735 = 0;
+	var Static_736 = 6;
+	var Static_737 = 0;
+	var Static_738 = 0;
+	var Static_739 = 0;
+	var Static_740 = 0;
+	var Static_741 = 0;
+	var Static_742 = 0;
+	var Static_743 = 0;
+	var Static_744 = 0;
+	var Static_745 = 0;
+	var Static_746 = 0;
+	var Static_747 = 0;
+	var Static_748 = 0;
+	var Static_749 = 6;
+	var Static_750 = 0;
+	var Static_751 = 0;
+	var Static_752 = 0;
+	var Static_753 = 6;
+	var Static_754 = 0;
+	var Static_755 = 0;
+	var Static_756 = 0;
+	var Static_757 = 0;
+	var Static_758 = 0;
+	var Static_759 = 0;
+	var Static_760 = 0;
+	var Static_761 = 0;
+	var Static_762 = 0;
+	var Static_763 = 0;
+	var Static_764 = 0;
+	var Static_765 = 0;
+	var Static_766 = 6;
+	var Static_767 = 0;
+	var Static_768 = 0;
+	var Static_769 = 0;
+	var Static_770 = 6;
+	var Static_771 = 0;
+	var Static_772 = 0;
+	var Static_773 = 0;
+	var Static_774 = 0;
+	var Static_775 = 0;
+	var Static_776 = 0;
+	var Static_777 = 0;
+	var Static_778 = 2;
+	var Static_779 = 0;
+	var Static_780 = 0;
+	var Static_781 = 0;
+	var Static_782 = 0;
+	var Static_783 = 0;
+	var Static_784 = 0;
+	var Static_785 = 0;
+	var Static_786 = 0;
+	var Static_787 = 0;
+	var Static_788 = 0;
+	var Static_789 = 0;
+	var Static_790 = 0;
+	var Static_791 = 0;
+	var Static_792 = 0;
+	var Static_793 = 0;
+	var Static_794 = 0;
+	var Static_795 = 0;
+	var Static_796 = 0;
+	var Static_797 = 0;
+	var Static_798 = 0;
+	var Static_799 = 0;
+	var Static_800 = 0;
+	var Static_801 = 9;
+	var Static_802 = 0;
+	var Static_803 = 0;
+	var Static_804 = 0;
+	var Static_805 = 0;
+	var Static_806 = 0;
+	var Static_807 = 0;
+	var Static_808 = 6;
+	var Static_809 = 0;
+	var Static_810 = 0;
+	var Static_811 = 0;
+	var Static_812 = 6;
+	var Static_813 = 0;
+	var Static_814 = 0;
+	var Static_815 = 0;
+	var Static_816 = 0;
+	var Static_817 = 0;
+	var Static_818 = 0;
+	var Static_819 = 0;
+	var Static_820 = 0;
+	var Static_821 = 0;
+	var Static_822 = 0;
+	var Static_823 = 0;
+	var Static_824 = 0;
+	var Static_825 = 6;
+	var Static_826 = 0;
+	var Static_827 = 0;
+	var Static_828 = 0;
+	var Static_829 = 6;
+	var Static_830 = 0;
+	var Static_831 = 0;
+	var Static_832 = 0;
+	var Static_833 = 0;
+	var Static_834 = 0;
+	var Static_835 = 0;
+	var Static_836 = 0;
+	var Static_837 = 0;
+	var Static_838 = 0;
+	var Static_839 = 0;
+	var Static_840 = 0;
+	var Static_841 = 0;
+	var Static_842 = 6;
+	var Static_843 = 0;
+	var Static_844 = 0;
+	var Static_845 = 0;
+	var Static_846 = 6;
+	var Static_847 = 0;
+	var Static_848 = 0;
+	var Static_849 = 0;
+	var Static_850 = 0;
+	var Static_851 = 0;
+	var Static_852 = 0;
+	var Static_853 = 0;
+	var Static_854 = 0;
+	var Static_855 = 0;
+	var Static_856 = 0;
+	var Static_857 = 0;
+	var Static_858 = 0;
+	var Static_859 = 6;
+	var Static_860 = 0;
+	var Static_861 = 0;
+	var Static_862 = 0;
+	var Static_863 = 6;
+	var Static_864 = 0;
+	var Static_865 = 0;
+	var Static_866 = 0;
+	var Static_867 = 0;
+	var Static_868 = 0;
+	var Static_869 = 0;
+	var Static_870 = 0;
+	var Static_871 = 0;
+	var Static_872 = 0;
+	var Static_873 = 0;
+	var Static_874 = 0;
+	var Static_875 = 0;
+	var Static_876 = 6;
+	var Static_877 = 0;
+	var Static_878 = 0;
+	var Static_879 = 0;
+	var Static_880 = 6;
+	var Static_881 = 0;
+	var Static_882 = 0;
+	var Static_883 = 0;
+	var Static_884 = 0;
+	var Static_885 = 0;
+	var Static_886 = 0;
+	var Static_887 = 0;
+	var Static_888 = 0;
+	var Static_889 = 0;
+	var Static_890 = 0;
+	var Static_891 = 0;
+	var Static_892 = 0;
+	var Static_893 = 6;
+	var Static_894 = 0;
+	var Static_895 = 0;
+	var Static_896 = 0;
+	var Static_897 = 6;
+	var Static_898 = 0;
+	var Static_899 = 0;
+	var Static_900 = 0;
+	var Static_901 = 0;
+	var Static_902 = 0;
+	var Static_903 = 0;
+	var Static_904 = 0;
+	var Static_905 = 0;
+	var Static_906 = 0;
+	var Static_907 = 0;
+	var Static_908 = 0;
+	var Static_909 = 0;
+	var Static_910 = 6;
+	var Static_911 = 0;
+	var Static_912 = 0;
+	var Static_913 = 0;
+	var Static_914 = 6;
+	var Static_915 = 0;
+	var Static_916 = 0;
+	var Static_917 = 0;
+	var Static_918 = 0;
+	var Static_919 = 0;
+	var Static_920 = 0;
+	var Static_921 = 0;
+	var Static_922 = 0;
+	var Static_923 = 0;
+	var Static_924 = 0;
+	var Static_925 = 0;
+	var Static_926 = 0;
+	var Static_927 = 6;
+	var Static_928 = 0;
+	var Static_929 = 0;
+	var Static_930 = 0;
+	var Static_931 = 6;
+	var Static_932 = 0;
+	var Static_933 = 0;
+	var Static_934 = 0;
+	var Static_935 = 0;
+	var Static_936 = 0;
+	var Static_937 = 0;
+	var Static_938 = 0;
+	var Static_939 = 0;
+	var Static_940 = 0;
+	var Static_941 = 0;
+	var Static_942 = 0;
+	var Static_943 = 0;
+	var Static_944 = 6;
+	var Static_945 = 0;
+	var Static_946 = 0;
+	var Static_947 = 0;
+	var Static_948 = 6;
+	var Static_949 = 0;
+	var Static_950 = 0;
+	var Static_951 = 0;
+	var Static_952 = 0;
+	var Static_953 = 0;
+	var Static_954 = 0;
+	var Static_955 = 0;
+	var Static_956 = 2;
+	var Static_957 = 0;
+	var Static_958 = 0;
+	var Static_959 = 0;
+	var Static_960 = 0;
+	var Static_961 = 0;
+	var Static_962 = 0;
+	var Static_963 = 0;
+	var Static_964 = 0;
+	var Static_965 = 0;
+	var Static_966 = 0;
+	var Static_967 = 0;
+	var Static_968 = 0;
+	var Static_969 = 0;
+	var Static_970 = 0;
+	var Static_971 = 0;
+	var Static_972 = 0;
+	var Static_973 = 0;
+	var Static_974 = 0;
+	var Static_975 = 0;
+	var Static_976 = 0;
+	var Static_977 = 0;
+	var Static_978 = 0;
+	var Static_979 = 9;
+	var Static_980 = 0;
+	var Static_981 = 0;
+	var Static_982 = 0;
+	var Static_983 = 0;
+	var Static_984 = 0;
+	var Static_985 = 0;
+	var Static_986 = 6;
+	var Static_987 = 0;
+	var Static_988 = 0;
+	var Static_989 = 0;
+	var Static_990 = 6;
+	var Static_991 = 0;
+	var Static_992 = 0;
+	var Static_993 = 0;
+	var Static_994 = 0;
+	var Static_995 = 0;
+	var Static_996 = 0;
+	var Static_997 = 0;
+	var Static_998 = 0;
+	var Static_999 = 0;
+	var Static_1000 = 0;
+	var Static_1001 = 0;
+	var Static_1002 = 0;
+	var Static_1003 = 6;
+	var Static_1004 = 0;
+	var Static_1005 = 0;
+	var Static_1006 = 0;
+	var Static_1007 = 6;
+	var Static_1008 = 0;
+	var Static_1009 = 0;
+	var Static_1010 = 0;
+	var Static_1011 = 0;
+	var Static_1012 = 0;
+	var Static_1013 = 0;
+	var Static_1014 = 0;
+	var Static_1015 = 0;
+	var Static_1016 = 0;
+	var Static_1017 = 0;
+	var Static_1018 = 0;
+	var Static_1019 = 0;
+	var Static_1020 = 6;
+	var Static_1021 = 0;
+	var Static_1022 = 0;
+	var Static_1023 = 0;
+	var Static_1024 = 6;
+	var Static_1025 = 0;
+	var Static_1026 = 0;
+	var Static_1027 = 0;
+	var Static_1028 = 0;
+	var Static_1029 = 0;
+	var Static_1030 = 0;
+	var Static_1031 = 0;
+	var Static_1032 = 0;
+	var Static_1033 = 0;
+	var Static_1034 = 0;
+	var Static_1035 = 0;
+	var Static_1036 = 0;
+	var Static_1037 = 6;
+	var Static_1038 = 0;
+	var Static_1039 = 0;
+	var Static_1040 = 0;
+	var Static_1041 = 6;
+	var Static_1042 = 0;
+	var Static_1043 = 0;
+	var Static_1044 = 0;
+	var Static_1045 = 0;
+	var Static_1046 = 0;
+	var Static_1047 = 0;
+	var Static_1048 = 0;
+	var Static_1049 = 0;
+	var Static_1050 = 0;
+	var Static_1051 = 0;
+	var Static_1052 = 0;
+	var Static_1053 = 0;
+	var Static_1054 = 6;
+	var Static_1055 = 0;
+	var Static_1056 = 0;
+	var Static_1057 = 0;
+	var Static_1058 = 6;
+	var Static_1059 = 0;
+	var Static_1060 = 0;
+	var Static_1061 = 0;
+	var Static_1062 = 0;
+	var Static_1063 = 0;
+	var Static_1064 = 0;
+	var Static_1065 = 0;
+	var Static_1066 = 0;
+	var Static_1067 = 0;
+	var Static_1068 = 0;
+	var Static_1069 = 0;
+	var Static_1070 = 0;
+	var Static_1071 = 6;
+	var Static_1072 = 0;
+	var Static_1073 = 0;
+	var Static_1074 = 0;
+	var Static_1075 = 6;
+	var Static_1076 = 0;
+	var Static_1077 = 0;
+	var Static_1078 = 0;
+	var Static_1079 = 0;
+	var Static_1080 = 0;
+	var Static_1081 = 0;
+	var Static_1082 = 0;
+	var Static_1083 = 0;
+	var Static_1084 = 0;
+	var Static_1085 = 0;
+	var Static_1086 = 0;
+	var Static_1087 = 0;
+	var Static_1088 = 6;
+	var Static_1089 = 0;
+	var Static_1090 = 0;
+	var Static_1091 = 0;
+	var Static_1092 = 6;
+	var Static_1093 = 0;
+	var Static_1094 = 0;
+	var Static_1095 = 0;
+	var Static_1096 = 0;
+	var Static_1097 = 0;
+	var Static_1098 = 0;
+	var Static_1099 = 0;
+	var Static_1100 = 0;
+	var Static_1101 = 0;
+	var Static_1102 = 0;
+	var Static_1103 = 0;
+	var Static_1104 = 0;
+	var Static_1105 = 6;
+	var Static_1106 = 0;
+	var Static_1107 = 0;
+	var Static_1108 = 0;
+	var Static_1109 = 6;
+	var Static_1110 = 0;
+	var Static_1111 = 0;
+	var Static_1112 = 0;
+	var Static_1113 = 0;
+	var Static_1114 = 0;
+	var Static_1115 = 0;
+	var Static_1116 = 0;
+	var Static_1117 = 0;
+	var Static_1118 = 0;
+	var Static_1119 = 0;
+	var Static_1120 = 0;
+	var Static_1121 = 0;
+	var Static_1122 = 6;
+	var Static_1123 = 0;
+	var Static_1124 = 0;
+	var Static_1125 = 0;
+	var Static_1126 = 6;
+	var Static_1127 = 0;
+	var Static_1128 = 0;
+	var Static_1129 = 0;
+	var Static_1130 = 0;
+	var Static_1131 = 0;
+	var Static_1132 = 0;
+	var Static_1133 = 0;
+	var Static_1134 = 2;
+	var Static_1135 = 0;
+	var Static_1136 = 0;
+	var Static_1137 = 0;
+	var Static_1138 = 0;
+	var Static_1139 = 0;
+	var Static_1140 = 0;
+	var Static_1141 = 0;
+	var Static_1142 = 0;
+	var Static_1143 = 0;
+	var Static_1144 = 0;
+	var Static_1145 = 0;
+	var Static_1146 = 0;
+	var Static_1147 = 0;
+	var Static_1148 = 0;
+	var Static_1149 = 0;
+	var Static_1150 = 0;
+	var Static_1151 = 0;
+	var Static_1152 = 0;
+	var Static_1153 = 0;
+	var Static_1154 = 0;
+	var Static_1155 = 0;
+	var Static_1156 = 0;
+	var Static_1157 = 9;
+	var Static_1158 = 0;
+	var Static_1159 = 0;
+	var Static_1160 = 0;
+	var Static_1161 = 0;
+	var Static_1162 = 0;
+	var Static_1163 = 0;
+	var Static_1164 = 6;
+	var Static_1165 = 0;
+	var Static_1166 = 0;
+	var Static_1167 = 0;
+	var Static_1168 = 6;
+	var Static_1169 = 0;
+	var Static_1170 = 0;
+	var Static_1171 = 0;
+	var Static_1172 = 0;
+	var Static_1173 = 0;
+	var Static_1174 = 0;
+	var Static_1175 = 0;
+	var Static_1176 = 0;
+	var Static_1177 = 0;
+	var Static_1178 = 0;
+	var Static_1179 = 0;
+	var Static_1180 = 0;
+	var Static_1181 = 6;
+	var Static_1182 = 0;
+	var Static_1183 = 0;
+	var Static_1184 = 0;
+	var Static_1185 = 6;
+	var Static_1186 = 0;
+	var Static_1187 = 0;
+	var Static_1188 = 0;
+	var Static_1189 = 0;
+	var Static_1190 = 0;
+	var Static_1191 = 0;
+	var Static_1192 = 0;
+	var Static_1193 = 0;
+	var Static_1194 = 0;
+	var Static_1195 = 0;
+	var Static_1196 = 0;
+	var Static_1197 = 0;
+	var Static_1198 = 6;
+	var Static_1199 = 0;
+	var Static_1200 = 0;
+	var Static_1201 = 0;
+	var Static_1202 = 6;
+	var Static_1203 = 0;
+	var Static_1204 = 0;
+	var Static_1205 = 0;
+	var Static_1206 = 0;
+	var Static_1207 = 0;
+	var Static_1208 = 0;
+	var Static_1209 = 0;
+	var Static_1210 = 0;
+	var Static_1211 = 0;
+	var Static_1212 = 0;
+	var Static_1213 = 0;
+	var Static_1214 = 0;
+	var Static_1215 = 6;
+	var Static_1216 = 0;
+	var Static_1217 = 0;
+	var Static_1218 = 0;
+	var Static_1219 = 6;
+	var Static_1220 = 0;
+	var Static_1221 = 0;
+	var Static_1222 = 0;
+	var Static_1223 = 0;
+	var Static_1224 = 0;
+	var Static_1225 = 0;
+	var Static_1226 = 0;
+	var Static_1227 = 0;
+	var Static_1228 = 0;
+	var Static_1229 = 0;
+	var Static_1230 = 0;
+	var Static_1231 = 0;
+	var Static_1232 = 6;
+	var Static_1233 = 0;
+	var Static_1234 = 0;
+	var Static_1235 = 0;
+	var Static_1236 = 6;
+	var Static_1237 = 0;
+	var Static_1238 = 0;
+	var Static_1239 = 0;
+	var Static_1240 = 0;
+	var Static_1241 = 0;
+	var Static_1242 = 0;
+	var Static_1243 = 0;
+	var Static_1244 = 0;
+	var Static_1245 = 0;
+	var Static_1246 = 0;
+	var Static_1247 = 0;
+	var Static_1248 = 0;
+	var Static_1249 = 6;
+	var Static_1250 = 0;
+	var Static_1251 = 0;
+	var Static_1252 = 0;
+	var Static_1253 = 6;
+	var Static_1254 = 0;
+	var Static_1255 = 0;
+	var Static_1256 = 0;
+	var Static_1257 = 0;
+	var Static_1258 = 0;
+	var Static_1259 = 0;
+	var Static_1260 = 0;
+	var Static_1261 = 0;
+	var Static_1262 = 0;
+	var Static_1263 = 0;
+	var Static_1264 = 0;
+	var Static_1265 = 0;
+	var Static_1266 = 6;
+	var Static_1267 = 0;
+	var Static_1268 = 0;
+	var Static_1269 = 0;
+	var Static_1270 = 6;
+	var Static_1271 = 0;
+	var Static_1272 = 0;
+	var Static_1273 = 0;
+	var Static_1274 = 0;
+	var Static_1275 = 0;
+	var Static_1276 = 0;
+	var Static_1277 = 0;
+	var Static_1278 = 0;
+	var Static_1279 = 0;
+	var Static_1280 = 0;
+	var Static_1281 = 0;
+	var Static_1282 = 0;
+	var Static_1283 = 6;
+	var Static_1284 = 0;
+	var Static_1285 = 0;
+	var Static_1286 = 0;
+	var Static_1287 = 6;
+	var Static_1288 = 0;
+	var Static_1289 = 0;
+	var Static_1290 = 0;
+	var Static_1291 = 0;
+	var Static_1292 = 0;
+	var Static_1293 = 0;
+	var Static_1294 = 0;
+	var Static_1295 = 0;
+	var Static_1296 = 0;
+	var Static_1297 = 0;
+	var Static_1298 = 0;
+	var Static_1299 = 0;
+	var Static_1300 = 6;
+	var Static_1301 = 0;
+	var Static_1302 = 0;
+	var Static_1303 = 0;
+	var Static_1304 = 6;
+	var Static_1305 = 0;
+	var Static_1306 = 0;
+	var Static_1307 = 0;
+	var Static_1308 = 0;
+	var Static_1309 = 0;
+	var Static_1310 = 0;
+	var Static_1311 = 0;
+	var Static_1312 = 2;
+	var Static_1313 = 0;
+	var Static_1314 = 0;
+	var Static_1315 = 0;
+	var Static_1316 = 0;
+	var Static_1317 = 0;
+	var Static_1318 = 0;
+	var Static_1319 = 0;
+	var Static_1320 = 0;
+	var Static_1321 = 0;
+	var Static_1322 = 0;
+	var Static_1323 = 0;
+	var Static_1324 = 0;
+	var Static_1325 = 0;
+	var Static_1326 = 0;
+	var Static_1327 = 0;
+	var Static_1328 = 0;
+	var Static_1329 = 0;
+	var Static_1330 = 0;
+	var Static_1331 = 0;
+	var Static_1332 = 0;
+	var Static_1333 = 0;
+	var Static_1334 = 0;
+	var Static_1335 = 9;
+	var Static_1336 = 0;
+	var Static_1337 = 0;
+	var Static_1338 = 0;
+	var Static_1339 = 0;
+	var Static_1340 = 0;
+	var Static_1341 = 0;
+	var Static_1342 = 6;
+	var Static_1343 = 0;
+	var Static_1344 = 0;
+	var Static_1345 = 0;
+	var Static_1346 = 6;
+	var Static_1347 = 0;
+	var Static_1348 = 0;
+	var Static_1349 = 0;
+	var Static_1350 = 0;
+	var Static_1351 = 0;
+	var Static_1352 = 0;
+	var Static_1353 = 0;
+	var Static_1354 = 0;
+	var Static_1355 = 0;
+	var Static_1356 = 0;
+	var Static_1357 = 0;
+	var Static_1358 = 0;
+	var Static_1359 = 6;
+	var Static_1360 = 0;
+	var Static_1361 = 0;
+	var Static_1362 = 0;
+	var Static_1363 = 6;
+	var Static_1364 = 0;
+	var Static_1365 = 0;
+	var Static_1366 = 0;
+	var Static_1367 = 0;
+	var Static_1368 = 0;
+	var Static_1369 = 0;
+	var Static_1370 = 0;
+	var Static_1371 = 0;
+	var Static_1372 = 0;
+	var Static_1373 = 0;
+	var Static_1374 = 0;
+	var Static_1375 = 0;
+	var Static_1376 = 6;
+	var Static_1377 = 0;
+	var Static_1378 = 0;
+	var Static_1379 = 0;
+	var Static_1380 = 6;
+	var Static_1381 = 0;
+	var Static_1382 = 0;
+	var Static_1383 = 0;
+	var Static_1384 = 0;
+	var Static_1385 = 0;
+	var Static_1386 = 0;
+	var Static_1387 = 0;
+	var Static_1388 = 0;
+	var Static_1389 = 0;
+	var Static_1390 = 0;
+	var Static_1391 = 0;
+	var Static_1392 = 0;
+	var Static_1393 = 6;
+	var Static_1394 = 0;
+	var Static_1395 = 0;
+	var Static_1396 = 0;
+	var Static_1397 = 6;
+	var Static_1398 = 0;
+	var Static_1399 = 0;
+	var Static_1400 = 0;
+	var Static_1401 = 0;
+	var Static_1402 = 0;
+	var Static_1403 = 0;
+	var Static_1404 = 0;
+	var Static_1405 = 0;
+	var Static_1406 = 0;
+	var Static_1407 = 0;
+	var Static_1408 = 0;
+	var Static_1409 = 0;
+	var Static_1410 = 6;
+	var Static_1411 = 0;
+	var Static_1412 = 0;
+	var Static_1413 = 0;
+	var Static_1414 = 6;
+	var Static_1415 = 0;
+	var Static_1416 = 0;
+	var Static_1417 = 0;
+	var Static_1418 = 0;
+	var Static_1419 = 0;
+	var Static_1420 = 0;
+	var Static_1421 = 0;
+	var Static_1422 = 0;
+	var Static_1423 = 0;
+	var Static_1424 = 0;
+	var Static_1425 = 0;
+	var Static_1426 = 0;
+	var Static_1427 = 6;
+	var Static_1428 = 0;
+	var Static_1429 = 0;
+	var Static_1430 = 0;
+	var Static_1431 = 6;
+	var Static_1432 = 0;
+	var Static_1433 = 0;
+	var Static_1434 = 0;
+	var Static_1435 = 0;
+	var Static_1436 = 0;
+	var Static_1437 = 0;
+	var Static_1438 = 0;
+	var Static_1439 = 0;
+	var Static_1440 = 0;
+	var Static_1441 = 0;
+	var Static_1442 = 0;
+	var Static_1443 = 0;
+	var Static_1444 = 6;
+	var Static_1445 = 0;
+	var Static_1446 = 0;
+	var Static_1447 = 0;
+	var Static_1448 = 6;
+	var Static_1449 = 0;
+	var Static_1450 = 0;
+	var Static_1451 = 0;
+	var Static_1452 = 0;
+	var Static_1453 = 0;
+	var Static_1454 = 0;
+	var Static_1455 = 0;
+	var Static_1456 = 0;
+	var Static_1457 = 0;
+	var Static_1458 = 0;
+	var Static_1459 = 0;
+	var Static_1460 = 0;
+	var Static_1461 = 6;
+	var Static_1462 = 0;
+	var Static_1463 = 0;
+	var Static_1464 = 0;
+	var Static_1465 = 6;
+	var Static_1466 = 0;
+	var Static_1467 = 0;
+	var Static_1468 = 0;
+	var Static_1469 = 0;
+	var Static_1470 = 0;
+	var Static_1471 = 0;
+	var Static_1472 = 0;
+	var Static_1473 = 0;
+	var Static_1474 = 0;
+	var Static_1475 = 0;
+	var Static_1476 = 0;
+	var Static_1477 = 0;
+	var Static_1478 = 6;
+	var Static_1479 = 0;
+	var Static_1480 = 0;
+	var Static_1481 = 0;
+	var Static_1482 = 6;
+	var Static_1483 = 0;
+	var Static_1484 = 0;
+	var Static_1485 = 0;
+	var Static_1486 = 0;
+	var Static_1487 = 0;
+	var Static_1488 = 0;
+	var Static_1489 = 0;
+	var Static_1490 = 2;
+	var Static_1491 = 0;
+	var Static_1492 = 0;
+	var Static_1493 = 0;
+	var Static_1494 = 0;
+	var Static_1495 = 0;
+	var Static_1496 = 0;
+	var Static_1497 = 0;
+	var Static_1498 = 0;
+	var Static_1499 = 0;
+	var Static_1500 = 0;
+	var Static_1501 = 0;
+	var Static_1502 = 0;
+	var Static_1503 = 0;
+	var Static_1504 = 0;
+	var Static_1505 = 0;
+	var Static_1506 = 0;
+	var Static_1507 = 0;
+	var Static_1508 = 0;
+	var Static_1509 = 0;
+	var Static_1510 = 0;
+	var Static_1511 = 0;
+	var Static_1512 = 0;
+	var Static_1513 = 9;
+	var Static_1514 = 0;
+	var Static_1515 = 0;
+	var Static_1516 = 0;
+	var Static_1517 = 0;
+	var Static_1518 = 0;
+	var Static_1519 = 0;
+	var Static_1520 = 6;
+	var Static_1521 = 0;
+	var Static_1522 = 0;
+	var Static_1523 = 0;
+	var Static_1524 = 6;
+	var Static_1525 = 0;
+	var Static_1526 = 0;
+	var Static_1527 = 0;
+	var Static_1528 = 0;
+	var Static_1529 = 0;
+	var Static_1530 = 0;
+	var Static_1531 = 0;
+	var Static_1532 = 0;
+	var Static_1533 = 0;
+	var Static_1534 = 0;
+	var Static_1535 = 0;
+	var Static_1536 = 0;
+	var Static_1537 = 6;
+	var Static_1538 = 0;
+	var Static_1539 = 0;
+	var Static_1540 = 0;
+	var Static_1541 = 6;
+	var Static_1542 = 0;
+	var Static_1543 = 0;
+	var Static_1544 = 0;
+	var Static_1545 = 0;
+	var Static_1546 = 0;
+	var Static_1547 = 0;
+	var Static_1548 = 0;
+	var Static_1549 = 0;
+	var Static_1550 = 0;
+	var Static_1551 = 0;
+	var Static_1552 = 0;
+	var Static_1553 = 0;
+	var Static_1554 = 6;
+	var Static_1555 = 0;
+	var Static_1556 = 0;
+	var Static_1557 = 0;
+	var Static_1558 = 6;
+	var Static_1559 = 0;
+	var Static_1560 = 0;
+	var Static_1561 = 0;
+	var Static_1562 = 0;
+	var Static_1563 = 0;
+	var Static_1564 = 0;
+	var Static_1565 = 0;
+	var Static_1566 = 0;
+	var Static_1567 = 0;
+	var Static_1568 = 0;
+	var Static_1569 = 0;
+	var Static_1570 = 0;
+	var Static_1571 = 6;
+	var Static_1572 = 0;
+	var Static_1573 = 0;
+	var Static_1574 = 0;
+	var Static_1575 = 6;
+	var Static_1576 = 0;
+	var Static_1577 = 0;
+	var Static_1578 = 0;
+	var Static_1579 = 0;
+	var Static_1580 = 0;
+	var Static_1581 = 0;
+	var Static_1582 = 0;
+	var Static_1583 = 0;
+	var Static_1584 = 0;
+	var Static_1585 = 0;
+	var Static_1586 = 0;
+	var Static_1587 = 0;
+	var Static_1588 = 6;
+	var Static_1589 = 0;
+	var Static_1590 = 0;
+	var Static_1591 = 0;
+	var Static_1592 = 6;
+	var Static_1593 = 0;
+	var Static_1594 = 0;
+	var Static_1595 = 0;
+	var Static_1596 = 0;
+	var Static_1597 = 0;
+	var Static_1598 = 0;
+	var Static_1599 = 0;
+	var Static_1600 = 0;
+	var Static_1601 = 0;
+	var Static_1602 = 0;
+	var Static_1603 = 0;
+	var Static_1604 = 0;
+	var Static_1605 = 6;
+	var Static_1606 = 0;
+	var Static_1607 = 0;
+	var Static_1608 = 0;
+	var Static_1609 = 6;
+	var Static_1610 = 0;
+	var Static_1611 = 0;
+	var Static_1612 = 0;
+	var Static_1613 = 0;
+	var Static_1614 = 0;
+	var Static_1615 = 0;
+	var Static_1616 = 0;
+	var Static_1617 = 0;
+	var Static_1618 = 0;
+	var Static_1619 = 0;
+	var Static_1620 = 0;
+	var Static_1621 = 0;
+	var Static_1622 = 6;
+	var Static_1623 = 0;
+	var Static_1624 = 0;
+	var Static_1625 = 0;
+	var Static_1626 = 6;
+	var Static_1627 = 0;
+	var Static_1628 = 0;
+	var Static_1629 = 0;
+	var Static_1630 = 0;
+	var Static_1631 = 0;
+	var Static_1632 = 0;
+	var Static_1633 = 0;
+	var Static_1634 = 0;
+	var Static_1635 = 0;
+	var Static_1636 = 0;
+	var Static_1637 = 0;
+	var Static_1638 = 0;
+	var Static_1639 = 6;
+	var Static_1640 = 0;
+	var Static_1641 = 0;
+	var Static_1642 = 0;
+	var Static_1643 = 6;
+	var Static_1644 = 0;
+	var Static_1645 = 0;
+	var Static_1646 = 0;
+	var Static_1647 = 0;
+	var Static_1648 = 0;
+	var Static_1649 = 0;
+	var Static_1650 = 0;
+	var Static_1651 = 0;
+	var Static_1652 = 0;
+	var Static_1653 = 0;
+	var Static_1654 = 0;
+	var Static_1655 = 0;
+	var Static_1656 = 6;
+	var Static_1657 = 0;
+	var Static_1658 = 0;
+	var Static_1659 = 0;
+	var Static_1660 = 6;
+	var Static_1661 = 0;
+	var Static_1662 = 0;
+	var Static_1663 = 0;
+	var Static_1664 = 0;
+	var Static_1665 = 0;
+	var Static_1666 = 0;
+	var Static_1667 = 0;
+	var Static_1668 = 2;
+	var Static_1669 = 0;
+	var Static_1670 = 0;
+	var Static_1671 = 0;
+	var Static_1672 = 0;
+	var Static_1673 = 0;
+	var Static_1674 = 0;
+	var Static_1675 = 0;
+	var Static_1676 = 0;
+	var Static_1677 = 0;
+	var Static_1678 = 0;
+	var Static_1679 = 0;
+	var Static_1680 = 0;
+	var Static_1681 = 0;
+	var Static_1682 = 0;
+	var Static_1683 = 0;
+	var Static_1684 = 0;
+	var Static_1685 = 0;
+	var Static_1686 = 0;
+	var Static_1687 = 0;
+	var Static_1688 = 0;
+	var Static_1689 = 0;
+	var Static_1690 = 0;
+	var Static_1691 = 9;
+	var Static_1692 = 0;
+	var Static_1693 = 0;
+	var Static_1694 = 0;
+	var Static_1695 = 0;
+	var Static_1696 = 0;
+	var Static_1697 = 0;
+	var Static_1698 = 6;
+	var Static_1699 = 0;
+	var Static_1700 = 0;
+	var Static_1701 = 0;
+	var Static_1702 = 6;
+	var Static_1703 = 0;
+	var Static_1704 = 0;
+	var Static_1705 = 0;
+	var Static_1706 = 0;
+	var Static_1707 = 0;
+	var Static_1708 = 0;
+	var Static_1709 = 0;
+	var Static_1710 = 0;
+	var Static_1711 = 0;
+	var Static_1712 = 0;
+	var Static_1713 = 0;
+	var Static_1714 = 0;
+	var Static_1715 = 6;
+	var Static_1716 = 0;
+	var Static_1717 = 0;
+	var Static_1718 = 0;
+	var Static_1719 = 6;
+	var Static_1720 = 0;
+	var Static_1721 = 0;
+	var Static_1722 = 0;
+	var Static_1723 = 0;
+	var Static_1724 = 0;
+	var Static_1725 = 0;
+	var Static_1726 = 0;
+	var Static_1727 = 0;
+	var Static_1728 = 0;
+	var Static_1729 = 0;
+	var Static_1730 = 0;
+	var Static_1731 = 0;
+	var Static_1732 = 6;
+	var Static_1733 = 0;
+	var Static_1734 = 0;
+	var Static_1735 = 0;
+	var Static_1736 = 6;
+	var Static_1737 = 0;
+	var Static_1738 = 0;
+	var Static_1739 = 0;
+	var Static_1740 = 0;
+	var Static_1741 = 0;
+	var Static_1742 = 0;
+	var Static_1743 = 0;
+	var Static_1744 = 0;
+	var Static_1745 = 0;
+	var Static_1746 = 0;
+	var Static_1747 = 0;
+	var Static_1748 = 0;
+	var Static_1749 = 6;
+	var Static_1750 = 0;
+	var Static_1751 = 0;
+	var Static_1752 = 0;
+	var Static_1753 = 6;
+	var Static_1754 = 0;
+	var Static_1755 = 0;
+	var Static_1756 = 0;
+	var Static_1757 = 0;
+	var Static_1758 = 0;
+	var Static_1759 = 0;
+	var Static_1760 = 0;
+	var Static_1761 = 0;
+	var Static_1762 = 0;
+	var Static_1763 = 0;
+	var Static_1764 = 0;
+	var Static_1765 = 0;
+	var Static_1766 = 6;
+	var Static_1767 = 0;
+	var Static_1768 = 0;
+	var Static_1769 = 0;
+	var Static_1770 = 6;
+	var Static_1771 = 0;
+	var Static_1772 = 0;
+	var Static_1773 = 0;
+	var Static_1774 = 0;
+	var Static_1775 = 0;
+	var Static_1776 = 0;
+	var Static_1777 = 0;
+	var Static_1778 = 0;
+	var Static_1779 = 0;
+	var Static_1780 = 0;
+	var Static_1781 = 0;
+	var Static_1782 = 0;
+	var Static_1783 = 6;
+	var Static_1784 = 0;
+	var Static_1785 = 0;
+	var Static_1786 = 0;
+	var Static_1787 = 6;
+	var Static_1788 = 0;
+	var Static_1789 = 0;
+	var Static_1790 = 0;
+	var Static_1791 = 0;
+	var Static_1792 = 0;
+	var Static_1793 = 0;
+	var Static_1794 = 0;
+	var Static_1795 = 0;
+	var Static_1796 = 0;
+	var Static_1797 = 0;
+	var Static_1798 = 0;
+	var Static_1799 = 0;
+	var Static_1800 = 6;
+	var Static_1801 = 0;
+	var Static_1802 = 0;
+	var Static_1803 = 0;
+	var Static_1804 = 6;
+	var Static_1805 = 0;
+	var Static_1806 = 0;
+	var Static_1807 = 0;
+	var Static_1808 = 0;
+	var Static_1809 = 0;
+	var Static_1810 = 0;
+	var Static_1811 = 0;
+	var Static_1812 = 0;
+	var Static_1813 = 0;
+	var Static_1814 = 0;
+	var Static_1815 = 0;
+	var Static_1816 = 0;
+	var Static_1817 = 6;
+	var Static_1818 = 0;
+	var Static_1819 = 0;
+	var Static_1820 = 0;
+	var Static_1821 = 6;
+	var Static_1822 = 0;
+	var Static_1823 = 0;
+	var Static_1824 = 0;
+	var Static_1825 = 0;
+	var Static_1826 = 0;
+	var Static_1827 = 0;
+	var Static_1828 = 0;
+	var Static_1829 = 0;
+	var Static_1830 = 0;
+	var Static_1831 = 0;
+	var Static_1832 = 0;
+	var Static_1833 = 0;
+	var Static_1834 = 6;
+	var Static_1835 = 0;
+	var Static_1836 = 0;
+	var Static_1837 = 0;
+	var Static_1838 = 6;
+	var Static_1839 = 0;
+	var Static_1840 = 0;
+	var Static_1841 = 0;
+	var Static_1842 = 0;
+	var Static_1843 = 0;
+	var Static_1844 = 0;
+	var Static_1845 = 0;
+	var Static_1846 = 2;
+	var Static_1847 = 0;
+	var Static_1848 = 0;
+	var Static_1849 = 0;
+	var Static_1850 = 0;
+	var Static_1851 = 0;
+	var Static_1852 = 0;
+	var Static_1853 = 0;
+	var Static_1854 = 0;
+	var Static_1855 = 0;
+	var Static_1856 = 0;
+	var Static_1857 = 0;
+	var Static_1858 = 0;
+	var Static_1859 = 0;
+	var Static_1860 = 0;
+	var Static_1861 = 0;
+	var Static_1862 = 0;
+	var Static_1863 = 0;
+	var Static_1864 = 0;
+	var Static_1865 = 0;
+	var Static_1866 = 0;
+	var Static_1867 = 0;
+	var Static_1868 = 0;
+	var Static_1869 = 9;
+	var Static_1870 = 0;
+	var Static_1871 = 0;
+	var Static_1872 = 0;
+	var Static_1873 = 0;
+	var Static_1874 = 0;
+	var Static_1875 = 0;
+	var Static_1876 = 6;
+	var Static_1877 = 0;
+	var Static_1878 = 0;
+	var Static_1879 = 0;
+	var Static_1880 = 6;
+	var Static_1881 = 0;
+	var Static_1882 = 0;
+	var Static_1883 = 0;
+	var Static_1884 = 0;
+	var Static_1885 = 0;
+	var Static_1886 = 0;
+	var Static_1887 = 0;
+	var Static_1888 = 0;
+	var Static_1889 = 0;
+	var Static_1890 = 0;
+	var Static_1891 = 0;
+	var Static_1892 = 0;
+	var Static_1893 = 6;
+	var Static_1894 = 0;
+	var Static_1895 = 0;
+	var Static_1896 = 0;
+	var Static_1897 = 6;
+	var Static_1898 = 0;
+	var Static_1899 = 0;
+	var Static_1900 = 0;
+	var Static_1901 = 0;
+	var Static_1902 = 0;
+	var Static_1903 = 0;
+	var Static_1904 = 0;
+	var Static_1905 = 0;
+	var Static_1906 = 0;
+	var Static_1907 = 0;
+	var Static_1908 = 0;
+	var Static_1909 = 0;
+	var Static_1910 = 6;
+	var Static_1911 = 0;
+	var Static_1912 = 0;
+	var Static_1913 = 0;
+	var Static_1914 = 6;
+	var Static_1915 = 0;
+	var Static_1916 = 0;
+	var Static_1917 = 0;
+	var Static_1918 = 0;
+	var Static_1919 = 0;
+	var Static_1920 = 0;
+	var Static_1921 = 0;
+	var Static_1922 = 0;
+	var Static_1923 = 0;
+	var Static_1924 = 0;
+	var Static_1925 = 0;
+	var Static_1926 = 0;
+	var Static_1927 = 6;
+	var Static_1928 = 0;
+	var Static_1929 = 0;
+	var Static_1930 = 0;
+	var Static_1931 = 6;
+	var Static_1932 = 0;
+	var Static_1933 = 0;
+	var Static_1934 = 0;
+	var Static_1935 = 0;
+	var Static_1936 = 0;
+	var Static_1937 = 0;
+	var Static_1938 = 0;
+	var Static_1939 = 0;
+	var Static_1940 = 0;
+	var Static_1941 = 0;
+	var Static_1942 = 0;
+	var Static_1943 = 0;
+	var Static_1944 = 6;
+	var Static_1945 = 0;
+	var Static_1946 = 0;
+	var Static_1947 = 0;
+	var Static_1948 = 6;
+	var Static_1949 = 0;
+	var Static_1950 = 0;
+	var Static_1951 = 0;
+	var Static_1952 = 0;
+	var Static_1953 = 0;
+	var Static_1954 = 0;
+	var Static_1955 = 0;
+	var Static_1956 = 0;
+	var Static_1957 = 0;
+	var Static_1958 = 0;
+	var Static_1959 = 0;
+	var Static_1960 = 0;
+	var Static_1961 = 6;
+	var Static_1962 = 0;
+	var Static_1963 = 0;
+	var Static_1964 = 0;
+	var Static_1965 = 6;
+	var Static_1966 = 0;
+	var Static_1967 = 0;
+	var Static_1968 = 0;
+	var Static_1969 = 0;
+	var Static_1970 = 0;
+	var Static_1971 = 0;
+	var Static_1972 = 0;
+	var Static_1973 = 0;
+	var Static_1974 = 0;
+	var Static_1975 = 0;
+	var Static_1976 = 0;
+	var Static_1977 = 0;
+	var Static_1978 = 6;
+	var Static_1979 = 0;
+	var Static_1980 = 0;
+	var Static_1981 = 0;
+	var Static_1982 = 6;
+	var Static_1983 = 0;
+	var Static_1984 = 0;
+	var Static_1985 = 0;
+	var Static_1986 = 0;
+	var Static_1987 = 0;
+	var Static_1988 = 0;
+	var Static_1989 = 0;
+	var Static_1990 = 0;
+	var Static_1991 = 0;
+	var Static_1992 = 0;
+	var Static_1993 = 0;
+	var Static_1994 = 0;
+	var Static_1995 = 6;
+	var Static_1996 = 0;
+	var Static_1997 = 0;
+	var Static_1998 = 0;
+	var Static_1999 = 6;
+	var Static_2000 = 0;
+	var Static_2001 = 0;
+	var Static_2002 = 0;
+	var Static_2003 = 0;
+	var Static_2004 = 0;
+	var Static_2005 = 0;
+	var Static_2006 = 0;
+	var Static_2007 = 0;
+	var Static_2008 = 0;
+	var Static_2009 = 0;
+	var Static_2010 = 0;
+	var Static_2011 = 0;
+	var Static_2012 = 6;
+	var Static_2013 = 0;
+	var Static_2014 = 0;
+	var Static_2015 = 0;
+	var Static_2016 = 6;
+	var Static_2017 = 0;
+	var Static_2018 = 0;
+	var Static_2019 = 0;
+	var Static_2020 = 0;
+	var Static_2021 = 0;
+	var Static_2022 = 0;
+	var Static_2023 = 0;
+	var Static_2024 = 2;
+	var Static_2025 = 0;
+	var Static_2026 = 0;
+	var Static_2027 = 0;
+	var Static_2028 = 0;
+	var Static_2029 = 0;
+	var Static_2030 = 0;
+	var Static_2031 = 0;
+	var Static_2032 = 0;
+	var Static_2033 = 0;
+	var Static_2034 = 0;
+	var Static_2035 = 0;
+	var Static_2036 = 0;
+	var Static_2037 = 0;
+	var Static_2038 = 0;
+	var Static_2039 = 0;
+	var Static_2040 = 0;
+	var Static_2041 = 0;
+	var Static_2042 = 0;
+	var Static_2043 = 0;
+	var Static_2044 = 0;
+	var Static_2045 = 0;
+	var Static_2046 = 0;
+	var Static_2047 = 9;
+	var Static_2048 = 0;
+	var Static_2049 = 0;
+	var Static_2050 = 0;
+	var Static_2051 = 0;
+	var Static_2052 = 0;
+	var Static_2053 = 0;
+	var Static_2054 = 6;
+	var Static_2055 = 0;
+	var Static_2056 = 0;
+	var Static_2057 = 0;
+	var Static_2058 = 6;
+	var Static_2059 = 0;
+	var Static_2060 = 0;
+	var Static_2061 = 0;
+	var Static_2062 = 0;
+	var Static_2063 = 0;
+	var Static_2064 = 0;
+	var Static_2065 = 0;
+	var Static_2066 = 0;
+	var Static_2067 = 0;
+	var Static_2068 = 0;
+	var Static_2069 = 0;
+	var Static_2070 = 0;
+	var Static_2071 = 6;
+	var Static_2072 = 0;
+	var Static_2073 = 0;
+	var Static_2074 = 0;
+	var Static_2075 = 6;
+	var Static_2076 = 0;
+	var Static_2077 = 0;
+	var Static_2078 = 0;
+	var Static_2079 = 0;
+	var Static_2080 = 0;
+	var Static_2081 = 0;
+	var Static_2082 = 0;
+	var Static_2083 = 0;
+	var Static_2084 = 0;
+	var Static_2085 = 0;
+	var Static_2086 = 0;
+	var Static_2087 = 0;
+	var Static_2088 = 6;
+	var Static_2089 = 0;
+	var Static_2090 = 0;
+	var Static_2091 = 0;
+	var Static_2092 = 6;
+	var Static_2093 = 0;
+	var Static_2094 = 0;
+	var Static_2095 = 0;
+	var Static_2096 = 0;
+	var Static_2097 = 0;
+	var Static_2098 = 0;
+	var Static_2099 = 0;
+	var Static_2100 = 0;
+	var Static_2101 = 0;
+	var Static_2102 = 0;
+	var Static_2103 = 0;
+	var Static_2104 = 0;
+	var Static_2105 = 6;
+	var Static_2106 = 0;
+	var Static_2107 = 0;
+	var Static_2108 = 0;
+	var Static_2109 = 6;
+	var Static_2110 = 0;
+	var Static_2111 = 0;
+	var Static_2112 = 0;
+	var Static_2113 = 0;
+	var Static_2114 = 0;
+	var Static_2115 = 0;
+	var Static_2116 = 0;
+	var Static_2117 = 0;
+	var Static_2118 = 0;
+	var Static_2119 = 0;
+	var Static_2120 = 0;
+	var Static_2121 = 0;
+	var Static_2122 = 6;
+	var Static_2123 = 0;
+	var Static_2124 = 0;
+	var Static_2125 = 0;
+	var Static_2126 = 6;
+	var Static_2127 = 0;
+	var Static_2128 = 0;
+	var Static_2129 = 0;
+	var Static_2130 = 0;
+	var Static_2131 = 0;
+	var Static_2132 = 0;
+	var Static_2133 = 0;
+	var Static_2134 = 0;
+	var Static_2135 = 0;
+	var Static_2136 = 0;
+	var Static_2137 = 0;
+	var Static_2138 = 0;
+	var Static_2139 = 6;
+	var Static_2140 = 0;
+	var Static_2141 = 0;
+	var Static_2142 = 0;
+	var Static_2143 = 6;
+	var Static_2144 = 0;
+	var Static_2145 = 0;
+	var Static_2146 = 0;
+	var Static_2147 = 0;
+	var Static_2148 = 0;
+	var Static_2149 = 0;
+	var Static_2150 = 0;
+	var Static_2151 = 0;
+	var Static_2152 = 0;
+	var Static_2153 = 0;
+	var Static_2154 = 0;
+	var Static_2155 = 0;
+	var Static_2156 = 6;
+	var Static_2157 = 0;
+	var Static_2158 = 0;
+	var Static_2159 = 0;
+	var Static_2160 = 6;
+	var Static_2161 = 0;
+	var Static_2162 = 0;
+	var Static_2163 = 0;
+	var Static_2164 = 0;
+	var Static_2165 = 0;
+	var Static_2166 = 0;
+	var Static_2167 = 0;
+	var Static_2168 = 0;
+	var Static_2169 = 0;
+	var Static_2170 = 0;
+	var Static_2171 = 0;
+	var Static_2172 = 0;
+	var Static_2173 = 6;
+	var Static_2174 = 0;
+	var Static_2175 = 0;
+	var Static_2176 = 0;
+	var Static_2177 = 6;
+	var Static_2178 = 0;
+	var Static_2179 = 0;
+	var Static_2180 = 0;
+	var Static_2181 = 0;
+	var Static_2182 = 0;
+	var Static_2183 = 0;
+	var Static_2184 = 0;
+	var Static_2185 = 0;
+	var Static_2186 = 0;
+	var Static_2187 = 0;
+	var Static_2188 = 0;
+	var Static_2189 = 0;
+	var Static_2190 = 6;
+	var Static_2191 = 0;
+	var Static_2192 = 0;
+	var Static_2193 = 0;
+	var Static_2194 = 6;
+	var Static_2195 = 0;
+	var Static_2196 = 0;
+	var Static_2197 = 0;
+	var Static_2198 = 0;
+	var Static_2199 = 0;
+	var Static_2200 = 0;
+	var Static_2201 = 0;
+	var Static_2202 = 2;
+	var Static_2203 = 0;
+	var Static_2204 = 0;
+	var Static_2205 = 0;
+	var Static_2206 = 0;
+	var Static_2207 = 0;
+	var Static_2208 = 0;
+	var Static_2209 = 0;
+	var Static_2210 = 0;
+	var Static_2211 = 0;
+	var Static_2212 = 0;
+	var Static_2213 = 0;
+	var Static_2214 = 0;
+	var Static_2215 = 0;
+	var Static_2216 = 0;
+	var Static_2217 = 0;
+	var Static_2218 = 0;
+	var Static_2219 = 0;
+	var Static_2220 = 0;
+	var Static_2221 = 0;
+	var Static_2222 = 0;
+	var Static_2223 = 0;
+	var Static_2224 = 0;
+	var Static_2225 = 9;
+	var Static_2226 = 0;
+	var Static_2227 = 0;
+	var Static_2228 = 0;
+	var Static_2229 = 0;
+	var Static_2230 = 0;
+	var Static_2231 = 0;
+	var Static_2232 = 6;
+	var Static_2233 = 0;
+	var Static_2234 = 0;
+	var Static_2235 = 0;
+	var Static_2236 = 6;
+	var Static_2237 = 0;
+	var Static_2238 = 0;
+	var Static_2239 = 0;
+	var Static_2240 = 0;
+	var Static_2241 = 0;
+	var Static_2242 = 0;
+	var Static_2243 = 0;
+	var Static_2244 = 0;
+	var Static_2245 = 0;
+	var Static_2246 = 0;
+	var Static_2247 = 0;
+	var Static_2248 = 0;
+	var Static_2249 = 6;
+	var Static_2250 = 0;
+	var Static_2251 = 0;
+	var Static_2252 = 0;
+	var Static_2253 = 6;
+	var Static_2254 = 0;
+	var Static_2255 = 0;
+	var Static_2256 = 0;
+	var Static_2257 = 0;
+	var Static_2258 = 0;
+	var Static_2259 = 0;
+	var Static_2260 = 0;
+	var Static_2261 = 0;
+	var Static_2262 = 0;
+	var Static_2263 = 0;
+	var Static_2264 = 0;
+	var Static_2265 = 0;
+	var Static_2266 = 6;
+	var Static_2267 = 0;
+	var Static_2268 = 0;
+	var Static_2269 = 0;
+	var Static_2270 = 6;
+	var Static_2271 = 0;
+	var Static_2272 = 0;
+	var Static_2273 = 0;
+	var Static_2274 = 0;
+	var Static_2275 = 0;
+	var Static_2276 = 0;
+	var Static_2277 = 0;
+	var Static_2278 = 0;
+	var Static_2279 = 0;
+	var Static_2280 = 0;
+	var Static_2281 = 0;
+	var Static_2282 = 0;
+	var Static_2283 = 6;
+	var Static_2284 = 0;
+	var Static_2285 = 0;
+	var Static_2286 = 0;
+	var Static_2287 = 6;
+	var Static_2288 = 0;
+	var Static_2289 = 0;
+	var Static_2290 = 0;
+	var Static_2291 = 0;
+	var Static_2292 = 0;
+	var Static_2293 = 0;
+	var Static_2294 = 0;
+	var Static_2295 = 0;
+	var Static_2296 = 0;
+	var Static_2297 = 0;
+	var Static_2298 = 0;
+	var Static_2299 = 0;
+	var Static_2300 = 6;
+	var Static_2301 = 0;
+	var Static_2302 = 0;
+	var Static_2303 = 0;
+	var Static_2304 = 6;
+	var Static_2305 = 0;
+	var Static_2306 = 0;
+	var Static_2307 = 0;
+	var Static_2308 = 0;
+	var Static_2309 = 0;
+	var Static_2310 = 0;
+	var Static_2311 = 0;
+	var Static_2312 = 0;
+	var Static_2313 = 0;
+	var Static_2314 = 0;
+	var Static_2315 = 0;
+	var Static_2316 = 0;
+	var Static_2317 = 6;
+	var Static_2318 = 0;
+	var Static_2319 = 0;
+	var Static_2320 = 0;
+	var Static_2321 = 6;
+	var Static_2322 = 0;
+	var Static_2323 = 0;
+	var Static_2324 = 0;
+	var Static_2325 = 0;
+	var Static_2326 = 0;
+	var Static_2327 = 0;
+	var Static_2328 = 0;
+	var Static_2329 = 0;
+	var Static_2330 = 0;
+	var Static_2331 = 0;
+	var Static_2332 = 0;
+	var Static_2333 = 0;
+	var Static_2334 = 6;
+	var Static_2335 = 0;
+	var Static_2336 = 0;
+	var Static_2337 = 0;
+	var Static_2338 = 6;
+	var Static_2339 = 0;
+	var Static_2340 = 0;
+	var Static_2341 = 0;
+	var Static_2342 = 0;
+	var Static_2343 = 0;
+	var Static_2344 = 0;
+	var Static_2345 = 0;
+	var Static_2346 = 0;
+	var Static_2347 = 0;
+	var Static_2348 = 0;
+	var Static_2349 = 0;
+	var Static_2350 = 0;
+	var Static_2351 = 6;
+	var Static_2352 = 0;
+	var Static_2353 = 0;
+	var Static_2354 = 0;
+	var Static_2355 = 6;
+	var Static_2356 = 0;
+	var Static_2357 = 0;
+	var Static_2358 = 0;
+	var Static_2359 = 0;
+	var Static_2360 = 0;
+	var Static_2361 = 0;
+	var Static_2362 = 0;
+	var Static_2363 = 0;
+	var Static_2364 = 0;
+	var Static_2365 = 0;
+	var Static_2366 = 0;
+	var Static_2367 = 0;
+	var Static_2368 = 6;
+	var Static_2369 = 0;
+	var Static_2370 = 0;
+	var Static_2371 = 0;
+	var Static_2372 = 6;
+	var Static_2373 = 0;
+	var Static_2374 = 0;
+	var Static_2375 = 0;
+	var Static_2376 = 0;
+	var Static_2377 = 0;
+	var Static_2378 = 0;
+	var Static_2379 = 0;
+	var Static_2380 = 2;
+	var Static_2381 = 0;
+	var Static_2382 = 0;
+	var Static_2383 = 0;
+	var Static_2384 = 0;
+	var Static_2385 = 0;
+	var Static_2386 = 0;
+	var Static_2387 = 0;
+	var Static_2388 = 0;
+	var Static_2389 = 0;
+	var Static_2390 = 0;
+	var Static_2391 = 0;
+	var Static_2392 = 0;
+	var Static_2393 = 0;
+	var Static_2394 = 0;
+	var Static_2395 = 0;
+	var Static_2396 = 0;
+	var Static_2397 = 0;
+	var Static_2398 = 0;
+	var Static_2399 = 0;
+	var Static_2400 = 0;
+	var Static_2401 = 0;
+	var Static_2402 = 0;
+	var Static_2403 = 9;
+	var Static_2404 = 0;
+	var Static_2405 = 0;
+	var Static_2406 = 0;
+	var Static_2407 = 0;
+	var Static_2408 = 0;
+	var Static_2409 = 0;
+	var Static_2410 = 6;
+	var Static_2411 = 0;
+	var Static_2412 = 0;
+	var Static_2413 = 0;
+	var Static_2414 = 6;
+	var Static_2415 = 0;
+	var Static_2416 = 0;
+	var Static_2417 = 0;
+	var Static_2418 = 0;
+	var Static_2419 = 0;
+	var Static_2420 = 0;
+	var Static_2421 = 0;
+	var Static_2422 = 0;
+	var Static_2423 = 0;
+	var Static_2424 = 0;
+	var Static_2425 = 0;
+	var Static_2426 = 0;
+	var Static_2427 = 6;
+	var Static_2428 = 0;
+	var Static_2429 = 0;
+	var Static_2430 = 0;
+	var Static_2431 = 6;
+	var Static_2432 = 0;
+	var Static_2433 = 0;
+	var Static_2434 = 0;
+	var Static_2435 = 0;
+	var Static_2436 = 0;
+	var Static_2437 = 0;
+	var Static_2438 = 0;
+	var Static_2439 = 0;
+	var Static_2440 = 0;
+	var Static_2441 = 0;
+	var Static_2442 = 0;
+	var Static_2443 = 0;
+	var Static_2444 = 6;
+	var Static_2445 = 0;
+	var Static_2446 = 0;
+	var Static_2447 = 0;
+	var Static_2448 = 6;
+	var Static_2449 = 0;
+	var Static_2450 = 0;
+	var Static_2451 = 0;
+	var Static_2452 = 0;
+	var Static_2453 = 0;
+	var Static_2454 = 0;
+	var Static_2455 = 0;
+	var Static_2456 = 0;
+	var Static_2457 = 0;
+	var Static_2458 = 0;
+	var Static_2459 = 0;
+	var Static_2460 = 0;
+	var Static_2461 = 6;
+	var Static_2462 = 0;
+	var Static_2463 = 0;
+	var Static_2464 = 0;
+	var Static_2465 = 6;
+	var Static_2466 = 0;
+	var Static_2467 = 0;
+	var Static_2468 = 0;
+	var Static_2469 = 0;
+	var Static_2470 = 0;
+	var Static_2471 = 0;
+	var Static_2472 = 0;
+	var Static_2473 = 0;
+	var Static_2474 = 0;
+	var Static_2475 = 0;
+	var Static_2476 = 0;
+	var Static_2477 = 0;
+	var Static_2478 = 6;
+	var Static_2479 = 0;
+	var Static_2480 = 0;
+	var Static_2481 = 0;
+	var Static_2482 = 6;
+	var Static_2483 = 0;
+	var Static_2484 = 0;
+	var Static_2485 = 0;
+	var Static_2486 = 0;
+	var Static_2487 = 0;
+	var Static_2488 = 0;
+	var Static_2489 = 0;
+	var Static_2490 = 0;
+	var Static_2491 = 0;
+	var Static_2492 = 0;
+	var Static_2493 = 0;
+	var Static_2494 = 0;
+	var Static_2495 = 6;
+	var Static_2496 = 0;
+	var Static_2497 = 0;
+	var Static_2498 = 0;
+	var Static_2499 = 6;
+	var Static_2500 = 0;
+	var Static_2501 = 0;
+	var Static_2502 = 0;
+	var Static_2503 = 0;
+	var Static_2504 = 0;
+	var Static_2505 = 0;
+	var Static_2506 = 0;
+	var Static_2507 = 0;
+	var Static_2508 = 0;
+	var Static_2509 = 0;
+	var Static_2510 = 0;
+	var Static_2511 = 0;
+	var Static_2512 = 6;
+	var Static_2513 = 0;
+	var Static_2514 = 0;
+	var Static_2515 = 0;
+	var Static_2516 = 6;
+	var Static_2517 = 0;
+	var Static_2518 = 0;
+	var Static_2519 = 0;
+	var Static_2520 = 0;
+	var Static_2521 = 0;
+	var Static_2522 = 0;
+	var Static_2523 = 0;
+	var Static_2524 = 0;
+	var Static_2525 = 0;
+	var Static_2526 = 0;
+	var Static_2527 = 0;
+	var Static_2528 = 0;
+	var Static_2529 = 6;
+	var Static_2530 = 0;
+	var Static_2531 = 0;
+	var Static_2532 = 0;
+	var Static_2533 = 6;
+	var Static_2534 = 0;
+	var Static_2535 = 0;
+	var Static_2536 = 0;
+	var Static_2537 = 0;
+	var Static_2538 = 0;
+	var Static_2539 = 0;
+	var Static_2540 = 0;
+	var Static_2541 = 0;
+	var Static_2542 = 0;
+	var Static_2543 = 0;
+	var Static_2544 = 0;
+	var Static_2545 = 0;
+	var Static_2546 = 6;
+	var Static_2547 = 0;
+	var Static_2548 = 0;
+	var Static_2549 = 0;
+	var Static_2550 = 6;
+	var Static_2551 = 0;
+	var Static_2552 = 0;
+	var Static_2553 = 0;
+	var Static_2554 = 0;
+	var Static_2555 = 0;
+	var Static_2556 = 0;
+	var Static_2557 = 0;
+	var Static_2558 = 2;
+	var Static_2559 = 0;
+	var Static_2560 = 0;
+	var Static_2561 = 0;
+	var Static_2562 = 0;
+	var Static_2563 = 0;
+	var Static_2564 = 0;
+	var Static_2565 = 0;
+	var Static_2566 = 0;
+	var Static_2567 = 0;
+	var Static_2568 = 0;
+	var Static_2569 = 0;
+	var Static_2570 = 0;
+	var Static_2571 = 0;
+	var Static_2572 = 0;
+	var Static_2573 = 0;
+	var Static_2574 = 0;
+	var Static_2575 = 0;
+	var Static_2576 = 0;
+	var Static_2577 = 0;
+	var Static_2578 = 0;
+	var Static_2579 = 0;
+	var Static_2580 = 0;
+	var Static_2581 = 9;
+	var Static_2582 = 0;
+	var Static_2583 = 0;
+	var Static_2584 = 0;
+	var Static_2585 = 0;
+	var Static_2586 = 0;
+	var Static_2587 = 0;
+	var Static_2588 = 6;
+	var Static_2589 = 0;
+	var Static_2590 = 0;
+	var Static_2591 = 0;
+	var Static_2592 = 6;
+	var Static_2593 = 0;
+	var Static_2594 = 0;
+	var Static_2595 = 0;
+	var Static_2596 = 0;
+	var Static_2597 = 0;
+	var Static_2598 = 0;
+	var Static_2599 = 0;
+	var Static_2600 = 0;
+	var Static_2601 = 0;
+	var Static_2602 = 0;
+	var Static_2603 = 0;
+	var Static_2604 = 0;
+	var Static_2605 = 6;
+	var Static_2606 = 0;
+	var Static_2607 = 0;
+	var Static_2608 = 0;
+	var Static_2609 = 6;
+	var Static_2610 = 0;
+	var Static_2611 = 0;
+	var Static_2612 = 0;
+	var Static_2613 = 0;
+	var Static_2614 = 0;
+	var Static_2615 = 0;
+	var Static_2616 = 0;
+	var Static_2617 = 0;
+	var Static_2618 = 0;
+	var Static_2619 = 0;
+	var Static_2620 = 0;
+	var Static_2621 = 0;
+	var Static_2622 = 6;
+	var Static_2623 = 0;
+	var Static_2624 = 0;
+	var Static_2625 = 0;
+	var Static_2626 = 6;
+	var Static_2627 = 0;
+	var Static_2628 = 0;
+	var Static_2629 = 0;
+	var Static_2630 = 0;
+	var Static_2631 = 0;
+	var Static_2632 = 0;
+	var Static_2633 = 0;
+	var Static_2634 = 0;
+	var Static_2635 = 0;
+	var Static_2636 = 0;
+	var Static_2637 = 0;
+	var Static_2638 = 0;
+	var Static_2639 = 6;
+	var Static_2640 = 0;
+	var Static_2641 = 0;
+	var Static_2642 = 0;
+	var Static_2643 = 6;
+	var Static_2644 = 0;
+	var Static_2645 = 0;
+	var Static_2646 = 0;
+	var Static_2647 = 0;
+	var Static_2648 = 0;
+	var Static_2649 = 0;
+	var Static_2650 = 0;
+	var Static_2651 = 0;
+	var Static_2652 = 0;
+	var Static_2653 = 0;
+	var Static_2654 = 0;
+	var Static_2655 = 0;
+	var Static_2656 = 6;
+	var Static_2657 = 0;
+	var Static_2658 = 0;
+	var Static_2659 = 0;
+	var Static_2660 = 6;
+	var Static_2661 = 0;
+	var Static_2662 = 0;
+	var Static_2663 = 0;
+	var Static_2664 = 0;
+	var Static_2665 = 0;
+	var Static_2666 = 0;
+	var Static_2667 = 0;
+	var Static_2668 = 0;
+	var Static_2669 = 0;
+	var Static_2670 = 0;
+	var Static_2671 = 0;
+	var Static_2672 = 0;
+	var Static_2673 = 6;
+	var Static_2674 = 0;
+	var Static_2675 = 0;
+	var Static_2676 = 0;
+	var Static_2677 = 6;
+	var Static_2678 = 0;
+	var Static_2679 = 0;
+	var Static_2680 = 0;
+	var Static_2681 = 0;
+	var Static_2682 = 0;
+	var Static_2683 = 0;
+	var Static_2684 = 0;
+	var Static_2685 = 0;
+	var Static_2686 = 0;
+	var Static_2687 = 0;
+	var Static_2688 = 0;
+	var Static_2689 = 0;
+	var Static_2690 = 6;
+	var Static_2691 = 0;
+	var Static_2692 = 0;
+	var Static_2693 = 0;
+	var Static_2694 = 6;
+	var Static_2695 = 0;
+	var Static_2696 = 0;
+	var Static_2697 = 0;
+	var Static_2698 = 0;
+	var Static_2699 = 0;
+	var Static_2700 = 0;
+	var Static_2701 = 0;
+	var Static_2702 = 0;
+	var Static_2703 = 0;
+	var Static_2704 = 0;
+	var Static_2705 = 0;
+	var Static_2706 = 0;
+	var Static_2707 = 6;
+	var Static_2708 = 0;
+	var Static_2709 = 0;
+	var Static_2710 = 0;
+	var Static_2711 = 6;
+	var Static_2712 = 0;
+	var Static_2713 = 0;
+	var Static_2714 = 0;
+	var Static_2715 = 0;
+	var Static_2716 = 0;
+	var Static_2717 = 0;
+	var Static_2718 = 0;
+	var Static_2719 = 0;
+	var Static_2720 = 0;
+	var Static_2721 = 0;
+	var Static_2722 = 0;
+	var Static_2723 = 0;
+	var Static_2724 = 6;
+	var Static_2725 = 0;
+	var Static_2726 = 0;
+	var Static_2727 = 0;
+	var Static_2728 = 6;
+	var Static_2729 = 0;
+	var Static_2730 = 0;
+	var Static_2731 = 0;
+	var Static_2732 = 0;
+	var Static_2733 = 0;
+	var Static_2734 = 0;
+	var Static_2735 = 0;
+	var Static_2736 = 2;
+	var Static_2737 = 0;
+	var Static_2738 = 0;
+	var Static_2739 = 0;
+	var Static_2740 = 0;
+	var Static_2741 = 0;
+	var Static_2742 = 0;
+	var Static_2743 = 0;
+	var Static_2744 = 0;
+	var Static_2745 = 0;
+	var Static_2746 = 0;
+	var Static_2747 = 0;
+	var Static_2748 = 0;
+	var Static_2749 = 0;
+	var Static_2750 = 0;
+	var Static_2751 = 0;
+	var Static_2752 = 0;
+	var Static_2753 = 0;
+	var Static_2754 = 0;
+	var Static_2755 = 0;
+	var Static_2756 = 0;
+	var Static_2757 = 0;
+	var Static_2758 = 0;
+	var Static_2759 = 9;
+	var Static_2760 = 0;
+	var Static_2761 = 0;
+	var Static_2762 = 0;
+	var Static_2763 = 0;
+	var Static_2764 = 0;
+	var Static_2765 = 0;
+	var Static_2766 = 6;
+	var Static_2767 = 0;
+	var Static_2768 = 0;
+	var Static_2769 = 0;
+	var Static_2770 = 6;
+	var Static_2771 = 0;
+	var Static_2772 = 0;
+	var Static_2773 = 0;
+	var Static_2774 = 0;
+	var Static_2775 = 0;
+	var Static_2776 = 0;
+	var Static_2777 = 0;
+	var Static_2778 = 0;
+	var Static_2779 = 0;
+	var Static_2780 = 0;
+	var Static_2781 = 0;
+	var Static_2782 = 0;
+	var Static_2783 = 6;
+	var Static_2784 = 0;
+	var Static_2785 = 0;
+	var Static_2786 = 0;
+	var Static_2787 = 6;
+	var Static_2788 = 0;
+	var Static_2789 = 0;
+	var Static_2790 = 0;
+	var Static_2791 = 0;
+	var Static_2792 = 0;
+	var Static_2793 = 0;
+	var Static_2794 = 0;
+	var Static_2795 = 0;
+	var Static_2796 = 0;
+	var Static_2797 = 0;
+	var Static_2798 = 0;
+	var Static_2799 = 0;
+	var Static_2800 = 6;
+	var Static_2801 = 0;
+	var Static_2802 = 0;
+	var Static_2803 = 0;
+	var Static_2804 = 6;
+	var Static_2805 = 0;
+	var Static_2806 = 0;
+	var Static_2807 = 0;
+	var Static_2808 = 0;
+	var Static_2809 = 0;
+	var Static_2810 = 0;
+	var Static_2811 = 0;
+	var Static_2812 = 0;
+	var Static_2813 = 0;
+	var Static_2814 = 0;
+	var Static_2815 = 0;
+	var Static_2816 = 0;
+	var Static_2817 = 6;
+	var Static_2818 = 0;
+	var Static_2819 = 0;
+	var Static_2820 = 0;
+	var Static_2821 = 6;
+	var Static_2822 = 0;
+	var Static_2823 = 0;
+	var Static_2824 = 0;
+	var Static_2825 = 0;
+	var Static_2826 = 0;
+	var Static_2827 = 0;
+	var Static_2828 = 0;
+	var Static_2829 = 0;
+	var Static_2830 = 0;
+	var Static_2831 = 0;
+	var Static_2832 = 0;
+	var Static_2833 = 0;
+	var Static_2834 = 6;
+	var Static_2835 = 0;
+	var Static_2836 = 0;
+	var Static_2837 = 0;
+	var Static_2838 = 6;
+	var Static_2839 = 0;
+	var Static_2840 = 0;
+	var Static_2841 = 0;
+	var Static_2842 = 0;
+	var Static_2843 = 0;
+	var Static_2844 = 0;
+	var Static_2845 = 0;
+	var Static_2846 = 0;
+	var Static_2847 = 0;
+	var Static_2848 = 0;
+	var Static_2849 = 0;
+	var Static_2850 = 0;
+	var Static_2851 = 6;
+	var Static_2852 = 0;
+	var Static_2853 = 0;
+	var Static_2854 = 0;
+	var Static_2855 = 6;
+	var Static_2856 = 0;
+	var Static_2857 = 0;
+	var Static_2858 = 0;
+	var Static_2859 = 0;
+	var Static_2860 = 0;
+	var Static_2861 = 0;
+	var Static_2862 = 0;
+	var Static_2863 = 0;
+	var Static_2864 = 0;
+	var Static_2865 = 0;
+	var Static_2866 = 0;
+	var Static_2867 = 0;
+	var Static_2868 = 6;
+	var Static_2869 = 0;
+	var Static_2870 = 0;
+	var Static_2871 = 0;
+	var Static_2872 = 6;
+	var Static_2873 = 0;
+	var Static_2874 = 0;
+	var Static_2875 = 0;
+	var Static_2876 = 0;
+	var Static_2877 = 0;
+	var Static_2878 = 0;
+	var Static_2879 = 0;
+	var Static_2880 = 0;
+	var Static_2881 = 0;
+	var Static_2882 = 0;
+	var Static_2883 = 0;
+	var Static_2884 = 0;
+	var Static_2885 = 6;
+	var Static_2886 = 0;
+	var Static_2887 = 0;
+	var Static_2888 = 0;
+	var Static_2889 = 6;
+	var Static_2890 = 0;
+	var Static_2891 = 0;
+	var Static_2892 = 0;
+	var Static_2893 = 0;
+	var Static_2894 = 0;
+	var Static_2895 = 0;
+	var Static_2896 = 0;
+	var Static_2897 = 0;
+	var Static_2898 = 0;
+	var Static_2899 = 0;
+	var Static_2900 = 0;
+	var Static_2901 = 0;
+	var Static_2902 = 6;
+	var Static_2903 = 0;
+	var Static_2904 = 0;
+	var Static_2905 = 0;
+	var Static_2906 = 6;
+	var Static_2907 = 0;
+	var Static_2908 = 0;
+	var Static_2909 = 0;
+	var Static_2910 = 0;
+	var Static_2911 = 0;
+	var Static_2912 = 0;
+	var Static_2913 = 0;
+	var Static_2914 = 2;
+	var Static_2915 = 0;
+	var Static_2916 = 0;
+	var Static_2917 = 0;
+	var Static_2918 = 0;
+	var Static_2919 = 0;
+	var Static_2920 = 0;
+	var Static_2921 = 0;
+	var Static_2922 = 0;
+	var Static_2923 = 0;
+	var Static_2924 = 0;
+	var Static_2925 = 0;
+	var Static_2926 = 0;
+	var Static_2927 = 0;
+	var Static_2928 = 0;
+	var Static_2929 = 0;
+	var Static_2930 = 0;
+	var Static_2931 = 0;
+	var Static_2932 = 0;
+	var Static_2933 = 0;
+	var Static_2934 = 0;
+	var Static_2935 = 0;
+	var Static_2936 = 0;
+	var Static_2937 = 9;
+	var Static_2938 = 0;
+	var Static_2939 = 0;
+	var Static_2940 = 0;
+	var Static_2941 = 0;
+	var Static_2942 = 0;
+	var Static_2943 = 0;
+	var Static_2944 = 6;
+	var Static_2945 = 0;
+	var Static_2946 = 0;
+	var Static_2947 = 0;
+	var Static_2948 = 6;
+	var Static_2949 = 0;
+	var Static_2950 = 0;
+	var Static_2951 = 0;
+	var Static_2952 = 0;
+	var Static_2953 = 0;
+	var Static_2954 = 0;
+	var Static_2955 = 0;
+	var Static_2956 = 0;
+	var Static_2957 = 0;
+	var Static_2958 = 0;
+	var Static_2959 = 0;
+	var Static_2960 = 0;
+	var Static_2961 = 6;
+	var Static_2962 = 0;
+	var Static_2963 = 0;
+	var Static_2964 = 0;
+	var Static_2965 = 6;
+	var Static_2966 = 0;
+	var Static_2967 = 0;
+	var Static_2968 = 0;
+	var Static_2969 = 0;
+	var Static_2970 = 0;
+	var Static_2971 = 0;
+	var Static_2972 = 0;
+	var Static_2973 = 0;
+	var Static_2974 = 0;
+	var Static_2975 = 0;
+	var Static_2976 = 0;
+	var Static_2977 = 0;
+	var Static_2978 = 6;
+	var Static_2979 = 0;
+	var Static_2980 = 0;
+	var Static_2981 = 0;
+	var Static_2982 = 6;
+	var Static_2983 = 0;
+	var Static_2984 = 0;
+	var Static_2985 = 0;
+	var Static_2986 = 0;
+	var Static_2987 = 0;
+	var Static_2988 = 0;
+	var Static_2989 = 0;
+	var Static_2990 = 0;
+	var Static_2991 = 0;
+	var Static_2992 = 0;
+	var Static_2993 = 0;
+	var Static_2994 = 0;
+	var Static_2995 = 6;
+	var Static_2996 = 0;
+	var Static_2997 = 0;
+	var Static_2998 = 0;
+	var Static_2999 = 6;
+	var Static_3000 = 0;
+	var Static_3001 = 0;
+	var Static_3002 = 0;
+	var Static_3003 = 0;
+	var Static_3004 = 0;
+	var Static_3005 = 0;
+	var Static_3006 = 0;
+	var Static_3007 = 0;
+	var Static_3008 = 0;
+	var Static_3009 = 0;
+	var Static_3010 = 0;
+	var Static_3011 = 0;
+	var Static_3012 = 6;
+	var Static_3013 = 0;
+	var Static_3014 = 0;
+	var Static_3015 = 0;
+	var Static_3016 = 6;
+	var Static_3017 = 0;
+	var Static_3018 = 0;
+	var Static_3019 = 0;
+	var Static_3020 = 0;
+	var Static_3021 = 0;
+	var Static_3022 = 0;
+	var Static_3023 = 0;
+	var Static_3024 = 0;
+	var Static_3025 = 0;
+	var Static_3026 = 0;
+	var Static_3027 = 0;
+	var Static_3028 = 0;
+	var Static_3029 = 6;
+	var Static_3030 = 0;
+	var Static_3031 = 0;
+	var Static_3032 = 0;
+	var Static_3033 = 6;
+	var Static_3034 = 0;
+	var Static_3035 = 0;
+	var Static_3036 = 0;
+	var Static_3037 = 0;
+	var Static_3038 = 0;
+	var Static_3039 = 0;
+	var Static_3040 = 0;
+	var Static_3041 = 0;
+	var Static_3042 = 0;
+	var Static_3043 = 0;
+	var Static_3044 = 0;
+	var Static_3045 = 0;
+	var Static_3046 = 6;
+	var Static_3047 = 0;
+	var Static_3048 = 0;
+	var Static_3049 = 0;
+	var Static_3050 = 6;
+	var Static_3051 = 0;
+	var Static_3052 = 0;
+	var Static_3053 = 0;
+	var Static_3054 = 0;
+	var Static_3055 = 0;
+	var Static_3056 = 0;
+	var Static_3057 = 0;
+	var Static_3058 = 0;
+	var Static_3059 = 0;
+	var Static_3060 = 0;
+	var Static_3061 = 0;
+	var Static_3062 = 0;
+	var Static_3063 = 6;
+	var Static_3064 = 0;
+	var Static_3065 = 0;
+	var Static_3066 = 0;
+	var Static_3067 = 6;
+	var Static_3068 = 0;
+	var Static_3069 = 0;
+	var Static_3070 = 0;
+	var Static_3071 = 0;
+	var Static_3072 = 0;
+	var Static_3073 = 0;
+	var Static_3074 = 0;
+	var Static_3075 = 0;
+	var Static_3076 = 0;
+	var Static_3077 = 0;
+	var Static_3078 = 0;
+	var Static_3079 = 0;
+	var Static_3080 = 6;
+	var Static_3081 = 0;
+	var Static_3082 = 0;
+	var Static_3083 = 0;
+	var Static_3084 = 6;
+	var Static_3085 = 0;
+	var Static_3086 = 0;
+	var Static_3087 = 0;
+	var Static_3088 = 0;
+	var Static_3089 = 0;
+	var Static_3090 = 0;
+	var Static_3091 = 0;
+	var Static_3092 = 2;
+	var Static_3093 = 0;
+	var Static_3094 = 0;
+	var Static_3095 = 0;
+	var Static_3096 = 0;
+	var Static_3097 = 0;
+	var Static_3098 = 0;
+	var Static_3099 = 0;
+	var Static_3100 = 0;
+	var Static_3101 = 0;
+	var Static_3102 = 0;
+	var Static_3103 = 0;
+	var Static_3104 = 0;
+	var Static_3105 = 0;
+	var Static_3106 = 0;
+	var Static_3107 = 0;
+	var Static_3108 = 0;
+	var Static_3109 = 0;
+	var Static_3110 = 0;
+	var Static_3111 = 0;
+	var Static_3112 = 0;
+	var Static_3113 = 0;
+	var Static_3114 = 0;
+	var Static_3115 = 9;
+	var Static_3116 = 0;
+	var Static_3117 = 0;
+	var Static_3118 = 0;
+	var Static_3119 = 0;
+	var Static_3120 = 0;
+	var Static_3121 = 0;
+	var Static_3122 = 6;
+	var Static_3123 = 0;
+	var Static_3124 = 0;
+	var Static_3125 = 0;
+	var Static_3126 = 6;
+	var Static_3127 = 0;
+	var Static_3128 = 0;
+	var Static_3129 = 0;
+	var Static_3130 = 0;
+	var Static_3131 = 0;
+	var Static_3132 = 0;
+	var Static_3133 = 0;
+	var Static_3134 = 0;
+	var Static_3135 = 0;
+	var Static_3136 = 0;
+	var Static_3137 = 0;
+	var Static_3138 = 0;
+	var Static_3139 = 6;
+	var Static_3140 = 0;
+	var Static_3141 = 0;
+	var Static_3142 = 0;
+	var Static_3143 = 6;
+	var Static_3144 = 0;
+	var Static_3145 = 0;
+	var Static_3146 = 0;
+	var Static_3147 = 0;
+	var Static_3148 = 0;
+	var Static_3149 = 0;
+	var Static_3150 = 0;
+	var Static_3151 = 0;
+	var Static_3152 = 0;
+	var Static_3153 = 0;
+	var Static_3154 = 0;
+	var Static_3155 = 0;
+	var Static_3156 = 6;
+	var Static_3157 = 0;
+	var Static_3158 = 0;
+	var Static_3159 = 0;
+	var Static_3160 = 6;
+	var Static_3161 = 0;
+	var Static_3162 = 0;
+	var Static_3163 = 0;
+	var Static_3164 = 0;
+	var Static_3165 = 0;
+	var Static_3166 = 0;
+	var Static_3167 = 0;
+	var Static_3168 = 0;
+	var Static_3169 = 0;
+	var Static_3170 = 0;
+	var Static_3171 = 0;
+	var Static_3172 = 0;
+	var Static_3173 = 6;
+	var Static_3174 = 0;
+	var Static_3175 = 0;
+	var Static_3176 = 0;
+	var Static_3177 = 6;
+	var Static_3178 = 0;
+	var Static_3179 = 0;
+	var Static_3180 = 0;
+	var Static_3181 = 0;
+	var Static_3182 = 0;
+	var Static_3183 = 0;
+	var Static_3184 = 0;
+	var Static_3185 = 0;
+	var Static_3186 = 0;
+	var Static_3187 = 0;
+	var Static_3188 = 0;
+	var Static_3189 = 0;
+	var Static_3190 = 6;
+	var Static_3191 = 0;
+	var Static_3192 = 0;
+	var Static_3193 = 0;
+	var Static_3194 = 6;
+	var Static_3195 = 0;
+	var Static_3196 = 0;
+	var Static_3197 = 0;
+	var Static_3198 = 0;
+	var Static_3199 = 0;
+	var Static_3200 = 0;
+	var Static_3201 = 0;
+	var Static_3202 = 0;
+	var Static_3203 = 0;
+	var Static_3204 = 0;
+	var Static_3205 = 0;
+	var Static_3206 = 0;
+	var Static_3207 = 6;
+	var Static_3208 = 0;
+	var Static_3209 = 0;
+	var Static_3210 = 0;
+	var Static_3211 = 6;
+	var Static_3212 = 0;
+	var Static_3213 = 0;
+	var Static_3214 = 0;
+	var Static_3215 = 0;
+	var Static_3216 = 0;
+	var Static_3217 = 0;
+	var Static_3218 = 0;
+	var Static_3219 = 0;
+	var Static_3220 = 0;
+	var Static_3221 = 0;
+	var Static_3222 = 0;
+	var Static_3223 = 0;
+	var Static_3224 = 6;
+	var Static_3225 = 0;
+	var Static_3226 = 0;
+	var Static_3227 = 0;
+	var Static_3228 = 6;
+	var Static_3229 = 0;
+	var Static_3230 = 0;
+	var Static_3231 = 0;
+	var Static_3232 = 0;
+	var Static_3233 = 0;
+	var Static_3234 = 0;
+	var Static_3235 = 0;
+	var Static_3236 = 0;
+	var Static_3237 = 0;
+	var Static_3238 = 0;
+	var Static_3239 = 0;
+	var Static_3240 = 0;
+	var Static_3241 = 6;
+	var Static_3242 = 0;
+	var Static_3243 = 0;
+	var Static_3244 = 0;
+	var Static_3245 = 6;
+	var Static_3246 = 0;
+	var Static_3247 = 0;
+	var Static_3248 = 0;
+	var Static_3249 = 0;
+	var Static_3250 = 0;
+	var Static_3251 = 0;
+	var Static_3252 = 0;
+	var Static_3253 = 0;
+	var Static_3254 = 0;
+	var Static_3255 = 0;
+	var Static_3256 = 0;
+	var Static_3257 = 0;
+	var Static_3258 = 6;
+	var Static_3259 = 0;
+	var Static_3260 = 0;
+	var Static_3261 = 0;
+	var Static_3262 = 6;
+	var Static_3263 = 0;
+	var Static_3264 = 0;
+	var Static_3265 = 0;
+	var Static_3266 = 0;
+	var Static_3267 = 0;
+	var Static_3268 = 0;
+	var Static_3269 = 0;
+	var Static_3270 = 2;
+	var Static_3271 = 0;
+	var Static_3272 = 0;
+	var Static_3273 = 0;
+	var Static_3274 = 0;
+	var Static_3275 = 0;
+	var Static_3276 = 0;
+	var Static_3277 = 0;
+	var Static_3278 = 0;
+	var Static_3279 = 0;
+	var Static_3280 = 0;
+	var Static_3281 = 0;
+	var Static_3282 = 0;
+	var Static_3283 = 0;
+	var Static_3284 = 0;
+	var Static_3285 = 0;
+	var Static_3286 = 0;
+	var Static_3287 = 0;
+	var Static_3288 = 0;
+	var Static_3289 = 0;
+	var Static_3290 = 0;
+	var Static_3291 = 0;
+	var Static_3292 = 0;
+	var Static_3293 = 9;
+	var Static_3294 = 0;
+	var Static_3295 = 0;
+	var Static_3296 = 0;
+	var Static_3297 = 0;
+	var Static_3298 = 0;
+	var Static_3299 = 0;
+	var Static_3300 = 6;
+	var Static_3301 = 0;
+	var Static_3302 = 0;
+	var Static_3303 = 0;
+	var Static_3304 = 6;
+	var Static_3305 = 0;
+	var Static_3306 = 0;
+	var Static_3307 = 0;
+	var Static_3308 = 0;
+	var Static_3309 = 0;
+	var Static_3310 = 0;
+	var Static_3311 = 0;
+	var Static_3312 = 0;
+	var Static_3313 = 0;
+	var Static_3314 = 0;
+	var Static_3315 = 0;
+	var Static_3316 = 0;
+	var Static_3317 = 6;
+	var Static_3318 = 0;
+	var Static_3319 = 0;
+	var Static_3320 = 0;
+	var Static_3321 = 6;
+	var Static_3322 = 0;
+	var Static_3323 = 0;
+	var Static_3324 = 0;
+	var Static_3325 = 0;
+	var Static_3326 = 0;
+	var Static_3327 = 0;
+	var Static_3328 = 0;
+	var Static_3329 = 0;
+	var Static_3330 = 0;
+	var Static_3331 = 0;
+	var Static_3332 = 0;
+	var Static_3333 = 0;
+	var Static_3334 = 6;
+	var Static_3335 = 0;
+	var Static_3336 = 0;
+	var Static_3337 = 0;
+	var Static_3338 = 6;
+	var Static_3339 = 0;
+	var Static_3340 = 0;
+	var Static_3341 = 0;
+	var Static_3342 = 0;
+	var Static_3343 = 0;
+	var Static_3344 = 0;
+	var Static_3345 = 0;
+	var Static_3346 = 0;
+	var Static_3347 = 0;
+	var Static_3348 = 0;
+	var Static_3349 = 0;
+	var Static_3350 = 0;
+	var Static_3351 = 6;
+	var Static_3352 = 0;
+	var Static_3353 = 0;
+	var Static_3354 = 0;
+	var Static_3355 = 6;
+	var Static_3356 = 0;
+	var Static_3357 = 0;
+	var Static_3358 = 0;
+	var Static_3359 = 0;
+	var Static_3360 = 0;
+	var Static_3361 = 0;
+	var Static_3362 = 0;
+	var Static_3363 = 0;
+	var Static_3364 = 0;
+	var Static_3365 = 0;
+	var Static_3366 = 0;
+	var Static_3367 = 0;
+	var Static_3368 = 6;
+	var Static_3369 = 0;
+	var Static_3370 = 0;
+	var Static_3371 = 0;
+	var Static_3372 = 6;
+	var Static_3373 = 0;
+	var Static_3374 = 0;
+	var Static_3375 = 0;
+	var Static_3376 = 0;
+	var Static_3377 = 0;
+	var Static_3378 = 0;
+	var Static_3379 = 0;
+	var Static_3380 = 0;
+	var Static_3381 = 0;
+	var Static_3382 = 0;
+	var Static_3383 = 0;
+	var Static_3384 = 0;
+	var Static_3385 = 6;
+	var Static_3386 = 0;
+	var Static_3387 = 0;
+	var Static_3388 = 0;
+	var Static_3389 = 6;
+	var Static_3390 = 0;
+	var Static_3391 = 0;
+	var Static_3392 = 0;
+	var Static_3393 = 0;
+	var Static_3394 = 0;
+	var Static_3395 = 0;
+	var Static_3396 = 0;
+	var Static_3397 = 0;
+	var Static_3398 = 0;
+	var Static_3399 = 0;
+	var Static_3400 = 0;
+	var Static_3401 = 0;
+	var Static_3402 = 6;
+	var Static_3403 = 0;
+	var Static_3404 = 0;
+	var Static_3405 = 0;
+	var Static_3406 = 6;
+	var Static_3407 = 0;
+	var Static_3408 = 0;
+	var Static_3409 = 0;
+	var Static_3410 = 0;
+	var Static_3411 = 0;
+	var Static_3412 = 0;
+	var Static_3413 = 0;
+	var Static_3414 = 0;
+	var Static_3415 = 0;
+	var Static_3416 = 0;
+	var Static_3417 = 0;
+	var Static_3418 = 0;
+	var Static_3419 = 6;
+	var Static_3420 = 0;
+	var Static_3421 = 0;
+	var Static_3422 = 0;
+	var Static_3423 = 6;
+	var Static_3424 = 0;
+	var Static_3425 = 0;
+	var Static_3426 = 0;
+	var Static_3427 = 0;
+	var Static_3428 = 0;
+	var Static_3429 = 0;
+	var Static_3430 = 0;
+	var Static_3431 = 0;
+	var Static_3432 = 0;
+	var Static_3433 = 0;
+	var Static_3434 = 0;
+	var Static_3435 = 0;
+	var Static_3436 = 6;
+	var Static_3437 = 0;
+	var Static_3438 = 0;
+	var Static_3439 = 0;
+	var Static_3440 = 6;
+	var Static_3441 = 0;
+	var Static_3442 = 0;
+	var Static_3443 = 0;
+	var Static_3444 = 0;
+	var Static_3445 = 0;
+	var Static_3446 = 0;
+	var Static_3447 = 0;
+	var Static_3448 = 2;
+	var Static_3449 = 0;
+	var Static_3450 = 0;
+	var Static_3451 = 0;
+	var Static_3452 = 0;
+	var Static_3453 = 0;
+	var Static_3454 = 0;
+	var Static_3455 = 0;
+	var Static_3456 = 0;
+	var Static_3457 = 0;
+	var Static_3458 = 0;
+	var Static_3459 = 0;
+	var Static_3460 = 0;
+	var Static_3461 = 0;
+	var Static_3462 = 0;
+	var Static_3463 = 0;
+	var Static_3464 = 0;
+	var Static_3465 = 0;
+	var Static_3466 = 0;
+	var Static_3467 = 0;
+	var Static_3468 = 0;
+	var Static_3469 = 0;
+	var Static_3470 = 0;
+	var Static_3471 = 9;
+	var Static_3472 = 0;
+	var Static_3473 = 0;
+	var Static_3474 = 0;
+	var Static_3475 = 0;
+	var Static_3476 = 0;
+	var Static_3477 = 0;
+	var Static_3478 = 6;
+	var Static_3479 = 0;
+	var Static_3480 = 0;
+	var Static_3481 = 0;
+	var Static_3482 = 6;
+	var Static_3483 = 0;
+	var Static_3484 = 0;
+	var Static_3485 = 0;
+	var Static_3486 = 0;
+	var Static_3487 = 0;
+	var Static_3488 = 0;
+	var Static_3489 = 0;
+	var Static_3490 = 0;
+	var Static_3491 = 0;
+	var Static_3492 = 0;
+	var Static_3493 = 0;
+	var Static_3494 = 0;
+	var Static_3495 = 6;
+	var Static_3496 = 0;
+	var Static_3497 = 0;
+	var Static_3498 = 0;
+	var Static_3499 = 6;
+	var Static_3500 = 0;
+	var Static_3501 = 0;
+	var Static_3502 = 0;
+	var Static_3503 = 0;
+	var Static_3504 = 0;
+	var Static_3505 = 0;
+	var Static_3506 = 0;
+	var Static_3507 = 0;
+	var Static_3508 = 0;
+	var Static_3509 = 0;
+	var Static_3510 = 0;
+	var Static_3511 = 0;
+	var Static_3512 = 6;
+	var Static_3513 = 0;
+	var Static_3514 = 0;
+	var Static_3515 = 0;
+	var Static_3516 = 6;
+	var Static_3517 = 0;
+	var Static_3518 = 0;
+	var Static_3519 = 0;
+	var Static_3520 = 0;
+	var Static_3521 = 0;
+	var Static_3522 = 0;
+	var Static_3523 = 0;
+	var Static_3524 = 0;
+	var Static_3525 = 0;
+	var Static_3526 = 0;
+	var Static_3527 = 0;
+	var Static_3528 = 0;
+	var Static_3529 = 6;
+	var Static_3530 = 0;
+	var Static_3531 = 0;
+	var Static_3532 = 0;
+	var Static_3533 = 6;
+	var Static_3534 = 0;
+	var Static_3535 = 0;
+	var Static_3536 = 0;
+	var Static_3537 = 0;
+	var Static_3538 = 0;
+	var Static_3539 = 0;
+	var Static_3540 = 0;
+	var Static_3541 = 0;
+	var Static_3542 = 0;
+	var Static_3543 = 0;
+	var Static_3544 = 0;
+	var Static_3545 = 0;
+	var Static_3546 = 6;
+	var Static_3547 = 0;
+	var Static_3548 = 0;
+	var Static_3549 = 0;
+	var Static_3550 = 6;
+	var Static_3551 = 0;
+	var Static_3552 = 0;
+	var Static_3553 = 0;
+	var Static_3554 = 0;
+	var Static_3555 = 0;
+	var Static_3556 = 0;
+	var Static_3557 = 0;
+	var Static_3558 = 0;
+	var Static_3559 = 0;
+	var Static_3560 = 0;
+	var Static_3561 = 0;
+	var Static_3562 = 0;
+	var Static_3563 = 6;
+	var Static_3564 = 0;
+	var Static_3565 = 0;
+	var Static_3566 = 0;
+	var Static_3567 = 6;
+	var Static_3568 = 0;
+	var Static_3569 = 0;
+	var Static_3570 = 0;
+	var Static_3571 = 0;
+	var Static_3572 = 0;
+	var Static_3573 = 0;
+	var Static_3574 = 0;
+	var Static_3575 = 0;
+	var Static_3576 = 0;
+	var Static_3577 = 0;
+	var Static_3578 = 0;
+	var Static_3579 = 0;
+	var Static_3580 = 6;
+	var Static_3581 = 0;
+	var Static_3582 = 0;
+	var Static_3583 = 0;
+	var Static_3584 = 6;
+	var Static_3585 = 0;
+	var Static_3586 = 0;
+	var Static_3587 = 0;
+	var Static_3588 = 0;
+	var Static_3589 = 0;
+	var Static_3590 = 0;
+	var Static_3591 = 0;
+	var Static_3592 = 0;
+	var Static_3593 = 0;
+	var Static_3594 = 0;
+	var Static_3595 = 0;
+	var Static_3596 = 0;
+	var Static_3597 = 6;
+	var Static_3598 = 0;
+	var Static_3599 = 0;
+	var Static_3600 = 0;
+	var Static_3601 = 6;
+	var Static_3602 = 0;
+	var Static_3603 = 0;
+	var Static_3604 = 0;
+	var Static_3605 = 0;
+	var Static_3606 = 0;
+	var Static_3607 = 0;
+	var Static_3608 = 0;
+	var Static_3609 = 0;
+	var Static_3610 = 0;
+	var Static_3611 = 0;
+	var Static_3612 = 0;
+	var Static_3613 = 0;
+	var Static_3614 = 6;
+	var Static_3615 = 0;
+	var Static_3616 = 0;
+	var Static_3617 = 0;
+	var Static_3618 = 6;
+	var Static_3619 = 0;
+	var Static_3620 = 0;
+	var Static_3621 = 0;
+	var Static_3622 = 0;
+	var Static_3623 = 0;
+	var Static_3624 = 0;
+	var Static_3625 = 0;
+	var Static_3626 = 2;
+	var Static_3627 = 0;
+	var Static_3628 = 0;
+	var Static_3629 = 0;
+	var Static_3630 = 0;
+	var Static_3631 = 0;
+	var Static_3632 = 0;
+	var Static_3633 = 0;
+	var Static_3634 = 0;
+	var Static_3635 = 0;
+	var Static_3636 = 0;
+	var Static_3637 = 0;
+	var Static_3638 = 0;
+	var Static_3639 = 0;
+	var Static_3640 = 0;
+	var Static_3641 = 0;
+	var Static_3642 = 0;
+	var Static_3643 = 0;
+	var Static_3644 = 0;
+	var Static_3645 = 0;
+	var Static_3646 = 0;
+	var Static_3647 = 0;
+	var Static_3648 = 0;
+	var Static_3649 = 9;
+	var Static_3650 = 0;
+	var Static_3651 = 0;
+	var Static_3652 = 0;
+	var Static_3653 = 0;
+	var Static_3654 = 0;
+	var Static_3655 = 0;
+	var Static_3656 = 6;
+	var Static_3657 = 0;
+	var Static_3658 = 0;
+	var Static_3659 = 0;
+	var Static_3660 = 6;
+	var Static_3661 = 0;
+	var Static_3662 = 0;
+	var Static_3663 = 0;
+	var Static_3664 = 0;
+	var Static_3665 = 0;
+	var Static_3666 = 0;
+	var Static_3667 = 0;
+	var Static_3668 = 0;
+	var Static_3669 = 0;
+	var Static_3670 = 0;
+	var Static_3671 = 0;
+	var Static_3672 = 0;
+	var Static_3673 = 6;
+	var Static_3674 = 0;
+	var Static_3675 = 0;
+	var Static_3676 = 0;
+	var Static_3677 = 6;
+	var Static_3678 = 0;
+	var Static_3679 = 0;
+	var Static_3680 = 0;
+	var Static_3681 = 0;
+	var Static_3682 = 0;
+	var Static_3683 = 0;
+	var Static_3684 = 0;
+	var Static_3685 = 0;
+	var Static_3686 = 0;
+	var Static_3687 = 0;
+	var Static_3688 = 0;
+	var Static_3689 = 0;
+	var Static_3690 = 6;
+	var Static_3691 = 0;
+	var Static_3692 = 0;
+	var Static_3693 = 0;
+	var Static_3694 = 6;
+	var Static_3695 = 0;
+	var Static_3696 = 0;
+	var Static_3697 = 0;
+	var Static_3698 = 0;
+	var Static_3699 = 0;
+	var Static_3700 = 0;
+	var Static_3701 = 0;
+	var Static_3702 = 0;
+	var Static_3703 = 0;
+	var Static_3704 = 0;
+	var Static_3705 = 0;
+	var Static_3706 = 0;
+	var Static_3707 = 6;
+	var Static_3708 = 0;
+	var Static_3709 = 0;
+	var Static_3710 = 0;
+	var Static_3711 = 6;
+	var Static_3712 = 0;
+	var Static_3713 = 0;
+	var Static_3714 = 0;
+	var Static_3715 = 0;
+	var Static_3716 = 0;
+	var Static_3717 = 0;
+	var Static_3718 = 0;
+	var Static_3719 = 0;
+	var Static_3720 = 0;
+	var Static_3721 = 0;
+	var Static_3722 = 0;
+	var Static_3723 = 0;
+	var Static_3724 = 6;
+	var Static_3725 = 0;
+	var Static_3726 = 0;
+	var Static_3727 = 0;
+	var Static_3728 = 6;
+	var Static_3729 = 0;
+	var Static_3730 = 0;
+	var Static_3731 = 0;
+	var Static_3732 = 0;
+	var Static_3733 = 0;
+	var Static_3734 = 0;
+	var Static_3735 = 0;
+	var Static_3736 = 0;
+	var Static_3737 = 0;
+	var Static_3738 = 0;
+	var Static_3739 = 0;
+	var Static_3740 = 0;
+	var Static_3741 = 6;
+	var Static_3742 = 0;
+	var Static_3743 = 0;
+	var Static_3744 = 0;
+	var Static_3745 = 6;
+	var Static_3746 = 0;
+	var Static_3747 = 0;
+	var Static_3748 = 0;
+	var Static_3749 = 0;
+	var Static_3750 = 0;
+	var Static_3751 = 0;
+	var Static_3752 = 0;
+	var Static_3753 = 0;
+	var Static_3754 = 0;
+	var Static_3755 = 0;
+	var Static_3756 = 0;
+	var Static_3757 = 0;
+	var Static_3758 = 6;
+	var Static_3759 = 0;
+	var Static_3760 = 0;
+	var Static_3761 = 0;
+	var Static_3762 = 6;
+	var Static_3763 = 0;
+	var Static_3764 = 0;
+	var Static_3765 = 0;
+	var Static_3766 = 0;
+	var Static_3767 = 0;
+	var Static_3768 = 0;
+	var Static_3769 = 0;
+	var Static_3770 = 0;
+	var Static_3771 = 0;
+	var Static_3772 = 0;
+	var Static_3773 = 0;
+	var Static_3774 = 0;
+	var Static_3775 = 6;
+	var Static_3776 = 0;
+	var Static_3777 = 0;
+	var Static_3778 = 0;
+	var Static_3779 = 6;
+	var Static_3780 = 0;
+	var Static_3781 = 0;
+	var Static_3782 = 0;
+	var Static_3783 = 0;
+	var Static_3784 = 0;
+	var Static_3785 = 0;
+	var Static_3786 = 0;
+	var Static_3787 = 0;
+	var Static_3788 = 0;
+	var Static_3789 = 0;
+	var Static_3790 = 0;
+	var Static_3791 = 0;
+	var Static_3792 = 6;
+	var Static_3793 = 0;
+	var Static_3794 = 0;
+	var Static_3795 = 0;
+	var Static_3796 = 6;
+	var Static_3797 = 0;
+	var Static_3798 = 0;
+	var Static_3799 = 0;
+	var Static_3800 = 0;
+	var Static_3801 = 0;
+	var Static_3802 = 0;
+	var Static_3803 = 0;
+	var Static_3804 = 2;
+	var Static_3805 = 0;
+	var Static_3806 = 0;
+	var Static_3807 = 0;
+	var Static_3808 = 0;
+	var Static_3809 = 0;
+	var Static_3810 = 0;
+	var Static_3811 = 0;
+	var Static_3812 = 0;
+	var Static_3813 = 0;
+	var Static_3814 = 0;
+	var Static_3815 = 0;
+	var Static_3816 = 0;
+	var Static_3817 = 0;
+	var Static_3818 = 0;
+	var Static_3819 = 0;
+	var Static_3820 = 0;
+	var Static_3821 = 0;
+	var Static_3822 = 0;
+	var Static_3823 = 0;
+	var Static_3824 = 0;
+	var Static_3825 = 0;
+	var Static_3826 = 0;
+	var Static_3827 = 9;
+	var Static_3828 = 0;
+	var Static_3829 = 0;
+	var Static_3830 = 0;
+	var Static_3831 = 0;
+	var Static_3832 = 0;
+	var Static_3833 = 0;
+	var Static_3834 = 6;
+	var Static_3835 = 0;
+	var Static_3836 = 0;
+	var Static_3837 = 0;
+	var Static_3838 = 6;
+	var Static_3839 = 0;
+	var Static_3840 = 0;
+	var Static_3841 = 0;
+	var Static_3842 = 0;
+	var Static_3843 = 0;
+	var Static_3844 = 0;
+	var Static_3845 = 0;
+	var Static_3846 = 0;
+	var Static_3847 = 0;
+	var Static_3848 = 0;
+	var Static_3849 = 0;
+	var Static_3850 = 0;
+	var Static_3851 = 6;
+	var Static_3852 = 0;
+	var Static_3853 = 0;
+	var Static_3854 = 0;
+	var Static_3855 = 6;
+	var Static_3856 = 0;
+	var Static_3857 = 0;
+	var Static_3858 = 0;
+	var Static_3859 = 0;
+	var Static_3860 = 0;
+	var Static_3861 = 0;
+	var Static_3862 = 0;
+	var Static_3863 = 0;
+	var Static_3864 = 0;
+	var Static_3865 = 0;
+	var Static_3866 = 0;
+	var Static_3867 = 0;
+	var Static_3868 = 6;
+	var Static_3869 = 0;
+	var Static_3870 = 0;
+	var Static_3871 = 0;
+	var Static_3872 = 6;
+	var Static_3873 = 0;
+	var Static_3874 = 0;
+	var Static_3875 = 0;
+	var Static_3876 = 0;
+	var Static_3877 = 0;
+	var Static_3878 = 0;
+	var Static_3879 = 0;
+	var Static_3880 = 0;
+	var Static_3881 = 0;
+	var Static_3882 = 0;
+	var Static_3883 = 0;
+	var Static_3884 = 0;
+	var Static_3885 = 6;
+	var Static_3886 = 0;
+	var Static_3887 = 0;
+	var Static_3888 = 0;
+	var Static_3889 = 6;
+	var Static_3890 = 0;
+	var Static_3891 = 0;
+	var Static_3892 = 0;
+	var Static_3893 = 0;
+	var Static_3894 = 0;
+	var Static_3895 = 0;
+	var Static_3896 = 0;
+	var Static_3897 = 0;
+	var Static_3898 = 0;
+	var Static_3899 = 0;
+	var Static_3900 = 0;
+	var Static_3901 = 0;
+	var Static_3902 = 6;
+	var Static_3903 = 0;
+	var Static_3904 = 0;
+	var Static_3905 = 0;
+	var Static_3906 = 6;
+	var Static_3907 = 0;
+	var Static_3908 = 0;
+	var Static_3909 = 0;
+	var Static_3910 = 0;
+	var Static_3911 = 0;
+	var Static_3912 = 0;
+	var Static_3913 = 0;
+	var Static_3914 = 0;
+	var Static_3915 = 0;
+	var Static_3916 = 0;
+	var Static_3917 = 0;
+	var Static_3918 = 0;
+	var Static_3919 = 6;
+	var Static_3920 = 0;
+	var Static_3921 = 0;
+	var Static_3922 = 0;
+	var Static_3923 = 6;
+	var Static_3924 = 0;
+	var Static_3925 = 0;
+	var Static_3926 = 0;
+	var Static_3927 = 0;
+	var Static_3928 = 0;
+	var Static_3929 = 0;
+	var Static_3930 = 0;
+	var Static_3931 = 0;
+	var Static_3932 = 0;
+	var Static_3933 = 0;
+	var Static_3934 = 0;
+	var Static_3935 = 0;
+	var Static_3936 = 6;
+	var Static_3937 = 0;
+	var Static_3938 = 0;
+	var Static_3939 = 0;
+	var Static_3940 = 6;
+	var Static_3941 = 0;
+	var Static_3942 = 0;
+	var Static_3943 = 0;
+	var Static_3944 = 0;
+	var Static_3945 = 0;
+	var Static_3946 = 0;
+	var Static_3947 = 0;
+	var Static_3948 = 0;
+	var Static_3949 = 0;
+	var Static_3950 = 0;
+	var Static_3951 = 0;
+	var Static_3952 = 0;
+	var Static_3953 = 6;
+	var Static_3954 = 0;
+	var Static_3955 = 0;
+	var Static_3956 = 0;
+	var Static_3957 = 6;
+	var Static_3958 = 0;
+	var Static_3959 = 0;
+	var Static_3960 = 0;
+	var Static_3961 = 0;
+	var Static_3962 = 0;
+	var Static_3963 = 0;
+	var Static_3964 = 0;
+	var Static_3965 = 0;
+	var Static_3966 = 0;
+	var Static_3967 = 0;
+	var Static_3968 = 0;
+	var Static_3969 = 0;
+	var Static_3970 = 6;
+	var Static_3971 = 0;
+	var Static_3972 = 0;
+	var Static_3973 = 0;
+	var Static_3974 = 6;
+	var Static_3975 = 0;
+	var Static_3976 = 0;
+	var Static_3977 = 0;
+	var Static_3978 = 0;
+	var Static_3979 = 0;
+	var Static_3980 = 0;
+	var Static_3981 = 0;
+	var Static_3982 = 2;
+	var Static_3983 = 0;
+	var Static_3984 = 0;
+	var Static_3985 = 0;
+	var Static_3986 = 0;
+	var Static_3987 = 0;
+	var Static_3988 = 0;
+	var Static_3989 = 0;
+	var Static_3990 = 0;
+	var Static_3991 = 0;
+	var Static_3992 = 0;
+	var Static_3993 = 0;
+	var Static_3994 = 0;
+	var Static_3995 = 0;
+	var Static_3996 = 0;
+	var Static_3997 = 0;
+	var Static_3998 = 0;
+	var Static_3999 = 0;
+	var Static_4000 = 0;
+	var Static_4001 = 0;
+	var Static_4002 = 0;
+	var Static_4003 = 0;
+	var Static_4004 = 0;
+	var Static_4005 = 9;
+	var Static_4006 = 0;
+	var Static_4007 = 0;
+	var Static_4008 = 0;
+	var Static_4009 = 0;
+	var Static_4010 = 0;
+	var Static_4011 = 0;
+	var Static_4012 = 6;
+	var Static_4013 = 0;
+	var Static_4014 = 0;
+	var Static_4015 = 0;
+	var Static_4016 = 6;
+	var Static_4017 = 0;
+	var Static_4018 = 0;
+	var Static_4019 = 0;
+	var Static_4020 = 0;
+	var Static_4021 = 0;
+	var Static_4022 = 0;
+	var Static_4023 = 0;
+	var Static_4024 = 0;
+	var Static_4025 = 0;
+	var Static_4026 = 0;
+	var Static_4027 = 0;
+	var Static_4028 = 0;
+	var Static_4029 = 6;
+	var Static_4030 = 0;
+	var Static_4031 = 0;
+	var Static_4032 = 0;
+	var Static_4033 = 6;
+	var Static_4034 = 0;
+	var Static_4035 = 0;
+	var Static_4036 = 0;
+	var Static_4037 = 0;
+	var Static_4038 = 0;
+	var Static_4039 = 0;
+	var Static_4040 = 0;
+	var Static_4041 = 0;
+	var Static_4042 = 0;
+	var Static_4043 = 0;
+	var Static_4044 = 0;
+	var Static_4045 = 0;
+	var Static_4046 = 6;
+	var Static_4047 = 0;
+	var Static_4048 = 0;
+	var Static_4049 = 0;
+	var Static_4050 = 6;
+	var Static_4051 = 0;
+	var Static_4052 = 0;
+	var Static_4053 = 0;
+	var Static_4054 = 0;
+	var Static_4055 = 0;
+	var Static_4056 = 0;
+	var Static_4057 = 0;
+	var Static_4058 = 0;
+	var Static_4059 = 0;
+	var Static_4060 = 0;
+	var Static_4061 = 0;
+	var Static_4062 = 0;
+	var Static_4063 = 6;
+	var Static_4064 = 0;
+	var Static_4065 = 0;
+	var Static_4066 = 0;
+	var Static_4067 = 6;
+	var Static_4068 = 0;
+	var Static_4069 = 0;
+	var Static_4070 = 0;
+	var Static_4071 = 0;
+	var Static_4072 = 0;
+	var Static_4073 = 0;
+	var Static_4074 = 0;
+	var Static_4075 = 0;
+	var Static_4076 = 0;
+	var Static_4077 = 0;
+	var Static_4078 = 0;
+	var Static_4079 = 0;
+	var Static_4080 = 6;
+	var Static_4081 = 0;
+	var Static_4082 = 0;
+	var Static_4083 = 0;
+	var Static_4084 = 6;
+	var Static_4085 = 0;
+	var Static_4086 = 0;
+	var Static_4087 = 0;
+	var Static_4088 = 0;
+	var Static_4089 = 0;
+	var Static_4090 = 0;
+	var Static_4091 = 0;
+	var Static_4092 = 0;
+	var Static_4093 = 0;
+	var Static_4094 = 0;
+	var Static_4095 = 0;
+	var Static_4096 = 0;
+	var Static_4097 = 6;
+	var Static_4098 = 0;
+	var Static_4099 = 0;
+	var Static_4100 = 0;
+	var Static_4101 = 6;
+	var Static_4102 = 0;
+	var Static_4103 = 0;
+	var Static_4104 = 0;
+	var Static_4105 = 0;
+	var Static_4106 = 0;
+	var Static_4107 = 0;
+	var Static_4108 = 0;
+	var Static_4109 = 0;
+	var Static_4110 = 0;
+	var Static_4111 = 0;
+	var Static_4112 = 0;
+	var Static_4113 = 0;
+	var Static_4114 = 6;
+	var Static_4115 = 0;
+	var Static_4116 = 0;
+	var Static_4117 = 0;
+	var Static_4118 = 6;
+	var Static_4119 = 0;
+	var Static_4120 = 0;
+	var Static_4121 = 0;
+	var Static_4122 = 0;
+	var Static_4123 = 0;
+	var Static_4124 = 0;
+	var Static_4125 = 0;
+	var Static_4126 = 0;
+	var Static_4127 = 0;
+	var Static_4128 = 0;
+	var Static_4129 = 0;
+	var Static_4130 = 0;
+	var Static_4131 = 6;
+	var Static_4132 = 0;
+	var Static_4133 = 0;
+	var Static_4134 = 0;
+	var Static_4135 = 6;
+	var Static_4136 = 0;
+	var Static_4137 = 0;
+	var Static_4138 = 0;
+	var Static_4139 = 0;
+	var Static_4140 = 0;
+	var Static_4141 = 0;
+	var Static_4142 = 0;
+	var Static_4143 = 0;
+	var Static_4144 = 0;
+	var Static_4145 = 0;
+	var Static_4146 = 0;
+	var Static_4147 = 0;
+	var Static_4148 = 6;
+	var Static_4149 = 0;
+	var Static_4150 = 0;
+	var Static_4151 = 0;
+	var Static_4152 = 6;
+	var Static_4153 = 0;
+	var Static_4154 = 0;
+	var Static_4155 = 0;
+	var Static_4156 = 0;
+	var Static_4157 = 0;
+	var Static_4158 = 0;
+	var Static_4159 = 0;
+	var Static_4160 = 2;
+	var Static_4161 = 0;
+	var Static_4162 = 0;
+	var Static_4163 = 0;
+	var Static_4164 = 0;
+	var Static_4165 = 0;
+	var Static_4166 = 0;
+	var Static_4167 = 0;
+	var Static_4168 = 0;
+	var Static_4169 = 0;
+	var Static_4170 = 0;
+	var Static_4171 = 0;
+	var Static_4172 = 0;
+	var Static_4173 = 0;
+	var Static_4174 = 0;
+	var Static_4175 = 0;
+	var Static_4176 = 0;
+	var Static_4177 = 0;
+	var Static_4178 = 0;
+	var Static_4179 = 0;
+	var Static_4180 = 0;
+	var Static_4181 = 0;
+	var Static_4182 = 0;
+	var Static_4183 = 9;
+	var Static_4184 = 0;
+	var Static_4185 = 0;
+	var Static_4186 = 0;
+	var Static_4187 = 0;
+	var Static_4188 = 0;
+	var Static_4189 = 0;
+	var Static_4190 = 6;
+	var Static_4191 = 0;
+	var Static_4192 = 0;
+	var Static_4193 = 0;
+	var Static_4194 = 6;
+	var Static_4195 = 0;
+	var Static_4196 = 0;
+	var Static_4197 = 0;
+	var Static_4198 = 0;
+	var Static_4199 = 0;
+	var Static_4200 = 0;
+	var Static_4201 = 0;
+	var Static_4202 = 0;
+	var Static_4203 = 0;
+	var Static_4204 = 0;
+	var Static_4205 = 0;
+	var Static_4206 = 0;
+	var Static_4207 = 6;
+	var Static_4208 = 0;
+	var Static_4209 = 0;
+	var Static_4210 = 0;
+	var Static_4211 = 6;
+	var Static_4212 = 0;
+	var Static_4213 = 0;
+	var Static_4214 = 0;
+	var Static_4215 = 0;
+	var Static_4216 = 0;
+	var Static_4217 = 0;
+	var Static_4218 = 0;
+	var Static_4219 = 0;
+	var Static_4220 = 0;
+	var Static_4221 = 0;
+	var Static_4222 = 0;
+	var Static_4223 = 0;
+	var Static_4224 = 6;
+	var Static_4225 = 0;
+	var Static_4226 = 0;
+	var Static_4227 = 0;
+	var Static_4228 = 6;
+	var Static_4229 = 0;
+	var Static_4230 = 0;
+	var Static_4231 = 0;
+	var Static_4232 = 0;
+	var Static_4233 = 0;
+	var Static_4234 = 0;
+	var Static_4235 = 0;
+	var Static_4236 = 0;
+	var Static_4237 = 0;
+	var Static_4238 = 0;
+	var Static_4239 = 0;
+	var Static_4240 = 0;
+	var Static_4241 = 6;
+	var Static_4242 = 0;
+	var Static_4243 = 0;
+	var Static_4244 = 0;
+	var Static_4245 = 6;
+	var Static_4246 = 0;
+	var Static_4247 = 0;
+	var Static_4248 = 0;
+	var Static_4249 = 0;
+	var Static_4250 = 0;
+	var Static_4251 = 0;
+	var Static_4252 = 0;
+	var Static_4253 = 0;
+	var Static_4254 = 0;
+	var Static_4255 = 0;
+	var Static_4256 = 0;
+	var Static_4257 = 0;
+	var Static_4258 = 6;
+	var Static_4259 = 0;
+	var Static_4260 = 0;
+	var Static_4261 = 0;
+	var Static_4262 = 6;
+	var Static_4263 = 0;
+	var Static_4264 = 0;
+	var Static_4265 = 0;
+	var Static_4266 = 0;
+	var Static_4267 = 0;
+	var Static_4268 = 0;
+	var Static_4269 = 0;
+	var Static_4270 = 0;
+	var Static_4271 = 0;
+	var Static_4272 = 0;
+	var Static_4273 = 0;
+	var Static_4274 = 0;
+	var Static_4275 = 6;
+	var Static_4276 = 0;
+	var Static_4277 = 0;
+	var Static_4278 = 0;
+	var Static_4279 = 6;
+	var Static_4280 = 0;
+	var Static_4281 = 0;
+	var Static_4282 = 0;
+	var Static_4283 = 0;
+	var Static_4284 = 0;
+	var Static_4285 = 0;
+	var Static_4286 = 0;
+	var Static_4287 = 0;
+	var Static_4288 = 0;
+	var Static_4289 = 0;
+	var Static_4290 = 0;
+	var Static_4291 = 0;
+	var Static_4292 = 6;
+	var Static_4293 = 0;
+	var Static_4294 = 0;
+	var Static_4295 = 0;
+	var Static_4296 = 6;
+	var Static_4297 = 0;
+	var Static_4298 = 0;
+	var Static_4299 = 0;
+	var Static_4300 = 0;
+	var Static_4301 = 0;
+	var Static_4302 = 0;
+	var Static_4303 = 0;
+	var Static_4304 = 0;
+	var Static_4305 = 0;
+	var Static_4306 = 0;
+	var Static_4307 = 0;
+	var Static_4308 = 0;
+	var Static_4309 = 6;
+	var Static_4310 = 0;
+	var Static_4311 = 0;
+	var Static_4312 = 0;
+	var Static_4313 = 6;
+	var Static_4314 = 0;
+	var Static_4315 = 0;
+	var Static_4316 = 0;
+	var Static_4317 = 0;
+	var Static_4318 = 0;
+	var Static_4319 = 0;
+	var Static_4320 = 0;
+	var Static_4321 = 0;
+	var Static_4322 = 0;
+	var Static_4323 = 0;
+	var Static_4324 = 0;
+	var Static_4325 = 0;
+	var Static_4326 = 6;
+	var Static_4327 = 0;
+	var Static_4328 = 0;
+	var Static_4329 = 0;
+	var Static_4330 = 6;
+	var Static_4331 = 0;
+	var Static_4332 = 0;
+	var Static_4333 = 0;
+	var Static_4334 = 0;
+	var Static_4335 = 0;
+	var Static_4336 = 0;
+	var Static_4337 = 0;
+	var Static_4338 = 2;
+	var Static_4339 = 0;
+	var Static_4340 = 0;
+	var Static_4341 = 0;
+	var Static_4342 = 0;
+	var Static_4343 = 0;
+	var Static_4344 = 0;
+	var Static_4345 = 0;
+	var Static_4346 = 0;
+	var Static_4347 = 0;
+	var Static_4348 = 0;
+	var Static_4349 = 0;
+	var Static_4350 = 0;
+	var Static_4351 = 0;
+	var Static_4352 = 0;
+	var Static_4353 = 0;
+	var Static_4354 = 0;
+	var Static_4355 = 0;
+	var Static_4356 = 0;
+	var Static_4357 = 0;
+	var Static_4358 = 0;
+	var Static_4359 = 0;
+	var Static_4360 = 0;
+	var Static_4361 = 9;
+	var Static_4362 = 0;
+	var Static_4363 = 0;
+	var Static_4364 = 0;
+	var Static_4365 = 0;
+	var Static_4366 = 0;
+	var Static_4367 = 0;
+	var Static_4368 = 6;
+	var Static_4369 = 0;
+	var Static_4370 = 0;
+	var Static_4371 = 0;
+	var Static_4372 = 6;
+	var Static_4373 = 0;
+	var Static_4374 = 0;
+	var Static_4375 = 0;
+	var Static_4376 = 0;
+	var Static_4377 = 0;
+	var Static_4378 = 0;
+	var Static_4379 = 0;
+	var Static_4380 = 0;
+	var Static_4381 = 0;
+	var Static_4382 = 0;
+	var Static_4383 = 0;
+	var Static_4384 = 0;
+	var Static_4385 = 6;
+	var Static_4386 = 0;
+	var Static_4387 = 0;
+	var Static_4388 = 0;
+	var Static_4389 = 6;
+	var Static_4390 = 0;
+	var Static_4391 = 0;
+	var Static_4392 = 0;
+	var Static_4393 = 0;
+	var Static_4394 = 0;
+	var Static_4395 = 0;
+	var Static_4396 = 0;
+	var Static_4397 = 0;
+	var Static_4398 = 0;
+	var Static_4399 = 0;
+	var Static_4400 = 0;
+	var Static_4401 = 0;
+	var Static_4402 = 6;
+	var Static_4403 = 0;
+	var Static_4404 = 0;
+	var Static_4405 = 0;
+	var Static_4406 = 6;
+	var Static_4407 = 0;
+	var Static_4408 = 0;
+	var Static_4409 = 0;
+	var Static_4410 = 0;
+	var Static_4411 = 0;
+	var Static_4412 = 0;
+	var Static_4413 = 0;
+	var Static_4414 = 0;
+	var Static_4415 = 0;
+	var Static_4416 = 0;
+	var Static_4417 = 0;
+	var Static_4418 = 0;
+	var Static_4419 = 6;
+	var Static_4420 = 0;
+	var Static_4421 = 0;
+	var Static_4422 = 0;
+	var Static_4423 = 6;
+	var Static_4424 = 0;
+	var Static_4425 = 0;
+	var Static_4426 = 0;
+	var Static_4427 = 0;
+	var Static_4428 = 0;
+	var Static_4429 = 0;
+	var Static_4430 = 0;
+	var Static_4431 = 0;
+	var Static_4432 = 0;
+	var Static_4433 = 0;
+	var Static_4434 = 0;
+	var Static_4435 = 0;
+	var Static_4436 = 6;
+	var Static_4437 = 0;
+	var Static_4438 = 0;
+	var Static_4439 = 0;
+	var Static_4440 = 6;
+	var Static_4441 = 0;
+	var Static_4442 = 0;
+	var Static_4443 = 0;
+	var Static_4444 = 0;
+	var Static_4445 = 0;
+	var Static_4446 = 0;
+	var Static_4447 = 0;
+	var Static_4448 = 0;
+	var Static_4449 = 0;
+	var Static_4450 = 0;
+	var Static_4451 = 0;
+	var Static_4452 = 0;
+	var Static_4453 = 6;
+	var Static_4454 = 0;
+	var Static_4455 = 0;
+	var Static_4456 = 0;
+	var Static_4457 = 6;
+	var Static_4458 = 0;
+	var Static_4459 = 0;
+	var Static_4460 = 0;
+	var Static_4461 = 0;
+	var Static_4462 = 0;
+	var Static_4463 = 0;
+	var Static_4464 = 0;
+	var Static_4465 = 0;
+	var Static_4466 = 0;
+	var Static_4467 = 0;
+	var Static_4468 = 0;
+	var Static_4469 = 0;
+	var Static_4470 = 6;
+	var Static_4471 = 0;
+	var Static_4472 = 0;
+	var Static_4473 = 0;
+	var Static_4474 = 6;
+	var Static_4475 = 0;
+	var Static_4476 = 0;
+	var Static_4477 = 0;
+	var Static_4478 = 0;
+	var Static_4479 = 0;
+	var Static_4480 = 0;
+	var Static_4481 = 0;
+	var Static_4482 = 0;
+	var Static_4483 = 0;
+	var Static_4484 = 0;
+	var Static_4485 = 0;
+	var Static_4486 = 0;
+	var Static_4487 = 6;
+	var Static_4488 = 0;
+	var Static_4489 = 0;
+	var Static_4490 = 0;
+	var Static_4491 = 6;
+	var Static_4492 = 0;
+	var Static_4493 = 0;
+	var Static_4494 = 0;
+	var Static_4495 = 0;
+	var Static_4496 = 0;
+	var Static_4497 = 0;
+	var Static_4498 = 0;
+	var Static_4499 = 0;
+	var Static_4500 = 0;
+	var Static_4501 = 0;
+	var Static_4502 = 0;
+	var Static_4503 = 0;
+	var Static_4504 = 6;
+	var Static_4505 = 0;
+	var Static_4506 = 0;
+	var Static_4507 = 0;
+	var Static_4508 = 6;
+	var Static_4509 = 0;
+	var Static_4510 = 0;
+	var Static_4511 = 0;
+	var Static_4512 = 0;
+	var Static_4513 = 0;
+	var Static_4514 = 0;
+	var Static_4515 = 0;
+	var Static_4516 = 2;
+	var Static_4517 = 0;
+	var Static_4518 = 0;
+	var Static_4519 = 0;
+	var Static_4520 = 0;
+	var Static_4521 = 0;
+	var Static_4522 = 0;
+	var Static_4523 = 0;
+	var Static_4524 = 0;
+	var Static_4525 = 0;
+	var Static_4526 = 0;
+	var Static_4527 = 0;
+	var Static_4528 = 0;
+	var Static_4529 = 0;
+	var Static_4530 = 0;
+	var Static_4531 = 0;
+	var Static_4532 = 0;
+	var Static_4533 = 0;
+	var Static_4534 = 0;
+	var Static_4535 = 0;
+	var Static_4536 = 0;
+	var Static_4537 = 0;
+	var Static_4538 = 0;
+	var Static_4539 = 9;
+	var Static_4540 = 0;
+	var Static_4541 = 0;
+	var Static_4542 = 0;
+	var Static_4543 = 0;
+	var Static_4544 = 0;
+	var Static_4545 = 0;
+	var Static_4546 = 6;
+	var Static_4547 = 0;
+	var Static_4548 = 0;
+	var Static_4549 = 0;
+	var Static_4550 = 6;
+	var Static_4551 = 0;
+	var Static_4552 = 0;
+	var Static_4553 = 0;
+	var Static_4554 = 0;
+	var Static_4555 = 0;
+	var Static_4556 = 0;
+	var Static_4557 = 0;
+	var Static_4558 = 0;
+	var Static_4559 = 0;
+	var Static_4560 = 0;
+	var Static_4561 = 0;
+	var Static_4562 = 0;
+	var Static_4563 = 6;
+	var Static_4564 = 0;
+	var Static_4565 = 0;
+	var Static_4566 = 0;
+	var Static_4567 = 6;
+	var Static_4568 = 0;
+	var Static_4569 = 0;
+	var Static_4570 = 0;
+	var Static_4571 = 0;
+	var Static_4572 = 0;
+	var Static_4573 = 0;
+	var Static_4574 = 0;
+	var Static_4575 = 0;
+	var Static_4576 = 0;
+	var Static_4577 = 0;
+	var Static_4578 = 0;
+	var Static_4579 = 0;
+	var Static_4580 = 6;
+	var Static_4581 = 0;
+	var Static_4582 = 0;
+	var Static_4583 = 0;
+	var Static_4584 = 6;
+	var Static_4585 = 0;
+	var Static_4586 = 0;
+	var Static_4587 = 0;
+	var Static_4588 = 0;
+	var Static_4589 = 0;
+	var Static_4590 = 0;
+	var Static_4591 = 0;
+	var Static_4592 = 0;
+	var Static_4593 = 0;
+	var Static_4594 = 0;
+	var Static_4595 = 0;
+	var Static_4596 = 0;
+	var Static_4597 = 6;
+	var Static_4598 = 0;
+	var Static_4599 = 0;
+	var Static_4600 = 0;
+	var Static_4601 = 6;
+	var Static_4602 = 0;
+	var Static_4603 = 0;
+	var Static_4604 = 0;
+	var Static_4605 = 0;
+	var Static_4606 = 0;
+	var Static_4607 = 0;
+	var Static_4608 = 0;
+	var Static_4609 = 0;
+	var Static_4610 = 0;
+	var Static_4611 = 0;
+	var Static_4612 = 0;
+	var Static_4613 = 0;
+	var Static_4614 = 6;
+	var Static_4615 = 0;
+	var Static_4616 = 0;
+	var Static_4617 = 0;
+	var Static_4618 = 6;
+	var Static_4619 = 0;
+	var Static_4620 = 0;
+	var Static_4621 = 0;
+	var Static_4622 = 0;
+	var Static_4623 = 0;
+	var Static_4624 = 0;
+	var Static_4625 = 0;
+	var Static_4626 = 0;
+	var Static_4627 = 0;
+	var Static_4628 = 0;
+	var Static_4629 = 0;
+	var Static_4630 = 0;
+	var Static_4631 = 6;
+	var Static_4632 = 0;
+	var Static_4633 = 0;
+	var Static_4634 = 0;
+	var Static_4635 = 6;
+	var Static_4636 = 0;
+	var Static_4637 = 0;
+	var Static_4638 = 0;
+	var Static_4639 = 0;
+	var Static_4640 = 0;
+	var Static_4641 = 0;
+	var Static_4642 = 0;
+	var Static_4643 = 0;
+	var Static_4644 = 0;
+	var Static_4645 = 0;
+	var Static_4646 = 0;
+	var Static_4647 = 0;
+	var Static_4648 = 6;
+	var Static_4649 = 0;
+	var Static_4650 = 0;
+	var Static_4651 = 0;
+	var Static_4652 = 6;
+	var Static_4653 = 0;
+	var Static_4654 = 0;
+	var Static_4655 = 0;
+	var Static_4656 = 0;
+	var Static_4657 = 0;
+	var Static_4658 = 0;
+	var Static_4659 = 0;
+	var Static_4660 = 0;
+	var Static_4661 = 0;
+	var Static_4662 = 0;
+	var Static_4663 = 0;
+	var Static_4664 = 0;
+	var Static_4665 = 6;
+	var Static_4666 = 0;
+	var Static_4667 = 0;
+	var Static_4668 = 0;
+	var Static_4669 = 6;
+	var Static_4670 = 0;
+	var Static_4671 = 0;
+	var Static_4672 = 0;
+	var Static_4673 = 0;
+	var Static_4674 = 0;
+	var Static_4675 = 0;
+	var Static_4676 = 0;
+	var Static_4677 = 0;
+	var Static_4678 = 0;
+	var Static_4679 = 0;
+	var Static_4680 = 0;
+	var Static_4681 = 0;
+	var Static_4682 = 6;
+	var Static_4683 = 0;
+	var Static_4684 = 0;
+	var Static_4685 = 0;
+	var Static_4686 = 6;
+	var Static_4687 = 0;
+	var Static_4688 = 0;
+	var Static_4689 = 0;
+	var Static_4690 = 0;
+	var Static_4691 = 0;
+	var Static_4692 = 0;
+	var Static_4693 = 0;
+	var Static_4694 = 2;
+	var Static_4695 = 0;
+	var Static_4696 = 0;
+	var Static_4697 = 0;
+	var Static_4698 = 0;
+	var Static_4699 = 0;
+	var Static_4700 = 0;
+	var Static_4701 = 0;
+	var Static_4702 = 0;
+	var Static_4703 = 0;
+	var Static_4704 = 0;
+	var Static_4705 = 0;
+	var Static_4706 = 0;
+	var Static_4707 = 0;
+	var Static_4708 = 0;
+	var Static_4709 = 0;
+	var Static_4710 = 0;
+	var Static_4711 = 0;
+	var Static_4712 = 0;
+	var Static_4713 = 0;
+	var Static_4714 = 0;
+	var Static_4715 = 0;
+	var Static_4716 = 0;
+	var Static_4717 = 9;
+	var Static_4718 = 0;
+	var Static_4719 = 0;
+	var Static_4720 = 0;
+	var Static_4721 = 0;
+	var Static_4722 = 0;
+	var Static_4723 = 0;
+	var Static_4724 = 6;
+	var Static_4725 = 0;
+	var Static_4726 = 0;
+	var Static_4727 = 0;
+	var Static_4728 = 6;
+	var Static_4729 = 0;
+	var Static_4730 = 0;
+	var Static_4731 = 0;
+	var Static_4732 = 0;
+	var Static_4733 = 0;
+	var Static_4734 = 0;
+	var Static_4735 = 0;
+	var Static_4736 = 0;
+	var Static_4737 = 0;
+	var Static_4738 = 0;
+	var Static_4739 = 0;
+	var Static_4740 = 0;
+	var Static_4741 = 6;
+	var Static_4742 = 0;
+	var Static_4743 = 0;
+	var Static_4744 = 0;
+	var Static_4745 = 6;
+	var Static_4746 = 0;
+	var Static_4747 = 0;
+	var Static_4748 = 0;
+	var Static_4749 = 0;
+	var Static_4750 = 0;
+	var Static_4751 = 0;
+	var Static_4752 = 0;
+	var Static_4753 = 0;
+	var Static_4754 = 0;
+	var Static_4755 = 0;
+	var Static_4756 = 0;
+	var Static_4757 = 0;
+	var Static_4758 = 6;
+	var Static_4759 = 0;
+	var Static_4760 = 0;
+	var Static_4761 = 0;
+	var Static_4762 = 6;
+	var Static_4763 = 0;
+	var Static_4764 = 0;
+	var Static_4765 = 0;
+	var Static_4766 = 0;
+	var Static_4767 = 0;
+	var Static_4768 = 0;
+	var Static_4769 = 0;
+	var Static_4770 = 0;
+	var Static_4771 = 0;
+	var Static_4772 = 0;
+	var Static_4773 = 0;
+	var Static_4774 = 0;
+	var Static_4775 = 6;
+	var Static_4776 = 0;
+	var Static_4777 = 0;
+	var Static_4778 = 0;
+	var Static_4779 = 6;
+	var Static_4780 = 0;
+	var Static_4781 = 0;
+	var Static_4782 = 0;
+	var Static_4783 = 0;
+	var Static_4784 = 0;
+	var Static_4785 = 0;
+	var Static_4786 = 0;
+	var Static_4787 = 0;
+	var Static_4788 = 0;
+	var Static_4789 = 0;
+	var Static_4790 = 0;
+	var Static_4791 = 0;
+	var Static_4792 = 6;
+	var Static_4793 = 0;
+	var Static_4794 = 0;
+	var Static_4795 = 0;
+	var Static_4796 = 6;
+	var Static_4797 = 0;
+	var Static_4798 = 0;
+	var Static_4799 = 0;
+	var Static_4800 = 0;
+	var Static_4801 = 0;
+	var Static_4802 = 0;
+	var Static_4803 = 0;
+	var Static_4804 = 0;
+	var Static_4805 = 0;
+	var Static_4806 = 0;
+	var Static_4807 = 0;
+	var Static_4808 = 0;
+	var Static_4809 = 6;
+	var Static_4810 = 0;
+	var Static_4811 = 0;
+	var Static_4812 = 0;
+	var Static_4813 = 6;
+	var Static_4814 = 0;
+	var Static_4815 = 0;
+	var Static_4816 = 0;
+	var Static_4817 = 0;
+	var Static_4818 = 0;
+	var Static_4819 = 0;
+	var Static_4820 = 0;
+	var Static_4821 = 0;
+	var Static_4822 = 0;
+	var Static_4823 = 0;
+	var Static_4824 = 0;
+	var Static_4825 = 0;
+	var Static_4826 = 6;
+	var Static_4827 = 0;
+	var Static_4828 = 0;
+	var Static_4829 = 0;
+	var Static_4830 = 6;
+	var Static_4831 = 0;
+	var Static_4832 = 0;
+	var Static_4833 = 0;
+	var Static_4834 = 0;
+	var Static_4835 = 0;
+	var Static_4836 = 0;
+	var Static_4837 = 0;
+	var Static_4838 = 0;
+	var Static_4839 = 0;
+	var Static_4840 = 0;
+	var Static_4841 = 0;
+	var Static_4842 = 0;
+	var Static_4843 = 6;
+	var Static_4844 = 0;
+	var Static_4845 = 0;
+	var Static_4846 = 0;
+	var Static_4847 = 6;
+	var Static_4848 = 0;
+	var Static_4849 = 0;
+	var Static_4850 = 0;
+	var Static_4851 = 0;
+	var Static_4852 = 0;
+	var Static_4853 = 0;
+	var Static_4854 = 0;
+	var Static_4855 = 0;
+	var Static_4856 = 0;
+	var Static_4857 = 0;
+	var Static_4858 = 0;
+	var Static_4859 = 0;
+	var Static_4860 = 6;
+	var Static_4861 = 0;
+	var Static_4862 = 0;
+	var Static_4863 = 0;
+	var Static_4864 = 6;
+	var Static_4865 = 0;
+	var Static_4866 = 0;
+	var Static_4867 = 0;
+	var Static_4868 = 0;
+	var Static_4869 = 0;
+	var Static_4870 = 0;
+	var Static_4871 = 0;
+	var Static_4872 = 2;
+	var Static_4873 = 0;
+	var Static_4874 = 0;
+	var Static_4875 = 0;
+	var Static_4876 = 0;
+	var Static_4877 = 0;
+	var Static_4878 = 0;
+	var Static_4879 = 0;
+	var Static_4880 = 0;
+	var Static_4881 = 0;
+	var Static_4882 = 0;
+	var Static_4883 = 0;
+	var Static_4884 = 0;
+	var Static_4885 = 0;
+	var Static_4886 = 0;
+	var Static_4887 = 0;
+	var Static_4888 = 0;
+	var Static_4889 = 0;
+	var Static_4890 = 0;
+	var Static_4891 = 0;
+	var Static_4892 = 0;
+	var Static_4893 = 0;
+	var Static_4894 = 0;
+	var Static_4895 = 0;
+	int Static_4896 = 30;
+	var Static_4897 = 4;
+	var Static_4898 = 0;
+	var Static_4899 = 0;
+	var Static_4900 = 0;
+	var Static_4901 = 0;
+	var Static_4902 = 0;
+	var Static_4903 = 0;
+	var Static_4904 = 0;
+	var Static_4905 = 0;
+	var Static_4906 = 0;
+	var Static_4907 = 0;
+	var Static_4908 = 0;
+	var Static_4909 = 0;
+	var Static_4910 = 0;
+	var Static_4911 = 0;
+	var Static_4912 = 0;
+	var Static_4913 = 0;
+	var Static_4914 = 4;
+	var Static_4915 = 0;
+	var Static_4916 = 0;
+	var Static_4917 = 0;
+	var Static_4918 = 0;
+	var Static_4919 = 0;
+	var Static_4920 = 0;
+	var Static_4921 = 4;
+	var Static_4922 = 0;
+	var Static_4923 = 0;
+	var Static_4924 = 0;
+	var Static_4925 = 0;
+	var Static_4926 = 0;
+	var Static_4927 = 0;
+	var Static_4928 = 0;
+	var Static_4929 = 0;
+	var Static_4930 = 0;
+	var Static_4931 = 0;
+	var Static_4932 = 0;
+	var Static_4933 = 0;
+	var Static_4934 = 0;
+	var Static_4935 = 0;
+	var Static_4936 = 0;
+	var Static_4937 = 0;
+	var Static_4938 = 4;
+	var Static_4939 = 0;
+	var Static_4940 = 0;
+	var Static_4941 = 0;
+	var Static_4942 = 0;
+	var Static_4943 = 0;
+	var Static_4944 = 0;
+	var Static_4945 = 4;
+	var Static_4946 = 0;
+	var Static_4947 = 0;
+	var Static_4948 = 0;
+	var Static_4949 = 0;
+	var Static_4950 = 0;
+	var Static_4951 = 0;
+	var Static_4952 = 0;
+	var Static_4953 = 0;
+	var Static_4954 = 0;
+	var Static_4955 = 0;
+	var Static_4956 = 0;
+	var Static_4957 = 0;
+	var Static_4958 = 0;
+	var Static_4959 = 0;
+	var Static_4960 = 0;
+	var Static_4961 = 0;
+	var Static_4962 = 4;
+	var Static_4963 = 0;
+	var Static_4964 = 0;
+	var Static_4965 = 0;
+	var Static_4966 = 0;
+	var Static_4967 = 0;
+	var Static_4968 = 0;
+	var Static_4969 = 4;
+	var Static_4970 = 0;
+	var Static_4971 = 0;
+	var Static_4972 = 0;
+	var Static_4973 = 0;
+	var Static_4974 = 0;
+	var Static_4975 = 0;
+	var Static_4976 = 0;
+	var Static_4977 = 0;
+	var Static_4978 = 0;
+	var Static_4979 = 0;
+	var Static_4980 = 0;
+	var Static_4981 = 0;
+	var Static_4982 = 0;
+	var Static_4983 = 0;
+	var Static_4984 = 0;
+	var Static_4985 = 0;
+	var Static_4986 = 4;
+	var Static_4987 = 0;
+	var Static_4988 = 0;
+	var Static_4989 = 0;
+	var Static_4990 = 0;
+	var Static_4991 = 0;
+	var Static_4992 = 0;
+	var Static_4993 = 4;
+	var Static_4994 = 0;
+	var Static_4995 = 0;
+	var Static_4996 = 0;
+	var Static_4997 = 0;
+	var Static_4998 = 0;
+	var Static_4999 = 0;
+	var Static_5000 = 0;
+	var Static_5001 = 0;
+	var Static_5002 = 0;
+	var Static_5003 = 0;
+	var Static_5004 = 0;
+	var Static_5005 = 0;
+	var Static_5006 = 0;
+	var Static_5007 = 0;
+	var Static_5008 = 0;
+	var Static_5009 = 0;
+	var Static_5010 = 4;
+	var Static_5011 = 0;
+	var Static_5012 = 0;
+	var Static_5013 = 0;
+	var Static_5014 = 0;
+	var Static_5015 = 0;
+	var Static_5016 = 0;
+	var Static_5017 = 4;
+	var Static_5018 = 0;
+	var Static_5019 = 0;
+	var Static_5020 = 0;
+	var Static_5021 = 0;
+	var Static_5022 = 0;
+	var Static_5023 = 0;
+	var Static_5024 = 0;
+	var Static_5025 = 0;
+	var Static_5026 = 0;
+	var Static_5027 = 0;
+	var Static_5028 = 0;
+	var Static_5029 = 0;
+	var Static_5030 = 0;
+	var Static_5031 = 0;
+	var Static_5032 = 0;
+	var Static_5033 = 0;
+	var Static_5034 = 4;
+	var Static_5035 = 0;
+	var Static_5036 = 0;
+	var Static_5037 = 0;
+	var Static_5038 = 0;
+	var Static_5039 = 0;
+	var Static_5040 = 0;
+	var Static_5041 = 4;
+	var Static_5042 = 0;
+	var Static_5043 = 0;
+	var Static_5044 = 0;
+	var Static_5045 = 0;
+	var Static_5046 = 0;
+	var Static_5047 = 0;
+	var Static_5048 = 0;
+	var Static_5049 = 0;
+	var Static_5050 = 0;
+	var Static_5051 = 0;
+	var Static_5052 = 0;
+	var Static_5053 = 0;
+	var Static_5054 = 0;
+	var Static_5055 = 0;
+	var Static_5056 = 0;
+	var Static_5057 = 0;
+	var Static_5058 = 4;
+	var Static_5059 = 0;
+	var Static_5060 = 0;
+	var Static_5061 = 0;
+	var Static_5062 = 0;
+	var Static_5063 = 0;
+	var Static_5064 = 0;
+	var Static_5065 = 4;
+	var Static_5066 = 0;
+	var Static_5067 = 0;
+	var Static_5068 = 0;
+	var Static_5069 = 0;
+	var Static_5070 = 0;
+	var Static_5071 = 0;
+	var Static_5072 = 0;
+	var Static_5073 = 0;
+	var Static_5074 = 0;
+	var Static_5075 = 0;
+	var Static_5076 = 0;
+	var Static_5077 = 0;
+	var Static_5078 = 0;
+	var Static_5079 = 0;
+	var Static_5080 = 0;
+	var Static_5081 = 0;
+	var Static_5082 = 4;
+	var Static_5083 = 0;
+	var Static_5084 = 0;
+	var Static_5085 = 0;
+	var Static_5086 = 0;
+	var Static_5087 = 0;
+	var Static_5088 = 0;
+	var Static_5089 = 4;
+	var Static_5090 = 0;
+	var Static_5091 = 0;
+	var Static_5092 = 0;
+	var Static_5093 = 0;
+	var Static_5094 = 0;
+	var Static_5095 = 0;
+	var Static_5096 = 0;
+	var Static_5097 = 0;
+	var Static_5098 = 0;
+	var Static_5099 = 0;
+	var Static_5100 = 0;
+	var Static_5101 = 0;
+	var Static_5102 = 0;
+	var Static_5103 = 0;
+	var Static_5104 = 0;
+	var Static_5105 = 0;
+	var Static_5106 = 4;
+	var Static_5107 = 0;
+	var Static_5108 = 0;
+	var Static_5109 = 0;
+	var Static_5110 = 0;
+	var Static_5111 = 0;
+	var Static_5112 = 0;
+	var Static_5113 = 4;
+	var Static_5114 = 0;
+	var Static_5115 = 0;
+	var Static_5116 = 0;
+	var Static_5117 = 0;
+	var Static_5118 = 0;
+	var Static_5119 = 0;
+	var Static_5120 = 0;
+	var Static_5121 = 0;
+	var Static_5122 = 0;
+	var Static_5123 = 0;
+	var Static_5124 = 0;
+	var Static_5125 = 0;
+	var Static_5126 = 0;
+	var Static_5127 = 0;
+	var Static_5128 = 0;
+	var Static_5129 = 0;
+	var Static_5130 = 4;
+	var Static_5131 = 0;
+	var Static_5132 = 0;
+	var Static_5133 = 0;
+	var Static_5134 = 0;
+	var Static_5135 = 0;
+	var Static_5136 = 0;
+	var Static_5137 = 4;
+	var Static_5138 = 0;
+	var Static_5139 = 0;
+	var Static_5140 = 0;
+	var Static_5141 = 0;
+	var Static_5142 = 0;
+	var Static_5143 = 0;
+	var Static_5144 = 0;
+	var Static_5145 = 0;
+	var Static_5146 = 0;
+	var Static_5147 = 0;
+	var Static_5148 = 0;
+	var Static_5149 = 0;
+	var Static_5150 = 0;
+	var Static_5151 = 0;
+	var Static_5152 = 0;
+	var Static_5153 = 0;
+	var Static_5154 = 4;
+	var Static_5155 = 0;
+	var Static_5156 = 0;
+	var Static_5157 = 0;
+	var Static_5158 = 0;
+	var Static_5159 = 0;
+	var Static_5160 = 0;
+	var Static_5161 = 4;
+	var Static_5162 = 0;
+	var Static_5163 = 0;
+	var Static_5164 = 0;
+	var Static_5165 = 0;
+	var Static_5166 = 0;
+	var Static_5167 = 0;
+	var Static_5168 = 0;
+	var Static_5169 = 0;
+	var Static_5170 = 0;
+	var Static_5171 = 0;
+	var Static_5172 = 0;
+	var Static_5173 = 0;
+	var Static_5174 = 0;
+	var Static_5175 = 0;
+	var Static_5176 = 0;
+	var Static_5177 = 0;
+	var Static_5178 = 4;
+	var Static_5179 = 0;
+	var Static_5180 = 0;
+	var Static_5181 = 0;
+	var Static_5182 = 0;
+	var Static_5183 = 0;
+	var Static_5184 = 0;
+	var Static_5185 = 4;
+	var Static_5186 = 0;
+	var Static_5187 = 0;
+	var Static_5188 = 0;
+	var Static_5189 = 0;
+	var Static_5190 = 0;
+	var Static_5191 = 0;
+	var Static_5192 = 0;
+	var Static_5193 = 0;
+	var Static_5194 = 0;
+	var Static_5195 = 0;
+	var Static_5196 = 0;
+	var Static_5197 = 0;
+	var Static_5198 = 0;
+	var Static_5199 = 0;
+	var Static_5200 = 0;
+	var Static_5201 = 0;
+	var Static_5202 = 4;
+	var Static_5203 = 0;
+	var Static_5204 = 0;
+	var Static_5205 = 0;
+	var Static_5206 = 0;
+	var Static_5207 = 0;
+	var Static_5208 = 0;
+	var Static_5209 = 4;
+	var Static_5210 = 0;
+	var Static_5211 = 0;
+	var Static_5212 = 0;
+	var Static_5213 = 0;
+	var Static_5214 = 0;
+	var Static_5215 = 0;
+	var Static_5216 = 0;
+	var Static_5217 = 0;
+	var Static_5218 = 0;
+	var Static_5219 = 0;
+	var Static_5220 = 0;
+	var Static_5221 = 0;
+	var Static_5222 = 0;
+	var Static_5223 = 0;
+	var Static_5224 = 0;
+	var Static_5225 = 0;
+	var Static_5226 = 4;
+	var Static_5227 = 0;
+	var Static_5228 = 0;
+	var Static_5229 = 0;
+	var Static_5230 = 0;
+	var Static_5231 = 0;
+	var Static_5232 = 0;
+	var Static_5233 = 4;
+	var Static_5234 = 0;
+	var Static_5235 = 0;
+	var Static_5236 = 0;
+	var Static_5237 = 0;
+	var Static_5238 = 0;
+	var Static_5239 = 0;
+	var Static_5240 = 0;
+	var Static_5241 = 0;
+	var Static_5242 = 0;
+	var Static_5243 = 0;
+	var Static_5244 = 0;
+	var Static_5245 = 0;
+	var Static_5246 = 0;
+	var Static_5247 = 0;
+	var Static_5248 = 0;
+	var Static_5249 = 0;
+	var Static_5250 = 4;
+	var Static_5251 = 0;
+	var Static_5252 = 0;
+	var Static_5253 = 0;
+	var Static_5254 = 0;
+	var Static_5255 = 0;
+	var Static_5256 = 0;
+	var Static_5257 = 4;
+	var Static_5258 = 0;
+	var Static_5259 = 0;
+	var Static_5260 = 0;
+	var Static_5261 = 0;
+	var Static_5262 = 0;
+	var Static_5263 = 0;
+	var Static_5264 = 0;
+	var Static_5265 = 0;
+	var Static_5266 = 0;
+	var Static_5267 = 0;
+	var Static_5268 = 0;
+	var Static_5269 = 0;
+	var Static_5270 = 0;
+	var Static_5271 = 0;
+	var Static_5272 = 0;
+	var Static_5273 = 0;
+	var Static_5274 = 4;
+	var Static_5275 = 0;
+	var Static_5276 = 0;
+	var Static_5277 = 0;
+	var Static_5278 = 0;
+	var Static_5279 = 0;
+	var Static_5280 = 0;
+	var Static_5281 = 4;
+	var Static_5282 = 0;
+	var Static_5283 = 0;
+	var Static_5284 = 0;
+	var Static_5285 = 0;
+	var Static_5286 = 0;
+	var Static_5287 = 0;
+	var Static_5288 = 0;
+	var Static_5289 = 0;
+	var Static_5290 = 0;
+	var Static_5291 = 0;
+	var Static_5292 = 0;
+	var Static_5293 = 0;
+	var Static_5294 = 0;
+	var Static_5295 = 0;
+	var Static_5296 = 0;
+	var Static_5297 = 0;
+	var Static_5298 = 4;
+	var Static_5299 = 0;
+	var Static_5300 = 0;
+	var Static_5301 = 0;
+	var Static_5302 = 0;
+	var Static_5303 = 0;
+	var Static_5304 = 0;
+	var Static_5305 = 4;
+	var Static_5306 = 0;
+	var Static_5307 = 0;
+	var Static_5308 = 0;
+	var Static_5309 = 0;
+	var Static_5310 = 0;
+	var Static_5311 = 0;
+	var Static_5312 = 0;
+	var Static_5313 = 0;
+	var Static_5314 = 0;
+	var Static_5315 = 0;
+	var Static_5316 = 0;
+	var Static_5317 = 0;
+	var Static_5318 = 0;
+	var Static_5319 = 0;
+	var Static_5320 = 0;
+	var Static_5321 = 0;
+	var Static_5322 = 4;
+	var Static_5323 = 0;
+	var Static_5324 = 0;
+	var Static_5325 = 0;
+	var Static_5326 = 0;
+	var Static_5327 = 0;
+	var Static_5328 = 0;
+	var Static_5329 = 4;
+	var Static_5330 = 0;
+	var Static_5331 = 0;
+	var Static_5332 = 0;
+	var Static_5333 = 0;
+	var Static_5334 = 0;
+	var Static_5335 = 0;
+	var Static_5336 = 0;
+	var Static_5337 = 0;
+	var Static_5338 = 0;
+	var Static_5339 = 0;
+	var Static_5340 = 0;
+	var Static_5341 = 0;
+	var Static_5342 = 0;
+	var Static_5343 = 0;
+	var Static_5344 = 0;
+	var Static_5345 = 0;
+	var Static_5346 = 4;
+	var Static_5347 = 0;
+	var Static_5348 = 0;
+	var Static_5349 = 0;
+	var Static_5350 = 0;
+	var Static_5351 = 0;
+	var Static_5352 = 0;
+	var Static_5353 = 4;
+	var Static_5354 = 0;
+	var Static_5355 = 0;
+	var Static_5356 = 0;
+	var Static_5357 = 0;
+	var Static_5358 = 0;
+	var Static_5359 = 0;
+	var Static_5360 = 0;
+	var Static_5361 = 0;
+	var Static_5362 = 0;
+	var Static_5363 = 0;
+	var Static_5364 = 0;
+	var Static_5365 = 0;
+	var Static_5366 = 0;
+	var Static_5367 = 0;
+	var Static_5368 = 0;
+	var Static_5369 = 0;
+	var Static_5370 = 4;
+	var Static_5371 = 0;
+	var Static_5372 = 0;
+	var Static_5373 = 0;
+	var Static_5374 = 0;
+	var Static_5375 = 0;
+	var Static_5376 = 0;
+	var Static_5377 = 4;
+	var Static_5378 = 0;
+	var Static_5379 = 0;
+	var Static_5380 = 0;
+	var Static_5381 = 0;
+	var Static_5382 = 0;
+	var Static_5383 = 0;
+	var Static_5384 = 0;
+	var Static_5385 = 0;
+	var Static_5386 = 0;
+	var Static_5387 = 0;
+	var Static_5388 = 0;
+	var Static_5389 = 0;
+	var Static_5390 = 0;
+	var Static_5391 = 0;
+	var Static_5392 = 0;
+	var Static_5393 = 0;
+	var Static_5394 = 4;
+	var Static_5395 = 0;
+	var Static_5396 = 0;
+	var Static_5397 = 0;
+	var Static_5398 = 0;
+	var Static_5399 = 0;
+	var Static_5400 = 0;
+	var Static_5401 = 4;
+	var Static_5402 = 0;
+	var Static_5403 = 0;
+	var Static_5404 = 0;
+	var Static_5405 = 0;
+	var Static_5406 = 0;
+	var Static_5407 = 0;
+	var Static_5408 = 0;
+	var Static_5409 = 0;
+	var Static_5410 = 0;
+	var Static_5411 = 0;
+	var Static_5412 = 0;
+	var Static_5413 = 0;
+	var Static_5414 = 0;
+	var Static_5415 = 0;
+	var Static_5416 = 0;
+	var Static_5417 = 0;
+	var Static_5418 = 4;
+	var Static_5419 = 0;
+	var Static_5420 = 0;
+	var Static_5421 = 0;
+	var Static_5422 = 0;
+	var Static_5423 = 0;
+	var Static_5424 = 0;
+	var Static_5425 = 4;
+	var Static_5426 = 0;
+	var Static_5427 = 0;
+	var Static_5428 = 0;
+	var Static_5429 = 0;
+	var Static_5430 = 0;
+	var Static_5431 = 0;
+	var Static_5432 = 0;
+	var Static_5433 = 0;
+	var Static_5434 = 0;
+	var Static_5435 = 0;
+	var Static_5436 = 0;
+	var Static_5437 = 0;
+	var Static_5438 = 0;
+	var Static_5439 = 0;
+	var Static_5440 = 0;
+	var Static_5441 = 0;
+	var Static_5442 = 4;
+	var Static_5443 = 0;
+	var Static_5444 = 0;
+	var Static_5445 = 0;
+	var Static_5446 = 0;
+	var Static_5447 = 0;
+	var Static_5448 = 0;
+	var Static_5449 = 4;
+	var Static_5450 = 0;
+	var Static_5451 = 0;
+	var Static_5452 = 0;
+	var Static_5453 = 0;
+	var Static_5454 = 0;
+	var Static_5455 = 0;
+	var Static_5456 = 0;
+	var Static_5457 = 0;
+	var Static_5458 = 0;
+	var Static_5459 = 0;
+	var Static_5460 = 0;
+	var Static_5461 = 0;
+	var Static_5462 = 0;
+	var Static_5463 = 0;
+	var Static_5464 = 0;
+	var Static_5465 = 0;
+	var Static_5466 = 4;
+	var Static_5467 = 0;
+	var Static_5468 = 0;
+	var Static_5469 = 0;
+	var Static_5470 = 0;
+	var Static_5471 = 0;
+	var Static_5472 = 0;
+	var Static_5473 = 4;
+	var Static_5474 = 0;
+	var Static_5475 = 0;
+	var Static_5476 = 0;
+	var Static_5477 = 0;
+	var Static_5478 = 0;
+	var Static_5479 = 0;
+	var Static_5480 = 0;
+	var Static_5481 = 0;
+	var Static_5482 = 0;
+	var Static_5483 = 0;
+	var Static_5484 = 0;
+	var Static_5485 = 0;
+	var Static_5486 = 0;
+	var Static_5487 = 0;
+	var Static_5488 = 0;
+	var Static_5489 = 0;
+	var Static_5490 = 4;
+	var Static_5491 = 0;
+	var Static_5492 = 0;
+	var Static_5493 = 0;
+	var Static_5494 = 0;
+	var Static_5495 = 0;
+	var Static_5496 = 0;
+	var Static_5497 = 4;
+	var Static_5498 = 0;
+	var Static_5499 = 0;
+	var Static_5500 = 0;
+	var Static_5501 = 0;
+	var Static_5502 = 0;
+	var Static_5503 = 0;
+	var Static_5504 = 0;
+	var Static_5505 = 0;
+	var Static_5506 = 0;
+	var Static_5507 = 0;
+	var Static_5508 = 0;
+	var Static_5509 = 0;
+	var Static_5510 = 0;
+	var Static_5511 = 0;
+	var Static_5512 = 0;
+	var Static_5513 = 0;
+	var Static_5514 = 4;
+	var Static_5515 = 0;
+	var Static_5516 = 0;
+	var Static_5517 = 0;
+	var Static_5518 = 0;
+	var Static_5519 = 0;
+	var Static_5520 = 0;
+	var Static_5521 = 4;
+	var Static_5522 = 0;
+	var Static_5523 = 0;
+	var Static_5524 = 0;
+	var Static_5525 = 0;
+	var Static_5526 = 0;
+	var Static_5527 = 0;
+	var Static_5528 = 0;
+	var Static_5529 = 0;
+	var Static_5530 = 0;
+	var Static_5531 = 0;
+	var Static_5532 = 0;
+	var Static_5533 = 0;
+	var Static_5534 = 0;
+	var Static_5535 = 0;
+	var Static_5536 = 0;
+	var Static_5537 = 0;
+	var Static_5538 = 4;
+	var Static_5539 = 0;
+	var Static_5540 = 0;
+	var Static_5541 = 0;
+	var Static_5542 = 0;
+	var Static_5543 = 0;
+	var Static_5544 = 0;
+	var Static_5545 = 4;
+	var Static_5546 = 0;
+	var Static_5547 = 0;
+	var Static_5548 = 0;
+	var Static_5549 = 0;
+	var Static_5550 = 0;
+	var Static_5551 = 0;
+	var Static_5552 = 0;
+	var Static_5553 = 0;
+	var Static_5554 = 0;
+	var Static_5555 = 0;
+	var Static_5556 = 0;
+	var Static_5557 = 0;
+	var Static_5558 = 0;
+	var Static_5559 = 0;
+	var Static_5560 = 0;
+	var Static_5561 = 0;
+	var Static_5562 = 4;
+	var Static_5563 = 0;
+	var Static_5564 = 0;
+	var Static_5565 = 0;
+	var Static_5566 = 0;
+	var Static_5567 = 0;
+	var Static_5568 = 0;
+	var Static_5569 = 4;
+	var Static_5570 = 0;
+	var Static_5571 = 0;
+	var Static_5572 = 0;
+	var Static_5573 = 0;
+	var Static_5574 = 0;
+	var Static_5575 = 0;
+	var Static_5576 = 0;
+	var Static_5577 = 0;
+	var Static_5578 = 0;
+	var Static_5579 = 0;
+	var Static_5580 = 0;
+	var Static_5581 = 0;
+	var Static_5582 = 0;
+	var Static_5583 = 0;
+	var Static_5584 = 0;
+	var Static_5585 = 0;
+	var Static_5586 = 4;
+	var Static_5587 = 0;
+	var Static_5588 = 0;
+	var Static_5589 = 0;
+	var Static_5590 = 0;
+	var Static_5591 = 0;
+	var Static_5592 = 0;
+	var Static_5593 = 4;
+	var Static_5594 = 0;
+	var Static_5595 = 0;
+	var Static_5596 = 0;
+	var Static_5597 = 0;
+	var Static_5598 = 0;
+	var Static_5599 = 0;
+	var Static_5600 = 0;
+	var Static_5601 = 0;
+	var Static_5602 = 0;
+	var Static_5603 = 0;
+	var Static_5604 = 0;
+	var Static_5605 = 0;
+	var Static_5606 = 0;
+	var Static_5607 = 0;
+	var Static_5608 = 0;
+	var Static_5609 = 0;
+	var Static_5610 = 4;
+	var Static_5611 = 0;
+	var Static_5612 = 0;
+	var Static_5613 = 0;
+	var Static_5614 = 0;
+	var Static_5615 = 0;
+	var Static_5616 = 0;
+	var Static_5617 = 0;
+	int Static_5618 = 24;
+	var Static_5619 = 4;
+	var Static_5620 = 0;
+	var Static_5621 = 0;
+	var Static_5622 = 0;
+	var Static_5623 = 0;
+	var Static_5624 = 0;
+	var Static_5625 = 0;
+	var Static_5626 = 0;
+	var Static_5627 = 0;
+	var Static_5628 = 0;
+	var Static_5629 = 0;
+	var Static_5630 = 0;
+	var Static_5631 = 0;
+	var Static_5632 = 0;
+	var Static_5633 = 0;
+	var Static_5634 = 0;
+	var Static_5635 = 0;
+	var Static_5636 = 4;
+	var Static_5637 = 0;
+	var Static_5638 = 0;
+	var Static_5639 = 0;
+	var Static_5640 = 0;
+	var Static_5641 = 0;
+	var Static_5642 = 0;
+	var Static_5643 = 4;
+	var Static_5644 = 0;
+	var Static_5645 = 0;
+	var Static_5646 = 0;
+	var Static_5647 = 0;
+	var Static_5648 = 0;
+	var Static_5649 = 0;
+	var Static_5650 = 0;
+	var Static_5651 = 0;
+	var Static_5652 = 0;
+	var Static_5653 = 0;
+	var Static_5654 = 0;
+	var Static_5655 = 0;
+	var Static_5656 = 0;
+	var Static_5657 = 0;
+	var Static_5658 = 0;
+	var Static_5659 = 0;
+	var Static_5660 = 4;
+	var Static_5661 = 0;
+	var Static_5662 = 0;
+	var Static_5663 = 0;
+	var Static_5664 = 0;
+	var Static_5665 = 0;
+	var Static_5666 = 0;
+	var Static_5667 = 4;
+	var Static_5668 = 0;
+	var Static_5669 = 0;
+	var Static_5670 = 0;
+	var Static_5671 = 0;
+	var Static_5672 = 0;
+	var Static_5673 = 0;
+	var Static_5674 = 0;
+	var Static_5675 = 0;
+	var Static_5676 = 0;
+	var Static_5677 = 0;
+	var Static_5678 = 0;
+	var Static_5679 = 0;
+	var Static_5680 = 0;
+	var Static_5681 = 0;
+	var Static_5682 = 0;
+	var Static_5683 = 0;
+	var Static_5684 = 4;
+	var Static_5685 = 0;
+	var Static_5686 = 0;
+	var Static_5687 = 0;
+	var Static_5688 = 0;
+	var Static_5689 = 0;
+	var Static_5690 = 0;
+	var Static_5691 = 4;
+	var Static_5692 = 0;
+	var Static_5693 = 0;
+	var Static_5694 = 0;
+	var Static_5695 = 0;
+	var Static_5696 = 0;
+	var Static_5697 = 0;
+	var Static_5698 = 0;
+	var Static_5699 = 0;
+	var Static_5700 = 0;
+	var Static_5701 = 0;
+	var Static_5702 = 0;
+	var Static_5703 = 0;
+	var Static_5704 = 0;
+	var Static_5705 = 0;
+	var Static_5706 = 0;
+	var Static_5707 = 0;
+	var Static_5708 = 4;
+	var Static_5709 = 0;
+	var Static_5710 = 0;
+	var Static_5711 = 0;
+	var Static_5712 = 0;
+	var Static_5713 = 0;
+	var Static_5714 = 0;
+	var Static_5715 = 4;
+	var Static_5716 = 0;
+	var Static_5717 = 0;
+	var Static_5718 = 0;
+	var Static_5719 = 0;
+	var Static_5720 = 0;
+	var Static_5721 = 0;
+	var Static_5722 = 0;
+	var Static_5723 = 0;
+	var Static_5724 = 0;
+	var Static_5725 = 0;
+	var Static_5726 = 0;
+	var Static_5727 = 0;
+	var Static_5728 = 0;
+	var Static_5729 = 0;
+	var Static_5730 = 0;
+	var Static_5731 = 0;
+	var Static_5732 = 4;
+	var Static_5733 = 0;
+	var Static_5734 = 0;
+	var Static_5735 = 0;
+	var Static_5736 = 0;
+	var Static_5737 = 0;
+	var Static_5738 = 0;
+	var Static_5739 = 4;
+	var Static_5740 = 0;
+	var Static_5741 = 0;
+	var Static_5742 = 0;
+	var Static_5743 = 0;
+	var Static_5744 = 0;
+	var Static_5745 = 0;
+	var Static_5746 = 0;
+	var Static_5747 = 0;
+	var Static_5748 = 0;
+	var Static_5749 = 0;
+	var Static_5750 = 0;
+	var Static_5751 = 0;
+	var Static_5752 = 0;
+	var Static_5753 = 0;
+	var Static_5754 = 0;
+	var Static_5755 = 0;
+	var Static_5756 = 4;
+	var Static_5757 = 0;
+	var Static_5758 = 0;
+	var Static_5759 = 0;
+	var Static_5760 = 0;
+	var Static_5761 = 0;
+	var Static_5762 = 0;
+	var Static_5763 = 4;
+	var Static_5764 = 0;
+	var Static_5765 = 0;
+	var Static_5766 = 0;
+	var Static_5767 = 0;
+	var Static_5768 = 0;
+	var Static_5769 = 0;
+	var Static_5770 = 0;
+	var Static_5771 = 0;
+	var Static_5772 = 0;
+	var Static_5773 = 0;
+	var Static_5774 = 0;
+	var Static_5775 = 0;
+	var Static_5776 = 0;
+	var Static_5777 = 0;
+	var Static_5778 = 0;
+	var Static_5779 = 0;
+	var Static_5780 = 4;
+	var Static_5781 = 0;
+	var Static_5782 = 0;
+	var Static_5783 = 0;
+	var Static_5784 = 0;
+	var Static_5785 = 0;
+	var Static_5786 = 0;
+	var Static_5787 = 4;
+	var Static_5788 = 0;
+	var Static_5789 = 0;
+	var Static_5790 = 0;
+	var Static_5791 = 0;
+	var Static_5792 = 0;
+	var Static_5793 = 0;
+	var Static_5794 = 0;
+	var Static_5795 = 0;
+	var Static_5796 = 0;
+	var Static_5797 = 0;
+	var Static_5798 = 0;
+	var Static_5799 = 0;
+	var Static_5800 = 0;
+	var Static_5801 = 0;
+	var Static_5802 = 0;
+	var Static_5803 = 0;
+	var Static_5804 = 4;
+	var Static_5805 = 0;
+	var Static_5806 = 0;
+	var Static_5807 = 0;
+	var Static_5808 = 0;
+	var Static_5809 = 0;
+	var Static_5810 = 0;
+	var Static_5811 = 4;
+	var Static_5812 = 0;
+	var Static_5813 = 0;
+	var Static_5814 = 0;
+	var Static_5815 = 0;
+	var Static_5816 = 0;
+	var Static_5817 = 0;
+	var Static_5818 = 0;
+	var Static_5819 = 0;
+	var Static_5820 = 0;
+	var Static_5821 = 0;
+	var Static_5822 = 0;
+	var Static_5823 = 0;
+	var Static_5824 = 0;
+	var Static_5825 = 0;
+	var Static_5826 = 0;
+	var Static_5827 = 0;
+	var Static_5828 = 4;
+	var Static_5829 = 0;
+	var Static_5830 = 0;
+	var Static_5831 = 0;
+	var Static_5832 = 0;
+	var Static_5833 = 0;
+	var Static_5834 = 0;
+	var Static_5835 = 4;
+	var Static_5836 = 0;
+	var Static_5837 = 0;
+	var Static_5838 = 0;
+	var Static_5839 = 0;
+	var Static_5840 = 0;
+	var Static_5841 = 0;
+	var Static_5842 = 0;
+	var Static_5843 = 0;
+	var Static_5844 = 0;
+	var Static_5845 = 0;
+	var Static_5846 = 0;
+	var Static_5847 = 0;
+	var Static_5848 = 0;
+	var Static_5849 = 0;
+	var Static_5850 = 0;
+	var Static_5851 = 0;
+	var Static_5852 = 4;
+	var Static_5853 = 0;
+	var Static_5854 = 0;
+	var Static_5855 = 0;
+	var Static_5856 = 0;
+	var Static_5857 = 0;
+	var Static_5858 = 0;
+	var Static_5859 = 4;
+	var Static_5860 = 0;
+	var Static_5861 = 0;
+	var Static_5862 = 0;
+	var Static_5863 = 0;
+	var Static_5864 = 0;
+	var Static_5865 = 0;
+	var Static_5866 = 0;
+	var Static_5867 = 0;
+	var Static_5868 = 0;
+	var Static_5869 = 0;
+	var Static_5870 = 0;
+	var Static_5871 = 0;
+	var Static_5872 = 0;
+	var Static_5873 = 0;
+	var Static_5874 = 0;
+	var Static_5875 = 0;
+	var Static_5876 = 4;
+	var Static_5877 = 0;
+	var Static_5878 = 0;
+	var Static_5879 = 0;
+	var Static_5880 = 0;
+	var Static_5881 = 0;
+	var Static_5882 = 0;
+	var Static_5883 = 4;
+	var Static_5884 = 0;
+	var Static_5885 = 0;
+	var Static_5886 = 0;
+	var Static_5887 = 0;
+	var Static_5888 = 0;
+	var Static_5889 = 0;
+	var Static_5890 = 0;
+	var Static_5891 = 0;
+	var Static_5892 = 0;
+	var Static_5893 = 0;
+	var Static_5894 = 0;
+	var Static_5895 = 0;
+	var Static_5896 = 0;
+	var Static_5897 = 0;
+	var Static_5898 = 0;
+	var Static_5899 = 0;
+	var Static_5900 = 4;
+	var Static_5901 = 0;
+	var Static_5902 = 0;
+	var Static_5903 = 0;
+	var Static_5904 = 0;
+	var Static_5905 = 0;
+	var Static_5906 = 0;
+	var Static_5907 = 4;
+	var Static_5908 = 0;
+	var Static_5909 = 0;
+	var Static_5910 = 0;
+	var Static_5911 = 0;
+	var Static_5912 = 0;
+	var Static_5913 = 0;
+	var Static_5914 = 0;
+	var Static_5915 = 0;
+	var Static_5916 = 0;
+	var Static_5917 = 0;
+	var Static_5918 = 0;
+	var Static_5919 = 0;
+	var Static_5920 = 0;
+	var Static_5921 = 0;
+	var Static_5922 = 0;
+	var Static_5923 = 0;
+	var Static_5924 = 4;
+	var Static_5925 = 0;
+	var Static_5926 = 0;
+	var Static_5927 = 0;
+	var Static_5928 = 0;
+	var Static_5929 = 0;
+	var Static_5930 = 0;
+	var Static_5931 = 4;
+	var Static_5932 = 0;
+	var Static_5933 = 0;
+	var Static_5934 = 0;
+	var Static_5935 = 0;
+	var Static_5936 = 0;
+	var Static_5937 = 0;
+	var Static_5938 = 0;
+	var Static_5939 = 0;
+	var Static_5940 = 0;
+	var Static_5941 = 0;
+	var Static_5942 = 0;
+	var Static_5943 = 0;
+	var Static_5944 = 0;
+	var Static_5945 = 0;
+	var Static_5946 = 0;
+	var Static_5947 = 0;
+	var Static_5948 = 4;
+	var Static_5949 = 0;
+	var Static_5950 = 0;
+	var Static_5951 = 0;
+	var Static_5952 = 0;
+	var Static_5953 = 0;
+	var Static_5954 = 0;
+	var Static_5955 = 4;
+	var Static_5956 = 0;
+	var Static_5957 = 0;
+	var Static_5958 = 0;
+	var Static_5959 = 0;
+	var Static_5960 = 0;
+	var Static_5961 = 0;
+	var Static_5962 = 0;
+	var Static_5963 = 0;
+	var Static_5964 = 0;
+	var Static_5965 = 0;
+	var Static_5966 = 0;
+	var Static_5967 = 0;
+	var Static_5968 = 0;
+	var Static_5969 = 0;
+	var Static_5970 = 0;
+	var Static_5971 = 0;
+	var Static_5972 = 4;
+	var Static_5973 = 0;
+	var Static_5974 = 0;
+	var Static_5975 = 0;
+	var Static_5976 = 0;
+	var Static_5977 = 0;
+	var Static_5978 = 0;
+	var Static_5979 = 4;
+	var Static_5980 = 0;
+	var Static_5981 = 0;
+	var Static_5982 = 0;
+	var Static_5983 = 0;
+	var Static_5984 = 0;
+	var Static_5985 = 0;
+	var Static_5986 = 0;
+	var Static_5987 = 0;
+	var Static_5988 = 0;
+	var Static_5989 = 0;
+	var Static_5990 = 0;
+	var Static_5991 = 0;
+	var Static_5992 = 0;
+	var Static_5993 = 0;
+	var Static_5994 = 0;
+	var Static_5995 = 0;
+	var Static_5996 = 4;
+	var Static_5997 = 0;
+	var Static_5998 = 0;
+	var Static_5999 = 0;
+	var Static_6000 = 0;
+	var Static_6001 = 0;
+	var Static_6002 = 0;
+	var Static_6003 = 4;
+	var Static_6004 = 0;
+	var Static_6005 = 0;
+	var Static_6006 = 0;
+	var Static_6007 = 0;
+	var Static_6008 = 0;
+	var Static_6009 = 0;
+	var Static_6010 = 0;
+	var Static_6011 = 0;
+	var Static_6012 = 0;
+	var Static_6013 = 0;
+	var Static_6014 = 0;
+	var Static_6015 = 0;
+	var Static_6016 = 0;
+	var Static_6017 = 0;
+	var Static_6018 = 0;
+	var Static_6019 = 0;
+	var Static_6020 = 4;
+	var Static_6021 = 0;
+	var Static_6022 = 0;
+	var Static_6023 = 0;
+	var Static_6024 = 0;
+	var Static_6025 = 0;
+	var Static_6026 = 0;
+	var Static_6027 = 4;
+	var Static_6028 = 0;
+	var Static_6029 = 0;
+	var Static_6030 = 0;
+	var Static_6031 = 0;
+	var Static_6032 = 0;
+	var Static_6033 = 0;
+	var Static_6034 = 0;
+	var Static_6035 = 0;
+	var Static_6036 = 0;
+	var Static_6037 = 0;
+	var Static_6038 = 0;
+	var Static_6039 = 0;
+	var Static_6040 = 0;
+	var Static_6041 = 0;
+	var Static_6042 = 0;
+	var Static_6043 = 0;
+	var Static_6044 = 4;
+	var Static_6045 = 0;
+	var Static_6046 = 0;
+	var Static_6047 = 0;
+	var Static_6048 = 0;
+	var Static_6049 = 0;
+	var Static_6050 = 0;
+	var Static_6051 = 4;
+	var Static_6052 = 0;
+	var Static_6053 = 0;
+	var Static_6054 = 0;
+	var Static_6055 = 0;
+	var Static_6056 = 0;
+	var Static_6057 = 0;
+	var Static_6058 = 0;
+	var Static_6059 = 0;
+	var Static_6060 = 0;
+	var Static_6061 = 0;
+	var Static_6062 = 0;
+	var Static_6063 = 0;
+	var Static_6064 = 0;
+	var Static_6065 = 0;
+	var Static_6066 = 0;
+	var Static_6067 = 0;
+	var Static_6068 = 4;
+	var Static_6069 = 0;
+	var Static_6070 = 0;
+	var Static_6071 = 0;
+	var Static_6072 = 0;
+	var Static_6073 = 0;
+	var Static_6074 = 0;
+	var Static_6075 = 4;
+	var Static_6076 = 0;
+	var Static_6077 = 0;
+	var Static_6078 = 0;
+	var Static_6079 = 0;
+	var Static_6080 = 0;
+	var Static_6081 = 0;
+	var Static_6082 = 0;
+	var Static_6083 = 0;
+	var Static_6084 = 0;
+	var Static_6085 = 0;
+	var Static_6086 = 0;
+	var Static_6087 = 0;
+	var Static_6088 = 0;
+	var Static_6089 = 0;
+	var Static_6090 = 0;
+	var Static_6091 = 0;
+	var Static_6092 = 4;
+	var Static_6093 = 0;
+	var Static_6094 = 0;
+	var Static_6095 = 0;
+	var Static_6096 = 0;
+	var Static_6097 = 0;
+	var Static_6098 = 0;
+	var Static_6099 = 4;
+	var Static_6100 = 0;
+	var Static_6101 = 0;
+	var Static_6102 = 0;
+	var Static_6103 = 0;
+	var Static_6104 = 0;
+	var Static_6105 = 0;
+	var Static_6106 = 0;
+	var Static_6107 = 0;
+	var Static_6108 = 0;
+	var Static_6109 = 0;
+	var Static_6110 = 0;
+	var Static_6111 = 0;
+	var Static_6112 = 0;
+	var Static_6113 = 0;
+	var Static_6114 = 0;
+	var Static_6115 = 0;
+	var Static_6116 = 4;
+	var Static_6117 = 0;
+	var Static_6118 = 0;
+	var Static_6119 = 0;
+	var Static_6120 = 0;
+	var Static_6121 = 0;
+	var Static_6122 = 0;
+	var Static_6123 = 4;
+	var Static_6124 = 0;
+	var Static_6125 = 0;
+	var Static_6126 = 0;
+	var Static_6127 = 0;
+	var Static_6128 = 0;
+	var Static_6129 = 0;
+	var Static_6130 = 0;
+	var Static_6131 = 0;
+	var Static_6132 = 0;
+	var Static_6133 = 0;
+	var Static_6134 = 0;
+	var Static_6135 = 0;
+	var Static_6136 = 0;
+	var Static_6137 = 0;
+	var Static_6138 = 0;
+	var Static_6139 = 0;
+	var Static_6140 = 4;
+	var Static_6141 = 0;
+	var Static_6142 = 0;
+	var Static_6143 = 0;
+	var Static_6144 = 0;
+	var Static_6145 = 0;
+	var Static_6146 = 0;
+	var Static_6147 = 4;
+	var Static_6148 = 0;
+	var Static_6149 = 0;
+	var Static_6150 = 0;
+	var Static_6151 = 0;
+	var Static_6152 = 0;
+	var Static_6153 = 0;
+	var Static_6154 = 0;
+	var Static_6155 = 0;
+	var Static_6156 = 0;
+	var Static_6157 = 0;
+	var Static_6158 = 0;
+	var Static_6159 = 0;
+	var Static_6160 = 0;
+	var Static_6161 = 0;
+	var Static_6162 = 0;
+	var Static_6163 = 0;
+	var Static_6164 = 4;
+	var Static_6165 = 0;
+	var Static_6166 = 0;
+	var Static_6167 = 0;
+	var Static_6168 = 0;
+	var Static_6169 = 0;
+	var Static_6170 = 0;
+	var Static_6171 = 4;
+	var Static_6172 = 0;
+	var Static_6173 = 0;
+	var Static_6174 = 0;
+	var Static_6175 = 0;
+	var Static_6176 = 0;
+	var Static_6177 = 0;
+	var Static_6178 = 0;
+	var Static_6179 = 0;
+	var Static_6180 = 0;
+	var Static_6181 = 0;
+	var Static_6182 = 0;
+	var Static_6183 = 0;
+	var Static_6184 = 0;
+	var Static_6185 = 0;
+	var Static_6186 = 0;
+	var Static_6187 = 0;
+	var Static_6188 = 4;
+	var Static_6189 = 0;
+	var Static_6190 = 0;
+	var Static_6191 = 0;
+	var Static_6192 = 0;
+	var Static_6193 = 0;
+	var Static_6194 = 0;
+	var Static_6195 = 0;
+	var Static_6196 = 0;
+	float Static_6197 = 0f;
+	float Static_6198 = 0f;
+	var Static_6199 = 0;
+	var Static_6200 = 0;
+	var Static_6201 = 0;
+	var Static_6202 = 0;
+	bool Static_6203 = 0;
+	bool Static_6204 = 0;
+	int Static_6205 = 0;
+	int Static_6206 = 0;
+	int Static_6207 = 0;
+	var Static_6208 = 0;
+	var Static_6209 = 0;
+	var Static_6210 = 0;
+	var Static_6211 = 0;
+	bool Static_6212 = 0;
 #endregion
 
-void __EntryFunction__()//Position - 0x0
+void main() // Position - 0x0
 {
-	iLocal_2 = 1;
-	iLocal_3 = 134;
-	iLocal_4 = 134;
-	iLocal_5 = 1;
-	iLocal_6 = 1;
-	iLocal_7 = 1;
-	iLocal_8 = 134;
-	iLocal_9 = 1;
-	iLocal_10 = 12;
-	iLocal_11 = 12;
-	fLocal_12 = 0.001f;
-	iLocal_15 = -1;
-	iLocal_87 = 29;
-	fLocal_6197 = 0.075f;
-	fLocal_6198 = 0.725f;
-	iLocal_6205 = 1;
-	iLocal_6206 = 1;
-	bLocal_6212 = true;
-	MISC::SET_MISSION_FLAG(true);
+	Static_2 = 1;
+	Static_3 = 134;
+	Static_4 = 134;
+	Static_5 = 1;
+	Static_6 = 1;
+	Static_7 = 1;
+	Static_8 = 134;
+	Static_9 = 1;
+	Static_10 = 12;
+	Static_11 = 12;
+	Static_12 = 0.001f;
+	Static_15 = -1;
+	Static_87 = 29;
+	Static_6197 = 0.075f;
+	Static_6198 = 0.725f;
+	Static_6205 = 1;
+	Static_6206 = 1;
+	Static_6212 = true;
+	MISC::SET_MISSION_FLAG(1);
+
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
-	{
 		func_42();
-	}
+
 	CAM::DO_SCREEN_FADE_OUT(0);
-	GRAPHICS::SET_DEBUG_LINES_AND_SPHERES_DRAWING_ACTIVE(true);
-	func_35(1);
+	GRAPHICS::SET_DEBUG_LINES_AND_SPHERES_DRAWING_ACTIVE(1);
+	func_35(true);
+
 	if (func_34(PLAYER::PLAYER_PED_ID()))
 	{
-		ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 689.1f, 586.5f, 130.5f, true, false, false, true);
+		ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 689.1f, 586.5f, 130.5f, 1, 0, 0, 1);
 		MISC::CLEAR_AREA_OF_PEDS(689.1f, 586.5f, 130.5f, 500f, 0);
-		WEAPON::REMOVE_ALL_PED_WEAPONS(PLAYER::PLAYER_PED_ID(), true);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(PLAYER::PLAYER_PED_ID(), 1);
 	}
+
 	CUTSCENE::REQUEST_CUTSCENE("les_1b_mcs_2_p2_a1", 8);
-	func_17(1);
+	func_17(true);
+
 	while (ENTITY::IS_ENTITY_WAITING_FOR_WORLD_COLLISION(PLAYER::PLAYER_PED_ID()))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
-	func_6(1, 1, 1, 0, 0, 0, 0);
+
+	func_6(true, true, true, 0, false, false, false);
 	CAM::DO_SCREEN_FADE_IN(0);
+
 	while (true)
 	{
 		VEHICLE::SET_VEHICLE_DENSITY_MULTIPLIER_THIS_FRAME(0f);
 		PED::SET_PED_DENSITY_MULTIPLIER_THIS_FRAME(0f);
 		func_34(PLAYER::PLAYER_PED_ID());
+	
 		if (func_1())
-		{
 			func_42();
-		}
-		SYSTEM::WAIT(0);
+	
+		BUILTIN::WAIT(0);
 	}
 }
 
-int func_1()//Position - 0x117
+bool func_1() // Position - 0x117
 {
-	CLOCK::SET_CLOCK_TIME(Local_19.f_0, Local_19.f_1, Local_19.f_2);
+	CLOCK::SET_CLOCK_TIME(Static_19, Static_19.f_1, Static_19.f_2);
 	MISC::SET_WIND(-1f);
-	switch (iLocal_6207)
+
+	switch (Static_6207)
 	{
 		case 0:
 			CAM::DO_SCREEN_FADE_IN(0);
 			func_5();
 			CAM::DO_SCREEN_FADE_IN(500);
 			CUTSCENE::START_CUTSCENE(0);
-			iLocal_6207++;
+			Static_6207 = Static_6207 + 1;
 			break;
-		
+	
 		case 1:
 			if (!CUTSCENE::HAS_CUTSCENE_FINISHED())
 			{
-				if (bLocal_6212)
-				{
+				if (Static_6212)
 					func_3();
-				}
-				HUD::SET_TEXT_RENDER_ID(iLocal_6201);
-				GRAPHICS::DRAW_SCALEFORM_MOVIE(iLocal_6199, 0.2f, 0.34f, 0.410001f, 0.69f, 100, 100, 100, 255, 0);
-				HUD::SET_TEXT_RENDER_ID(iLocal_6202);
-				if (bLocal_6203)
+			
+				HUD::SET_TEXT_RENDER_ID(Static_6201);
+				GRAPHICS::DRAW_SCALEFORM_MOVIE(Static_6199, 0.2f, 0.34f, 0.410001f, 0.69f, 100, 100, 100, 255, 0);
+				HUD::SET_TEXT_RENDER_ID(Static_6202);
+			
+				if (Static_6203)
 				{
-					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_6200, "SET_TEXT");
-					func_2("KEYNOTE_NAME");
-					func_2("KEYNOTE_TITLE");
+					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Static_6200, "SET_TEXT");
+					func_2("KEYNOTE_NAME" /* GXT: Jay Norris */);
+					func_2("KEYNOTE_TITLE" /* GXT: CEO Lifeinvader */);
 					GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-					GRAPHICS::DRAW_SCALEFORM_MOVIE(iLocal_6200, 0.5f, 0.5f, 1f, 1f, 100, 100, 100, 255, 0);
+					GRAPHICS::DRAW_SCALEFORM_MOVIE(Static_6200, 0.5f, 0.5f, 1f, 1f, 100, 100, 100, 255, 0);
 				}
 			}
 			else
 			{
-				return 1;
+				return true;
 			}
 			break;
 	}
-	return 0;
+
+	return false;
 }
 
-void func_2(char* sParam0)//Position - 0x1F0
+void func_2(char* sParam0) // Position - 0x1F0
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 }
 
-void func_3()//Position - 0x202
+void func_3() // Position - 0x202
 {
-	int iVar0;
-	bool bVar1;
-	
-	iVar0 = CUTSCENE::GET_CUTSCENE_TIME();
-	bVar1 = false;
-	while (bVar1 <= (16 - 1))
+	var uVar0;
+	int iVar1;
+
+	uVar0 = CUTSCENE::GET_CUTSCENE_TIME();
+
+	for (iVar1 = 0; iVar1 <= 16 - 1; iVar1 = iVar1 + 1)
 	{
-		if (Local_22[bVar1] != -1)
+		if (Static_22[iVar1] != -1)
 		{
-			if ((!BitTest(uLocal_56, bVar1) && iVar0 >= Local_22[bVar1]) && iVar0 < Local_22.f_17[bVar1])
+			if (!IS_BIT_SET(Static_56, iVar1) && uVar0 >= Static_22[iVar1] && uVar0 < Static_22.f_17[iVar1])
 			{
 				func_4();
-				MISC::SET_BIT(&uLocal_56, bVar1);
+				MISC::SET_BIT(&Static_56, iVar1);
 			}
 		}
-		bVar1++;
 	}
 }
 
-void func_4()//Position - 0x262
+void func_4() // Position - 0x262
 {
 }
 
-void func_5()//Position - 0x26A
+void func_5() // Position - 0x26A
 {
 }
 
-void func_6(bool bParam0, bool bParam1, int iParam2, bool bParam3, bool bParam4, bool bParam5, bool bParam6)//Position - 0x272
+void func_6(bool bParam0, bool bParam1, bool bParam2, int iParam3, bool bParam4, bool bParam5, bool bParam6) // Position - 0x272
 {
 	if (bParam0)
 	{
 		PLAYER::SPECIAL_ABILITY_DEACTIVATE_FAST(PLAYER::PLAYER_ID(), 0);
-		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), true);
-		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), true);
+		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), 1);
+		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), 1);
 		func_16(1);
 		HUD::THEFEED_FLUSH_QUEUE();
 		HUD::THEFEED_PAUSE();
-		if (Global_21066.f_1 > 3 && !bParam6)
+	
+		if (Global_21627.f_1 > 3 && !bParam6)
 		{
 			if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
-			{
-				AUDIO::STOP_SCRIPTED_CONVERSATION(false);
-			}
+				AUDIO::STOP_SCRIPTED_CONVERSATION(0);
+		
 			if (!func_15())
-			{
-				Global_21066.f_1 = 3;
-			}
-			Global_22425 = 5;
+				Global_21627.f_1 = 3;
+		
+			Global_23000 = 5;
 		}
-		func_14(1, bParam3, iParam2, 0);
-		Global_64314 = 1;
-		Global_76643 = 1;
-		Global_79537 = 1;
+	
+		func_14(1, iParam3, bParam2, 0);
+		Global_65033 = true;
+		Global_77362 = true;
+		Global_80303 = true;
 	}
 	else
 	{
 		func_16(0);
 		HUD::THEFEED_RESUME();
-		Global_64314 = 0;
+		Global_65033 = false;
+	
 		if (bParam1)
-		{
 			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
-		}
-		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
-		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);
-		func_14(0, bParam3, iParam2, 0);
+	
+		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), 0);
+		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), 0);
+		func_14(0, iParam3, bParam2, 0);
+	
 		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-		{
-			if ((((((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_12(PLAYER::PLAYER_ID())) && !func_8(PLAYER::PLAYER_ID(), 0)) && !func_7()) && !bParam4) && !bParam5) && !NETWORK::NETWORK_IS_IN_SPECTATOR_MODE())
-			{
-				ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false, false);
-			}
-		}
-		else if (((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_12(PLAYER::PLAYER_ID())) && !bParam4) && !bParam5)
-		{
-			ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false, false);
-		}
-		Global_79537 = 0;
+			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_12(PLAYER::PLAYER_ID()) && !func_8(PLAYER::PLAYER_ID(), 0) && !func_7() && !bParam4 && !bParam5 && !NETWORK::NETWORK_IS_IN_SPECTATOR_MODE())
+				ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), 0, 0);
+		else if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_12(PLAYER::PLAYER_ID()) && !bParam4 && !bParam5)
+			ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), 0, 0);
+	
+		Global_80303 = false;
 	}
 }
 
-bool func_7()//Position - 0x3C1
+bool func_7() // Position - 0x3C1
 {
-	return BitTest(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_36.f_18, 14);
+	return IS_BIT_SET(Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_36.f_18, 14);
 }
 
-bool func_8(int iParam0, int iParam1)//Position - 0x3DB
+bool func_8(int iParam0, int iParam1) // Position - 0x3DB
 {
 	bool bVar0;
-	
+
 	if (!func_11(iParam0))
-	{
-		return 0;
-	}
+		return false;
+
 	if (iParam0 == PLAYER::PLAYER_ID())
-	{
-		bVar0 = func_9(-1, 0) == 8;
-	}
+		bVar0 = func_9(-1, false) == 8;
 	else
-	{
-		bVar0 = Global_1845221[iParam0 /*889*/].f_206 == 8;
-	}
+		bVar0 = Global_1845299[iParam0 /*883*/].f_198 == 8;
+
 	if (iParam1 == 1)
-	{
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(iParam0))
-		{
 			bVar0 = PLAYER::GET_PLAYER_TEAM(iParam0) == 8;
-		}
-	}
+
 	return bVar0;
 }
 
-int func_9(int iParam0, bool bParam1)//Position - 0x434
+bool func_9(bool bParam0, bool bParam1) // Position - 0x434
 {
-	int iVar0;
-	int iVar1;
-	
-	iVar1 = iParam0;
-	if (iVar1 == -1)
+	bool bVar0;
+	bool bVar1;
+
+	bVar1 = bParam0;
+
+	if (bVar1 == -1)
+		bVar1 = func_10();
+
+	if (Global_1575072[bVar1] == true)
 	{
-		iVar1 = func_10();
-	}
-	if (Global_1575064[iVar1] == 1)
-	{
-		if (bParam1)
-		{
-		}
-		iVar0 = 8;
+		bParam1;
+		bVar0 = 8;
 	}
 	else
 	{
-		iVar0 = Global_1574920[iVar1];
-		if (bParam1)
-		{
-		}
+		bVar0 = Global_1574921[bVar1];
+		bParam1;
 	}
-	return iVar0;
+
+	return bVar0;
 }
 
-int func_10()//Position - 0x475
+bool func_10() // Position - 0x475
 {
-	return Global_1574926;
+	return Global_1574927;
 }
 
-int func_11(var uParam0)//Position - 0x481
+bool func_11(int iParam0) // Position - 0x481
 {
 	int iVar0;
-	
-	iVar0 = uParam0;
+
+	iVar0 = iParam0;
+
 	if (iVar0 < 0)
-	{
-		return 0;
-	}
+		return false;
+
 	if (iVar0 >= 32)
-	{
-		return 0;
-	}
-	return 1;
+		return false;
+
+	return true;
 }
 
-int func_12(int iParam0)//Position - 0x4A3
+bool func_12(int iParam0) // Position - 0x4A3
 {
 	if (func_8(iParam0, 0))
-	{
-		return 1;
-	}
+		return true;
+
 	if (func_13())
-	{
 		if (iParam0 == PLAYER::PLAYER_ID())
-		{
-			return 1;
-		}
-	}
-	if (BitTest(Global_2657991[iParam0 /*467*/].f_202, 2))
-	{
-		return 1;
-	}
-	return 0;
+			return true;
+
+	if (IS_BIT_SET(Global_2658294[iParam0 /*468*/].f_203, 2))
+		return true;
+
+	return false;
 }
 
-bool func_13()//Position - 0x4E2
+bool func_13() // Position - 0x4E2
 {
-	return BitTest(Global_2621446, 3);
+	return IS_BIT_SET(Global_2621446, 3);
 }
 
-int func_14(bool bParam0, bool bParam1, var uParam2, bool bParam3)//Position - 0x4F0
+int func_14(int iParam0, int iParam1, bool bParam2, int iParam3) // Position - 0x4F0
 {
 	int iVar0;
-	
+
 	iVar0 = 0;
+
 	if (MISC::IS_PC_VERSION())
 	{
-		if (CUTSCENE::IS_MULTIHEAD_FADE_UP() != bParam0 && uParam2)
+		if (CUTSCENE::IS_MULTIHEAD_FADE_UP() != iParam0 && bParam2)
 		{
-			CUTSCENE::SET_CUTSCENE_MULTIHEAD_FADE(bParam0, bParam1, true, bParam3);
+			CUTSCENE::SET_CUTSCENE_MULTIHEAD_FADE(iParam0, iParam1, 1, iParam3);
 			iVar0 = 1;
 		}
 	}
+
 	return iVar0;
 }
 
-int func_15()//Position - 0x523
+bool func_15() // Position - 0x523
 {
-	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 0)
-	{
-		return 1;
-	}
-	return 0;
+	if (Global_21627.f_1 == 1 || Global_21627.f_1 == 0)
+		return true;
+
+	return false;
 }
 
-void func_16(int iParam0)//Position - 0x54A
+void func_16(int iParam0) // Position - 0x54A
 {
 	if (iParam0 == 1)
-	{
-		MISC::SET_BIT(&Global_8919, 13);
-	}
+		MISC::SET_BIT(&Global_9463, 13);
 	else
-	{
-		MISC::CLEAR_BIT(&Global_8919, 13);
-	}
+		MISC::CLEAR_BIT(&Global_9463, 13);
 }
 
-void func_17(bool bParam0)//Position - 0x56D
+void func_17(bool bParam0) // Position - 0x56D
 {
 	int iVar0;
-	
+
 	if (func_34(PLAYER::PLAYER_PED_ID()))
 	{
-		ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 689.1f, 586.5f, 130.5f, true, false, false, true);
+		ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 689.1f, 586.5f, 130.5f, 1, 0, 0, 1);
 		MISC::CLEAR_AREA_OF_PEDS(689.1f, 586.5f, 130.5f, 500f, 0);
-		WEAPON::REMOVE_ALL_PED_WEAPONS(PLAYER::PLAYER_PED_ID(), true);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(PLAYER::PLAYER_PED_ID(), 1);
 	}
+
 	func_33(0);
-	func_32(&iLocal_6211, 0);
+	func_32(&Static_6211, 0);
 	STREAMING::NEW_LOAD_SCENE_START_SPHERE(689.1f, 586.5f, 130.5f, 80f, 0);
+
 	while (!STREAMING::IS_NEW_LOAD_SCENE_LOADED())
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
+
 	STREAMING::NEW_LOAD_SCENE_STOP();
+
 	if (bParam0)
 	{
 		STREAMING::REQUEST_IPL("LInvader");
+	
 		while (!STREAMING::IS_IPL_ACTIVE("LInvader"))
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	}
+
 	MISC::SET_WEATHER_TYPE_NOW_PERSIST("EXTRASUNNY");
-	iLocal_57[0] = joaat("A_M_Y_Hipster_01");
-	iLocal_57[1] = joaat("A_M_Y_Hipster_02");
-	iLocal_57[2] = joaat("A_M_Y_Hipster_03");
-	iLocal_57[3] = joaat("A_F_Y_Hipster_01");
-	iLocal_57[4] = joaat("A_F_Y_Hipster_02");
-	iLocal_57[5] = joaat("A_F_Y_Hipster_03");
-	iLocal_57[6] = joaat("A_F_Y_Hipster_04");
-	iLocal_57[7] = joaat("A_F_Y_BevHills_01");
-	iLocal_57[8] = joaat("A_M_M_Business_01");
-	iLocal_57[9] = joaat("A_M_M_BevHills_02");
-	iLocal_57[10] = joaat("A_M_M_Skater_01");
-	iLocal_57[11] = joaat("A_M_Y_BeachVesp_01");
-	iLocal_57[12] = joaat("A_M_Y_BevHills_01");
-	iLocal_57[13] = joaat("A_F_M_BevHills_01");
-	iLocal_57[14] = joaat("A_M_M_KTown_01");
-	iLocal_57[15] = joaat("A_M_Y_BusiCas_01");
-	iLocal_57[16] = joaat("A_M_Y_Business_02");
-	iLocal_57[17] = joaat("A_M_Y_Gay_01");
-	iLocal_57[18] = joaat("A_M_Y_KTown_02");
-	iLocal_57[19] = joaat("A_M_M_BevHills_02");
-	iLocal_57[20] = joaat("A_M_Y_Business_03");
-	iLocal_57[21] = joaat("A_M_Y_Gay_02");
-	iLocal_57[22] = joaat("A_M_M_Malibu_01");
-	iLocal_57[22] = joaat("A_M_Y_Gay_02");
-	iLocal_57[23] = joaat("A_M_Y_EastSA_02");
-	iLocal_57[24] = joaat("A_M_Y_SouCent_02");
-	iLocal_57[25] = joaat("A_M_Y_Vinewood_01");
-	iLocal_57[26] = joaat("A_M_Y_Vinewood_02");
-	iLocal_57[27] = joaat("A_M_Y_Vinewood_03");
-	iLocal_57[28] = joaat("A_M_Y_Vinewood_04");
-	iVar0 = 0;
-	while (iVar0 <= 12)
+	Static_57[0] = joaat("A_M_Y_HIPSTER_01");
+	Static_57[1] = joaat("A_M_Y_HIPSTER_02");
+	Static_57[2] = joaat("A_M_Y_HIPSTER_03");
+	Static_57[3] = joaat("A_F_Y_HIPSTER_01");
+	Static_57[4] = joaat("A_F_Y_HIPSTER_02");
+	Static_57[5] = joaat("A_F_Y_HIPSTER_03");
+	Static_57[6] = joaat("A_F_Y_HIPSTER_04");
+	Static_57[7] = joaat("A_F_Y_BEVHILLS_01");
+	Static_57[8] = joaat("A_M_M_BUSINESS_01");
+	Static_57[9] = joaat("A_M_M_BEVHILLS_02");
+	Static_57[10] = joaat("A_M_M_SKATER_01");
+	Static_57[11] = joaat("A_M_Y_BEACHVESP_01");
+	Static_57[12] = joaat("A_M_Y_BEVHILLS_01");
+	Static_57[13] = joaat("A_F_M_BEVHILLS_01");
+	Static_57[14] = joaat("A_M_M_KTOWN_01");
+	Static_57[15] = joaat("A_M_Y_BUSICAS_01");
+	Static_57[16] = joaat("A_M_Y_BUSINESS_02");
+	Static_57[17] = joaat("A_M_Y_GAY_01");
+	Static_57[18] = joaat("A_M_Y_KTOWN_02");
+	Static_57[19] = joaat("A_M_M_BEVHILLS_02");
+	Static_57[20] = joaat("A_M_Y_BUSINESS_03");
+	Static_57[21] = joaat("A_M_Y_GAY_02");
+	Static_57[22] = joaat("A_M_M_MALIBU_01");
+	Static_57[22] = joaat("A_M_Y_GAY_02");
+	Static_57[23] = joaat("A_M_Y_EASTSA_02");
+	Static_57[24] = joaat("A_M_Y_SOUCENT_02");
+	Static_57[25] = joaat("A_M_Y_VINEWOOD_01");
+	Static_57[26] = joaat("A_M_Y_VINEWOOD_02");
+	Static_57[27] = joaat("A_M_Y_VINEWOOD_03");
+	Static_57[28] = joaat("A_M_Y_VINEWOOD_04");
+
+	for (iVar0 = 0; iVar0 <= 12; iVar0 = iVar0 + 1)
 	{
 		func_30(func_31(iVar0), 1);
-		iVar0++;
 	}
+
 	func_30("misslester1b_crowdlow@14@", 1);
 	func_30("misslester1b_crowdlow@24@", 1);
-	func_29("BREAKING_NEWS", &iLocal_6200, 1);
-	func_29("lifeinvader_presentation", &iLocal_6199, 1);
-	func_28("LEST1", 0, 1, 0);
-	iVar0 = 0;
-	while (iVar0 <= 26)
+	func_29("BREAKING_NEWS", &Static_6200, 1);
+	func_29("lifeinvader_presentation", &Static_6199, 1);
+	func_28("LEST1", 0, 1, false);
+
+	for (iVar0 = 0; iVar0 <= 26; iVar0 = iVar0 + 1)
 	{
-		func_22(&(Local_88[iVar0 /*178*/]), iVar0);
-		iVar0++;
+		func_22(&Static_88[iVar0 /*178*/], iVar0);
 	}
-	iVar0 = 0;
-	while (iVar0 <= 29)
+
+	for (iVar0 = 0; iVar0 <= 29; iVar0 = iVar0 + 1)
 	{
-		func_21(&(Local_4896[iVar0 /*24*/]), iVar0);
-		iVar0++;
+		func_21(&Static_4896[iVar0 /*24*/], iVar0);
 	}
-	iVar0 = 0;
-	while (iVar0 <= 23)
+
+	for (iVar0 = 0; iVar0 <= 23; iVar0 = iVar0 + 1)
 	{
-		func_20(&(Local_5618[iVar0 /*24*/]), iVar0);
-		iVar0++;
+		func_20(&Static_5618[iVar0 /*24*/], iVar0);
 	}
+
 	GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(1);
-	HUD::REGISTER_NAMED_RENDERTARGET("Big_Disp", false);
-	HUD::LINK_NAMED_RENDERTARGET(joaat("prop_huge_display_01"));
-	HUD::LINK_NAMED_RENDERTARGET(joaat("prop_huge_display_02"));
-	iLocal_6201 = HUD::GET_NAMED_RENDERTARGET_RENDER_ID("Big_Disp");
-	iLocal_6202 = HUD::GET_DEFAULT_SCRIPT_RENDERTARGET_RENDER_ID();
+	HUD::REGISTER_NAMED_RENDERTARGET("Big_Disp", 0);
+	HUD::LINK_NAMED_RENDERTARGET(joaat("PROP_HUGE_DISPLAY_01"));
+	HUD::LINK_NAMED_RENDERTARGET(joaat("PROP_HUGE_DISPLAY_02"));
+	Static_6201 = HUD::GET_NAMED_RENDERTARGET_RENDER_ID("Big_Disp");
+	Static_6202 = HUD::GET_DEFAULT_SCRIPT_RENDERTARGET_RENDER_ID();
+
 	while (ENTITY::IS_ENTITY_WAITING_FOR_WORLD_COLLISION(PLAYER::PLAYER_PED_ID()))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
+
 	while (!CUTSCENE::HAS_CUTSCENE_LOADED())
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
-	SYSTEM::WAIT(2000);
-	iLocal_6207 = 0;
-	Local_19.f_0 = 12;
-	Local_19.f_1 = 0;
-	Local_19.f_2 = 0;
-	iVar0 = 0;
-	while (iVar0 <= (16 - 1))
+
+	BUILTIN::WAIT(2000);
+	Static_6207 = 0;
+	Static_19 = 12;
+	Static_19.f_1 = 0;
+	Static_19.f_2 = 0;
+
+	for (iVar0 = 0; iVar0 <= 16 - 1; iVar0 = iVar0 + 1)
 	{
 		func_18(iVar0);
-		iVar0++;
 	}
-	if (bLocal_6204)
-	{
-	}
+
+	Static_6204;
 }
 
-void func_18(int iParam0)//Position - 0x8A1
+void func_18(int iParam0) // Position - 0x8A1
 {
 	switch (iParam0)
 	{
 		case 0:
 			func_19(iParam0, 0, 10000);
 			break;
-		
+	
 		case 1:
 			func_19(iParam0, 9000, 10000);
 			break;
-		
+	
 		case 2:
 			func_19(iParam0, 27000, 32000);
 			break;
-		
+	
 		case 3:
 			func_19(iParam0, 32000, 42000);
 			break;
-		
+	
 		case 4:
 			func_19(iParam0, 51000, 63000);
 			break;
-		
+	
 		case 5:
 			func_19(iParam0, 63600, 69000);
 			break;
-		
+	
 		case 6:
 			func_19(iParam0, 66000, 70200);
 			break;
-		
+	
 		case 7:
-			func_19(iParam0, 69600, 79200);
+			func_19(iParam0, 69600, joaat("SS1_03_98_LOD"));
 			break;
-		
+	
 		case 8:
 			func_19(iParam0, 77400, 84000);
 			break;
-		
+	
 		case 12:
 			func_19(iParam0, 81000, 93600);
 			break;
-		
+	
 		case 9:
 			func_19(iParam0, -1, -1);
 			break;
-		
+	
 		case 11:
 			func_19(iParam0, 90000, 154200);
 			break;
-		
+	
 		case 10:
 			func_19(iParam0, 129600, 133200);
 			break;
-		
+	
 		case 13:
 			func_19(iParam0, 144600, 154200);
 			break;
-		
+	
 		case 14:
 			func_19(iParam0, 152700, 154200);
 			break;
-		
+	
 		case 15:
 			func_19(iParam0, 154200, 154200);
 			break;
 	}
 }
 
-void func_19(int iParam0, int iParam1, int iParam2)//Position - 0xA11
+void func_19(int iParam0, int iParam1, int iParam2) // Position - 0xA11
 {
-	Local_22[iParam0] = iParam1;
-	Local_22.f_17[iParam0] = iParam2;
+	Static_22[iParam0] = iParam1;
+	Static_22.f_17[iParam0] = iParam2;
 }
 
-void func_20(var uParam0, int iParam1)//Position - 0xA2B
+void func_20(var uParam0, int iParam1) // Position - 0xA2B
 {
 	uParam0->f_22 = 0;
-	MISC::CLEAR_BIT(&uLocal_6195, iParam1);
-	if (iParam1 == 0 && uParam0->f_22 == 0)
-	{
-	}
+	MISC::CLEAR_BIT(&Static_6195, iParam1);
+	iParam1 == 0 && uParam0->f_22 == 0;
 }
 
-void func_21(var uParam0, int iParam1)//Position - 0xA53
+void func_21(var uParam0, int iParam1) // Position - 0xA53
 {
 	uParam0->f_22 = 0;
-	MISC::CLEAR_BIT(&uLocal_5617, iParam1);
-	if (iParam1 == 0 && uParam0->f_22 == 0)
-	{
-	}
+	MISC::CLEAR_BIT(&Static_5617, iParam1);
+	iParam1 == 0 && uParam0->f_22 == 0;
 }
 
-void func_22(var uParam0, int iParam1)//Position - 0xA7B
+void func_22(var uParam0, int iParam1) // Position - 0xA7B
 {
-	struct<3> Var0;
-	
+	var uVar0;
+
 	func_27(uParam0);
-	MISC::CLEAR_BIT(&uLocal_4895, iParam1);
+	MISC::CLEAR_BIT(&Static_4895, iParam1);
+
 	switch (iParam1)
 	{
 		case 0:
-			Var0 = { 0f, 0f, (func_26(-4.29f) + 180f) };
-			func_24(uParam0, 82047830, 667.319f, 572.133f, 128.521f, Var0, 6, 0, 0);
-			func_24(uParam0, 83248680, 666.312f, 571.675f, 128.521f, Var0, 6, 1, 0);
-			func_24(uParam0, 71526810, 665.235f, 571.183f, 128.521f, Var0, 6, 2, 0);
-			func_24(uParam0, 49826530, 664.124f, 570.679f, 128.521f, Var0, 6, 0, 0);
-			func_24(uParam0, 78575440, 663.029f, 570.181f, 128.521f, Var0, 6, 1, 0);
-			func_24(uParam0, 12133230, 661.937f, 569.685f, 128.521f, Var0, 6, 2, 0);
-			func_24(uParam0, 89665750, 660.839f, 569.194f, 128.521f, Var0, 6, 0, 0);
-			func_24(uParam0, 65990810, 659.537f, 569.392f, 128.521f, Var0, 6, 1, 0);
-			func_24(uParam0, 21233450, 658.187f, 569.572f, 128.523f, Var0, 4, 0, 1f);
-			func_23(&(uParam0->f_155[0 /*11*/]), 659.867f, 571.539f, 128.531f, Var0, 0, 0.5f, -1.5f);
-			func_23(&(uParam0->f_155[1 /*11*/]), 660.646f, 567.108f, 128.521f, Var0, 0, 0.5f, -1.5f);
+			uVar0 = { 0f, 0f, func_26(-4.29f) + 180f };
+			func_24(uParam0, 82047830, 667.319f, 572.133f, 128.521f, uVar0, 6, 0, 0);
+			func_24(uParam0, 83248680, 666.312f, 571.675f, 128.521f, uVar0, 6, 1, 0);
+			func_24(uParam0, 71526810, 665.235f, 571.183f, 128.521f, uVar0, 6, 2, 0);
+			func_24(uParam0, 49826530, 664.124f, 570.679f, 128.521f, uVar0, 6, 0, 0);
+			func_24(uParam0, 78575440, 663.029f, 570.181f, 128.521f, uVar0, 6, 1, 0);
+			func_24(uParam0, 12133230, 661.937f, 569.685f, 128.521f, uVar0, 6, 2, 0);
+			func_24(uParam0, 89665750, 660.839f, 569.194f, 128.521f, uVar0, 6, 0, 0);
+			func_24(uParam0, 65990810, 659.537f, 569.392f, 128.521f, uVar0, 6, 1, 0);
+			func_24(uParam0, 21233450, 658.187f, 569.572f, 128.523f, uVar0, 4, 0, 1f);
+			func_23(&uParam0->f_155[0 /*11*/], 659.867f, 571.539f, 128.531f, uVar0, 0, 0.5f, -1.5f);
+			func_23(&uParam0->f_155[1 /*11*/], 660.646f, 567.108f, 128.521f, uVar0, 0, 0.5f, -1.5f);
 			break;
-		
+	
 		case 1:
-			Var0 = { 0f, 0f, (func_26(-3.98f) + 180f) };
-			func_24(uParam0, 21091970, 670.312f, 568.023f, 128.521f, Var0, 5, 0, 0.5f);
-			func_24(uParam0, 97482490, 669.189f, 567.502f, 128.522f, Var0, 6, 1, 0);
-			func_24(uParam0, 66764240, 668.28f, 566.688f, 128.522f, Var0, 6, 0, 0);
-			func_24(uParam0, 82832850, 667.384f, 565.885f, 128.522f, Var0, 6, 2, 0);
-			func_24(uParam0, 33636100, 666.491f, 565.085f, 128.522f, Var0, 6, 0, 0);
-			func_24(uParam0, 22769640, 665.595f, 564.282f, 128.522f, Var0, 6, 1, 0);
+			uVar0 = { 0f, 0f, func_26(-3.98f) + 180f };
+			func_24(uParam0, 21091970, 670.312f, 568.023f, 128.521f, uVar0, 5, 0, 0.5f);
+			func_24(uParam0, 97482490, 669.189f, 567.502f, 128.522f, uVar0, 6, 1, 0);
+			func_24(uParam0, 66764240, 668.28f, 566.688f, 128.522f, uVar0, 6, 0, 0);
+			func_24(uParam0, 82832850, 667.384f, 565.885f, 128.522f, uVar0, 6, 2, 0);
+			func_24(uParam0, 33636100, 666.491f, 565.085f, 128.522f, uVar0, 6, 0, 0);
+			func_24(uParam0, 22769640, 665.595f, 564.282f, 128.522f, uVar0, 6, 1, 0);
 			break;
-		
+	
 		case 2:
-			Var0 = { 0f, 0f, (func_26(-3.78f) + 180f) };
-			func_24(uParam0, 91480760, 673.7f, 564.799f, 128.521f, Var0, 6, 0, 0);
-			func_24(uParam0, 64996320, 672.996f, 563.847f, 128.521f, Var0, 6, 1, 0);
-			func_24(uParam0, 30855220, 672.271f, 562.865f, 128.521f, Var0, 6, 2, 0);
-			func_24(uParam0, 98921990, 671.557f, 561.897f, 128.521f, Var0, 6, 0, 0);
-			func_24(uParam0, 73357200, 670.258f, 561.366f, 128.522f, Var0, 6, 1, 0);
-			func_23(&(uParam0->f_155[0 /*11*/]), 669.564f, 563.469f, 128.521f, Var0, 2, -1.5f, -1.5f);
-			func_23(&(uParam0->f_155[1 /*11*/]), 672.34f, 559.914f, 128.522f, Var0, 2, -1.5f, -1.5f);
+			uVar0 = { 0f, 0f, func_26(-3.78f) + 180f };
+			func_24(uParam0, 91480760, 673.7f, 564.799f, 128.521f, uVar0, 6, 0, 0);
+			func_24(uParam0, 64996320, 672.996f, 563.847f, 128.521f, uVar0, 6, 1, 0);
+			func_24(uParam0, 30855220, 672.271f, 562.865f, 128.521f, uVar0, 6, 2, 0);
+			func_24(uParam0, 98921990, 671.557f, 561.897f, 128.521f, uVar0, 6, 0, 0);
+			func_24(uParam0, 73357200, 670.258f, 561.366f, 128.522f, uVar0, 6, 1, 0);
+			func_23(&uParam0->f_155[0 /*11*/], 669.564f, 563.469f, 128.521f, uVar0, 2, -1.5f, -1.5f);
+			func_23(&uParam0->f_155[1 /*11*/], 672.34f, 559.914f, 128.522f, uVar0, 2, -1.5f, -1.5f);
 			break;
-		
+	
 		case 3:
-			Var0 = { 0f, 0f, (func_26(-3.38f) + 180f) };
-			func_24(uParam0, 89689390, 681.517f, 555.801f, 128.522f, Var0, 6, 0, 0);
-			func_24(uParam0, 71057000, 681.796f, 556.967f, 128.522f, Var0, 6, 1, 0);
-			func_24(uParam0, 26206390, 682.076f, 558.137f, 128.522f, Var0, 6, 2, 0);
-			func_24(uParam0, 58207860, 682.36f, 559.342f, 128.522f, Var0, 6, 0, 0);
-			func_24(uParam0, 43622440, 682.635f, 560.475f, 128.522f, Var0, 6, 1, 0);
+			uVar0 = { 0f, 0f, func_26(-3.38f) + 180f };
+			func_24(uParam0, 89689390, 681.517f, 555.801f, 128.522f, uVar0, 6, 0, 0);
+			func_24(uParam0, 71057000, 681.796f, 556.967f, 128.522f, uVar0, 6, 1, 0);
+			func_24(uParam0, 26206390, 682.076f, 558.137f, 128.522f, uVar0, 6, 2, 0);
+			func_24(uParam0, 58207860, 682.36f, 559.342f, 128.522f, uVar0, 6, 0, 0);
+			func_24(uParam0, 43622440, 682.635f, 560.475f, 128.522f, uVar0, 6, 1, 0);
 			break;
-		
+	
 		case 4:
-			Var0 = { 0f, 0f, (func_26(-3.17f) + 180f) };
-			func_24(uParam0, 78555440, 687.841f, 559.785f, 128.522f, Var0, 6, 0, 0);
-			func_24(uParam0, 12324420, 687.807f, 558.602f, 128.522f, Var0, 6, 1, 0);
-			func_24(uParam0, 4083210, 687.771f, 557.382f, 128.522f, Var0, 6, 2, 0);
-			func_24(uParam0, 2021980, 688.465f, 556.159f, 128.522f, Var0, 6, 0, 0);
-			func_24(uParam0, 21091970, 688.431f, 554.961f, 128.521f, Var0, 6, 1, 0);
-			func_23(&(uParam0->f_155[0 /*11*/]), 685.931f, 556.306f, 128.522f, Var0, 0, 0.5f, -1.5f);
-			func_23(&(uParam0->f_155[1 /*11*/]), 685.897f, 555.108f, 128.521f, Var0, 1, -1.5f, -1.5f);
+			uVar0 = { 0f, 0f, func_26(-3.17f) + 180f };
+			func_24(uParam0, 78555440, 687.841f, 559.785f, 128.522f, uVar0, 6, 0, 0);
+			func_24(uParam0, 12324420, 687.807f, 558.602f, 128.522f, uVar0, 6, 1, 0);
+			func_24(uParam0, 4083210, 687.771f, 557.382f, 128.522f, uVar0, 6, 2, 0);
+			func_24(uParam0, 2021980, 688.465f, 556.159f, 128.522f, uVar0, 6, 0, 0);
+			func_24(uParam0, 21091970, 688.431f, 554.961f, 128.521f, uVar0, 6, 1, 0);
+			func_23(&uParam0->f_155[0 /*11*/], 685.931f, 556.306f, 128.522f, uVar0, 0, 0.5f, -1.5f);
+			func_23(&uParam0->f_155[1 /*11*/], 685.897f, 555.108f, 128.521f, uVar0, 1, -1.5f, -1.5f);
 			break;
-		
+	
 		case 5:
-			Var0 = { 0f, 0f, (func_26(-2.97f) + 180f) };
-			func_24(uParam0, 31491440, 692.632f, 559.992f, 128.522f, Var0, 5, 2, -0.5f);
-			func_24(uParam0, 34393340, 693.189f, 558.886f, 128.522f, Var0, 6, 0, 0);
-			func_24(uParam0, 94762900, 693.396f, 557.684f, 128.522f, Var0, 6, 1, 0);
-			func_24(uParam0, 95283980, 693.6f, 556.498f, 128.522f, Var0, 6, 2, 0);
-			func_24(uParam0, 92416940, 693.803f, 555.317f, 128.522f, Var0, 6, 0, 0);
-			func_24(uParam0, 53597080, 694.007f, 554.131f, 128.522f, Var0, 6, 1, 0);
+			uVar0 = { 0f, 0f, func_26(-2.97f) + 180f };
+			func_24(uParam0, 31491440, 692.632f, 559.992f, 128.522f, uVar0, 5, 2, -0.5f);
+			func_24(uParam0, 34393340, 693.189f, 558.886f, 128.522f, uVar0, 6, 0, 0);
+			func_24(uParam0, 94762900, 693.396f, 557.684f, 128.522f, uVar0, 6, 1, 0);
+			func_24(uParam0, 95283980, 693.6f, 556.498f, 128.522f, uVar0, 6, 2, 0);
+			func_24(uParam0, 92416940, 693.803f, 555.317f, 128.522f, uVar0, 6, 0, 0);
+			func_24(uParam0, 53597080, 694.007f, 554.131f, 128.522f, uVar0, 6, 1, 0);
 			break;
-		
+	
 		case 6:
-			Var0 = { 0f, 0f, (func_26(-2.7f) + 180f) };
-			func_24(uParam0, 86170110, 697.492f, 561.188f, 128.522f, Var0, 6, 0, 0);
-			func_24(uParam0, 62247860, 697.964f, 560.188f, 128.522f, Var0, 6, 1, 0);
-			func_24(uParam0, 43665230, 698.467f, 559.116f, 128.522f, Var0, 6, 2, 0);
-			func_24(uParam0, 32906070, 698.988f, 558.013f, 128.522f, Var0, 6, 0, 0);
-			func_24(uParam0, 70836820, 699.502f, 556.925f, 128.522f, Var0, 6, 1, 0);
-			func_24(uParam0, 67800350, 700.014f, 555.841f, 128.522f, Var0, 6, 2, 0);
-			func_24(uParam0, 41115560, 701.184f, 555.063f, 128.521f, Var0, 6, 0, 0);
-			func_24(uParam0, 98430790, 701.005f, 553.758f, 128.522f, Var0, 6, 1, 0);
-			func_23(&(uParam0->f_155[0 /*11*/]), 698.861f, 554.048f, 128.521f, Var0, 0, 0.5f, -1.5f);
-			func_23(&(uParam0->f_155[1 /*11*/]), 703.267f, 554.91f, 128.522f, Var0, 0, 0.5f, -1.5f);
+			uVar0 = { 0f, 0f, func_26(-2.7f) + 180f };
+			func_24(uParam0, 86170110, 697.492f, 561.188f, 128.522f, uVar0, 6, 0, 0);
+			func_24(uParam0, 62247860, 697.964f, 560.188f, 128.522f, uVar0, 6, 1, 0);
+			func_24(uParam0, 43665230, 698.467f, 559.116f, 128.522f, uVar0, 6, 2, 0);
+			func_24(uParam0, 32906070, 698.988f, 558.013f, 128.522f, uVar0, 6, 0, 0);
+			func_24(uParam0, 70836820, 699.502f, 556.925f, 128.522f, uVar0, 6, 1, 0);
+			func_24(uParam0, 67800350, 700.014f, 555.841f, 128.522f, uVar0, 6, 2, 0);
+			func_24(uParam0, 41115560, 701.184f, 555.063f, 128.521f, uVar0, 6, 0, 0);
+			func_24(uParam0, 98430790, 701.005f, 553.758f, 128.522f, uVar0, 6, 1, 0);
+			func_23(&uParam0->f_155[0 /*11*/], 698.861f, 554.048f, 128.521f, uVar0, 0, 0.5f, -1.5f);
+			func_23(&uParam0->f_155[1 /*11*/], 703.267f, 554.91f, 128.522f, uVar0, 0, 0.5f, -1.5f);
 			break;
-		
+	
 		case 7:
-			Var0 = { 0f, 0f, (func_26(-3.99f) + 180f) };
-			func_24(uParam0, 13168530, 652.833f, 570.052f, 128.529f, Var0, 6, 0, 0);
-			func_24(uParam0, 92127780, 652.006f, 569.319f, 128.528f, Var0, 6, 1, 0);
-			func_24(uParam0, 51664260, 651.136f, 568.538f, 128.729f, Var0, 6, 2, 0);
-			func_24(uParam0, 35914010, 650.242f, 567.746f, 128.729f, Var0, 6, 0, 0);
-			func_24(uParam0, 43076060, 649.661f, 566.94f, 128.929f, Var0, 6, 1, 0);
-			func_24(uParam0, 21755390, 648.426f, 566.137f, 128.929f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.99f) + 180f };
+			func_24(uParam0, 13168530, 652.833f, 570.052f, 128.529f, uVar0, 6, 0, 0);
+			func_24(uParam0, 92127780, 652.006f, 569.319f, 128.528f, uVar0, 6, 1, 0);
+			func_24(uParam0, 51664260, 651.136f, 568.538f, 128.729f, uVar0, 6, 2, 0);
+			func_24(uParam0, 35914010, 650.242f, 567.746f, 128.729f, uVar0, 6, 0, 0);
+			func_24(uParam0, 43076060, 649.661f, 566.94f, 128.929f, uVar0, 6, 1, 0);
+			func_24(uParam0, 21755390, 648.426f, 566.137f, 128.929f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 8:
-			Var0 = { 0f, 0f, (func_26(-3.9f) + 180f) };
-			func_24(uParam0, 20501110, 656.955f, 565.868f, 128.53f, Var0, 6, 0, 0);
-			func_24(uParam0, 10114780, 656.193f, 565.067f, 128.53f, Var0, 6, 1, 0);
-			func_24(uParam0, 12664730, 655.358f, 564.19f, 128.73f, Var0, 6, 2, 0);
-			func_24(uParam0, 32956570, 654.534f, 563.324f, 128.73f, Var0, 6, 0, 0);
-			func_24(uParam0, 11862860, 653.696f, 562.443f, 128.93f, Var0, 6, 1, 0);
-			func_24(uParam0, 87809290, 652.862f, 561.566f, 128.93f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.9f) + 180f };
+			func_24(uParam0, 20501110, 656.955f, 565.868f, 128.53f, uVar0, 6, 0, 0);
+			func_24(uParam0, 10114780, 656.193f, 565.067f, 128.53f, uVar0, 6, 1, 0);
+			func_24(uParam0, 12664730, 655.358f, 564.19f, 128.73f, uVar0, 6, 2, 0);
+			func_24(uParam0, 32956570, 654.534f, 563.324f, 128.73f, uVar0, 6, 0, 0);
+			func_24(uParam0, 11862860, 653.696f, 562.443f, 128.93f, uVar0, 6, 1, 0);
+			func_24(uParam0, 87809290, 652.862f, 561.566f, 128.93f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 9:
-			Var0 = { 0f, 0f, (func_26(-3.76f) + 180f) };
-			func_24(uParam0, 75170110, 662.947f, 560.965f, 128.529f, Var0, 6, 0, 0);
-			func_24(uParam0, 62246860, 662.306f, 560.065f, 128.529f, Var0, 6, 1, 0);
-			func_24(uParam0, 83665250, 661.603f, 559.079f, 128.73f, Var0, 6, 2, 0);
-			func_24(uParam0, 22016170, 660.91f, 558.106f, 128.73f, Var0, 6, 0, 0);
-			func_24(uParam0, 41846840, 660.204f, 557.116f, 128.929f, Var0, 6, 1, 0);
-			func_24(uParam0, 10000350, 659.502f, 556.13f, 128.929f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.76f) + 180f };
+			func_24(uParam0, 75170110, 662.947f, 560.965f, 128.529f, uVar0, 6, 0, 0);
+			func_24(uParam0, 62246860, 662.306f, 560.065f, 128.529f, uVar0, 6, 1, 0);
+			func_24(uParam0, 83665250, 661.603f, 559.079f, 128.73f, uVar0, 6, 2, 0);
+			func_24(uParam0, 22016170, 660.91f, 558.106f, 128.73f, uVar0, 6, 0, 0);
+			func_24(uParam0, 41846840, 660.204f, 557.116f, 128.929f, uVar0, 6, 1, 0);
+			func_24(uParam0, 10000350, 659.502f, 556.13f, 128.929f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 10:
-			Var0 = { 0f, 0f, (func_26(-3.68f) + 180f) };
-			func_24(uParam0, 86878180, 667.872f, 557.785f, 128.53f, Var0, 6, 0, 0);
-			func_24(uParam0, 22242820, 667.31f, 556.833f, 128.53f, Var0, 6, 1, 0);
-			func_24(uParam0, 93969290, 666.693f, 555.791f, 128.73f, Var0, 6, 2, 0);
-			func_24(uParam0, 12101010, 666.086f, 554.762f, 128.73f, Var0, 6, 0, 0);
-			func_24(uParam0, 20232220, 665.467f, 553.715f, 128.93f, Var0, 6, 1, 0);
-			func_24(uParam0, 57707370, 664.852f, 552.673f, 128.93f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.68f) + 180f };
+			func_24(uParam0, 86878180, 667.872f, 557.785f, 128.53f, uVar0, 6, 0, 0);
+			func_24(uParam0, 22242820, 667.31f, 556.833f, 128.53f, uVar0, 6, 1, 0);
+			func_24(uParam0, 93969290, 666.693f, 555.791f, 128.73f, uVar0, 6, 2, 0);
+			func_24(uParam0, 12101010, 666.086f, 554.762f, 128.73f, uVar0, 6, 0, 0);
+			func_24(uParam0, 20232220, 665.467f, 553.715f, 128.93f, uVar0, 6, 1, 0);
+			func_24(uParam0, 57707370, 664.852f, 552.673f, 128.93f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 11:
-			Var0 = { 0f, 0f, (func_26(-3.53f) + 180f) };
-			func_24(uParam0, 13130110, 674.882f, 554.326f, 128.529f, Var0, 6, 0, 0);
-			func_24(uParam0, 97845810, 674.46f, 553.305f, 128.529f, Var0, 6, 1, 0);
-			func_24(uParam0, 12345670, 673.997f, 552.186f, 128.73f, Var0, 6, 2, 0);
-			func_24(uParam0, 89101110, 673.541f, 551.081f, 128.73f, Var0, 6, 0, 0);
-			func_24(uParam0, 12131410, 673.076f, 549.958f, 128.929f, Var0, 6, 1, 0);
-			func_24(uParam0, 51617180, 672.613f, 548.839f, 128.929f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.53f) + 180f };
+			func_24(uParam0, 13130110, 674.882f, 554.326f, 128.529f, uVar0, 6, 0, 0);
+			func_24(uParam0, 97845810, 674.46f, 553.305f, 128.529f, uVar0, 6, 1, 0);
+			func_24(uParam0, 12345670, 673.997f, 552.186f, 128.73f, uVar0, 6, 2, 0);
+			func_24(uParam0, 89101110, 673.541f, 551.081f, 128.73f, uVar0, 6, 0, 0);
+			func_24(uParam0, 12131410, 673.076f, 549.958f, 128.929f, uVar0, 6, 1, 0);
+			func_24(uParam0, 51617180, 672.613f, 548.839f, 128.929f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 12:
-			Var0 = { 0f, 0f, (func_26(-3.45f) + 180f) };
-			func_24(uParam0, 60616260, 680.396f, 552.335f, 128.53f, Var0, 6, 0, 0);
-			func_24(uParam0, 36465660, 680.063f, 551.281f, 128.53f, Var0, 6, 1, 0);
-			func_24(uParam0, 67686970, 679.697f, 550.127f, 128.73f, Var0, 6, 2, 0);
-			func_24(uParam0, 71727370, 679.336f, 548.988f, 128.73f, Var0, 6, 0, 0);
-			func_24(uParam0, 47576770, 678.969f, 547.829f, 128.93f, Var0, 6, 1, 0);
-			func_24(uParam0, 78798080, 678.603f, 546.674f, 128.93f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.45f) + 180f };
+			func_24(uParam0, 60616260, 680.396f, 552.335f, 128.53f, uVar0, 6, 0, 0);
+			func_24(uParam0, 36465660, 680.063f, 551.281f, 128.53f, uVar0, 6, 1, 0);
+			func_24(uParam0, 67686970, 679.697f, 550.127f, 128.73f, uVar0, 6, 2, 0);
+			func_24(uParam0, 71727370, 679.336f, 548.988f, 128.73f, uVar0, 6, 0, 0);
+			func_24(uParam0, 47576770, 678.969f, 547.829f, 128.93f, uVar0, 6, 1, 0);
+			func_24(uParam0, 78798080, 678.603f, 546.674f, 128.93f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 13:
-			Var0 = { 0f, 0f, (func_26(-3.31f) + 180f) };
-			func_24(uParam0, 11511610, 688.034f, 550.483f, 128.529f, Var0, 6, 0, 0);
-			func_24(uParam0, 17118110, 687.853f, 549.393f, 128.529f, Var0, 6, 1, 0);
-			func_24(uParam0, 91201210, 687.653f, 548.199f, 128.73f, Var0, 6, 2, 0);
-			func_24(uParam0, 12212310, 687.457f, 547.02f, 128.73f, Var0, 6, 0, 0);
-			func_24(uParam0, 23124120, 687.257f, 545.821f, 128.929f, Var0, 6, 1, 0);
-			func_24(uParam0, 51261270, 687.058f, 544.627f, 128.929f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.31f) + 180f };
+			func_24(uParam0, 11511610, 688.034f, 550.483f, 128.529f, uVar0, 6, 0, 0);
+			func_24(uParam0, 17118110, 687.853f, 549.393f, 128.529f, uVar0, 6, 1, 0);
+			func_24(uParam0, 91201210, 687.653f, 548.199f, 128.73f, uVar0, 6, 2, 0);
+			func_24(uParam0, 12212310, 687.457f, 547.02f, 128.73f, uVar0, 6, 0, 0);
+			func_24(uParam0, 23124120, 687.257f, 545.821f, 128.929f, uVar0, 6, 1, 0);
+			func_24(uParam0, 51261270, 687.058f, 544.627f, 128.929f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 14:
-			Var0 = { 0f, 0f, (func_26(-3.22f) + 180f) };
-			func_24(uParam0, 15515610, 693.855f, 549.783f, 128.53f, Var0, 6, 0, 0);
-			func_24(uParam0, 57158150, 693.767f, 548.682f, 128.53f, Var0, 6, 1, 0);
-			func_24(uParam0, 91601610, 693.67f, 547.474f, 128.73f, Var0, 6, 2, 0);
-			func_24(uParam0, 16216310, 693.575f, 546.283f, 128.73f, Var0, 6, 0, 0);
-			func_24(uParam0, 64165160, 693.478f, 545.071f, 128.93f, Var0, 6, 1, 0);
-			func_24(uParam0, 61671680, 693.381f, 543.865f, 128.93f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.22f) + 180f };
+			func_24(uParam0, 15515610, 693.855f, 549.783f, 128.53f, uVar0, 6, 0, 0);
+			func_24(uParam0, 57158150, 693.767f, 548.682f, 128.53f, uVar0, 6, 1, 0);
+			func_24(uParam0, 91601610, 693.67f, 547.474f, 128.73f, uVar0, 6, 2, 0);
+			func_24(uParam0, 16216310, 693.575f, 546.283f, 128.73f, uVar0, 6, 0, 0);
+			func_24(uParam0, 64165160, 693.478f, 545.071f, 128.93f, uVar0, 6, 1, 0);
+			func_24(uParam0, 61671680, 693.381f, 543.865f, 128.93f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 15:
-			Var0 = { 0f, 0f, (func_26(-3.08f) + 180f) };
-			func_24(uParam0, 19920020, 701.652f, 549.708f, 128.529f, Var0, 6, 0, 0);
-			func_24(uParam0, 1202200, 701.721f, 548.605f, 128.529f, Var0, 6, 1, 0);
-			func_24(uParam0, 32042050, 701.795f, 547.396f, 128.729f, Var0, 6, 2, 0);
-			func_24(uParam0, 20620720, 701.869f, 546.203f, 128.729f, Var0, 6, 0, 0);
-			func_24(uParam0, 8209210, 701.944f, 544.99f, 128.929f, Var0, 6, 1, 0);
-			func_24(uParam0, 2112120, 702.019f, 543.781f, 128.929f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.08f) + 180f };
+			func_24(uParam0, 19920020, 701.652f, 549.708f, 128.529f, uVar0, 6, 0, 0);
+			func_24(uParam0, 1202200, 701.721f, 548.605f, 128.529f, uVar0, 6, 1, 0);
+			func_24(uParam0, 32042050, 701.795f, 547.396f, 128.729f, uVar0, 6, 2, 0);
+			func_24(uParam0, 20620720, 701.869f, 546.203f, 128.729f, uVar0, 6, 0, 0);
+			func_24(uParam0, 8209210, 701.944f, 544.99f, 128.929f, uVar0, 6, 1, 0);
+			func_24(uParam0, 2112120, 702.019f, 543.781f, 128.929f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 16:
-			Var0 = { 0f, 0f, (func_26(-2.99f) + 180f) };
-			func_24(uParam0, 24024120, 707.482f, 550.335f, 128.53f, Var0, 6, 0, 0);
-			func_24(uParam0, 43244240, 707.644f, 549.242f, 128.53f, Var0, 6, 1, 0);
-			func_24(uParam0, 42452460, 707.821f, 548.044f, 128.73f, Var0, 6, 2, 0);
-			func_24(uParam0, 24724820, 707.996f, 546.862f, 128.73f, Var0, 6, 0, 0);
-			func_24(uParam0, 48249250, 708.174f, 545.659f, 128.929f, Var0, 6, 1, 0);
-			func_24(uParam0, 2512520, 708.351f, 544.461f, 128.929f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-2.99f) + 180f };
+			func_24(uParam0, 24024120, 707.482f, 550.335f, 128.53f, uVar0, 6, 0, 0);
+			func_24(uParam0, 43244240, 707.644f, 549.242f, 128.53f, uVar0, 6, 1, 0);
+			func_24(uParam0, 42452460, 707.821f, 548.044f, 128.73f, uVar0, 6, 2, 0);
+			func_24(uParam0, 24724820, 707.996f, 546.862f, 128.73f, uVar0, 6, 0, 0);
+			func_24(uParam0, 48249250, 708.174f, 545.659f, 128.929f, uVar0, 6, 1, 0);
+			func_24(uParam0, 2512520, 708.351f, 544.461f, 128.929f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 17:
-			Var0 = { 0f, 0f, (func_26(-3.98f) + 180f) };
-			func_24(uParam0, 46779100, 646.434f, 564.522f, 128.927f, Var0, 6, 0, 0);
-			func_24(uParam0, 93643160, 645.612f, 563.784f, 128.927f, Var0, 6, 1, 0);
-			func_24(uParam0, 34729570, 644.71f, 562.975f, 129.127f, Var0, 6, 2, 0);
-			func_24(uParam0, 28556490, 643.821f, 562.177f, 129.127f, Var0, 6, 0, 0);
-			func_24(uParam0, 75335160, 642.916f, 561.365f, 129.327f, Var0, 6, 1, 0);
-			func_24(uParam0, 84872300, 642.015f, 560.557f, 129.327f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.98f) + 180f };
+			func_24(uParam0, 46779100, 646.434f, 564.522f, 128.927f, uVar0, 6, 0, 0);
+			func_24(uParam0, 93643160, 645.612f, 563.784f, 128.927f, uVar0, 6, 1, 0);
+			func_24(uParam0, 34729570, 644.71f, 562.975f, 129.127f, uVar0, 6, 2, 0);
+			func_24(uParam0, 28556490, 643.821f, 562.177f, 129.127f, uVar0, 6, 0, 0);
+			func_24(uParam0, 75335160, 642.916f, 561.365f, 129.327f, uVar0, 6, 1, 0);
+			func_24(uParam0, 84872300, 642.015f, 560.557f, 129.327f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 18:
-			Var0 = { 0f, 0f, (func_26(-3.91f) + 180f) };
-			func_24(uParam0, 65187100, 651.092f, 559.707f, 128.926f, Var0, 6, 0, 0);
-			func_24(uParam0, 87514460, 650.325f, 558.912f, 128.926f, Var0, 6, 1, 0);
-			func_24(uParam0, 46165810, 649.483f, 558.04f, 128.127f, Var0, 6, 2, 0);
-			func_24(uParam0, 12560720, 648.654f, 557.18f, 129.127f, Var0, 6, 0, 0);
-			func_24(uParam0, 27854880, 647.809f, 556.306f, 129.326f, Var0, 6, 1, 0);
-			func_24(uParam0, 97601360, 646.968f, 555.435f, 129.326f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.91f) + 180f };
+			func_24(uParam0, 65187100, 651.092f, 559.707f, 128.926f, uVar0, 6, 0, 0);
+			func_24(uParam0, 87514460, 650.325f, 558.912f, 128.926f, uVar0, 6, 1, 0);
+			func_24(uParam0, 46165810, 649.483f, 558.04f, 128.127f, uVar0, 6, 2, 0);
+			func_24(uParam0, 12560720, 648.654f, 557.18f, 129.127f, uVar0, 6, 0, 0);
+			func_24(uParam0, 27854880, 647.809f, 556.306f, 129.326f, uVar0, 6, 1, 0);
+			func_24(uParam0, 97601360, 646.968f, 555.435f, 129.326f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 19:
-			Var0 = { 0f, 0f, (func_26(-3.75f) + 180f) };
-			func_24(uParam0, 55178130, 657.925f, 554.108f, 128.927f, Var0, 6, 0, 0);
-			func_24(uParam0, 75148880, 657.29f, 553.204f, 128.927f, Var0, 6, 1, 0);
-			func_24(uParam0, 88865540, 656.593f, 552.213f, 129.127f, Var0, 6, 2, 0);
-			func_24(uParam0, 64916770, 655.906f, 551.235f, 129.127f, Var0, 6, 0, 0);
-			func_24(uParam0, 70536220, 655.207f, 550.241f, 129.327f, Var0, 6, 1, 0);
-			func_24(uParam0, 17101310, 654.512f, 549.25f, 129.327f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.75f) + 180f };
+			func_24(uParam0, 55178130, 657.925f, 554.108f, 128.927f, uVar0, 6, 0, 0);
+			func_24(uParam0, 75148880, 657.29f, 553.204f, 128.927f, uVar0, 6, 1, 0);
+			func_24(uParam0, 88865540, 656.593f, 552.213f, 129.127f, uVar0, 6, 2, 0);
+			func_24(uParam0, 64916770, 655.906f, 551.235f, 129.127f, uVar0, 6, 0, 0);
+			func_24(uParam0, 70536220, 655.207f, 550.241f, 129.327f, uVar0, 6, 1, 0);
+			func_24(uParam0, 17101310, 654.512f, 549.25f, 129.327f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 20:
-			Var0 = { 0f, 0f, (func_26(-3.68f) + 180f) };
-			func_24(uParam0, 76870120, 663.545f, 550.463f, 128.926f, Var0, 6, 0, 0);
-			func_24(uParam0, 32147850, 662.977f, 549.515f, 128.926f, Var0, 6, 1, 0);
-			func_24(uParam0, 97662220, 662.353f, 548.477f, 129.127f, Var0, 6, 2, 0);
-			func_24(uParam0, 12107070, 661.738f, 547.453f, 129.127f, Var0, 6, 0, 0);
-			func_24(uParam0, 60841880, 661.111f, 546.411f, 129.326f, Var0, 6, 1, 0);
-			func_24(uParam0, 27803350, 660.489f, 545.373f, 129.326f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.68f) + 180f };
+			func_24(uParam0, 76870120, 663.545f, 550.463f, 128.926f, uVar0, 6, 0, 0);
+			func_24(uParam0, 32147850, 662.977f, 549.515f, 128.926f, uVar0, 6, 1, 0);
+			func_24(uParam0, 97662220, 662.353f, 548.477f, 129.127f, uVar0, 6, 2, 0);
+			func_24(uParam0, 12107070, 661.738f, 547.453f, 129.127f, uVar0, 6, 0, 0);
+			func_24(uParam0, 60841880, 661.111f, 546.411f, 129.326f, uVar0, 6, 1, 0);
+			func_24(uParam0, 27803350, 660.489f, 545.373f, 129.326f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 21:
-			Var0 = { 0f, 0f, (func_26(-3.53f) + 180f) };
-			func_24(uParam0, 19202120, 671.531f, 546.515f, 128.927f, Var0, 6, 0, 0);
-			func_24(uParam0, 22232420, 671.116f, 545.491f, 128.927f, Var0, 6, 1, 0);
-			func_24(uParam0, 52627280, 670.66f, 544.369f, 129.127f, Var0, 6, 2, 0);
-			func_24(uParam0, 29303130, 670.211f, 543.262f, 129.127f, Var0, 6, 0, 0);
-			func_24(uParam0, 23334350, 669.753f, 542.135f, 129.327f, Var0, 6, 1, 0);
-			func_24(uParam0, 36373830, 669.298f, 541.014f, 129.327f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.53f) + 180f };
+			func_24(uParam0, 19202120, 671.531f, 546.515f, 128.927f, uVar0, 6, 0, 0);
+			func_24(uParam0, 22232420, 671.116f, 545.491f, 128.927f, uVar0, 6, 1, 0);
+			func_24(uParam0, 52627280, 670.66f, 544.369f, 129.127f, uVar0, 6, 2, 0);
+			func_24(uParam0, 29303130, 670.211f, 543.262f, 129.127f, uVar0, 6, 0, 0);
+			func_24(uParam0, 23334350, 669.753f, 542.135f, 129.327f, uVar0, 6, 1, 0);
+			func_24(uParam0, 36373830, 669.298f, 541.014f, 129.327f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 22:
-			Var0 = { 0f, 0f, (func_26(-3.46f) + 180f) };
-			func_24(uParam0, 18283840, 677.828f, 544.227f, 128.926f, Var0, 6, 0, 0);
-			func_24(uParam0, 85858680, 677.487f, 543.176f, 128.926f, Var0, 6, 1, 0);
-			func_24(uParam0, 78889900, 677.112f, 542.024f, 129.127f, Var0, 6, 2, 0);
-			func_24(uParam0, 91929390, 676.744f, 540.888f, 129.127f, Var0, 6, 0, 0);
-			func_24(uParam0, 49596970, 676.368f, 539.731f, 129.326f, Var0, 6, 1, 0);
-			func_24(uParam0, 98991000, 675.994f, 538.58f, 129.326f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.46f) + 180f };
+			func_24(uParam0, 18283840, 677.828f, 544.227f, 128.926f, uVar0, 6, 0, 0);
+			func_24(uParam0, 85858680, 677.487f, 543.176f, 128.926f, uVar0, 6, 1, 0);
+			func_24(uParam0, 78889900, 677.112f, 542.024f, 129.127f, uVar0, 6, 2, 0);
+			func_24(uParam0, 91929390, 676.744f, 540.888f, 129.127f, uVar0, 6, 0, 0);
+			func_24(uParam0, 49596970, 676.368f, 539.731f, 129.326f, uVar0, 6, 1, 0);
+			func_24(uParam0, 98991000, 675.994f, 538.58f, 129.326f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 23:
-			Var0 = { 0f, 0f, (func_26(-3.3f) + 180f) };
-			func_24(uParam0, 12812910, 686.526f, 542.118f, 128.927f, Var0, 6, 0, 0);
-			func_24(uParam0, 30131130, 686.352f, 541.027f, 128.927f, Var0, 6, 1, 0);
-			func_24(uParam0, 21331340, 686.16f, 539.831f, 129.127f, Var0, 6, 1, 0);
-			func_24(uParam0, 13513610, 685.972f, 538.652f, 129.127f, Var0, 6, 0, 0);
-			func_24(uParam0, 37138130, 685.779f, 537.451f, 129.327f, Var0, 6, 1, 0);
-			func_24(uParam0, 91401410, 685.588f, 536.256f, 129.327f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.3f) + 180f };
+			func_24(uParam0, 12812910, 686.526f, 542.118f, 128.927f, uVar0, 6, 0, 0);
+			func_24(uParam0, 30131130, 686.352f, 541.027f, 128.927f, uVar0, 6, 1, 0);
+			func_24(uParam0, 21331340, 686.16f, 539.831f, 129.127f, uVar0, 6, 1, 0);
+			func_24(uParam0, 13513610, 685.972f, 538.652f, 129.127f, uVar0, 6, 0, 0);
+			func_24(uParam0, 37138130, 685.779f, 537.451f, 129.327f, uVar0, 6, 1, 0);
+			func_24(uParam0, 91401410, 685.588f, 536.256f, 129.327f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 24:
-			Var0 = { 0f, 0f, (func_26(-3.23f) + 180f) };
-			func_24(uParam0, 16917010, 693.176f, 541.306f, 128.926f, Var0, 6, 0, 0);
-			func_24(uParam0, 71172170, 693.08f, 540.205f, 128.926f, Var0, 6, 1, 0);
-			func_24(uParam0, 31741750, 692.975f, 538.998f, 129.127f, Var0, 6, 2, 0);
-			func_24(uParam0, 17617810, 692.871f, 537.808f, 129.127f, Var0, 6, 0, 0);
-			func_24(uParam0, 79180180, 692.765f, 536.597f, 129.326f, Var0, 6, 1, 0);
-			func_24(uParam0, 21831840, 692.66f, 535.391f, 129.326f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.23f) + 180f };
+			func_24(uParam0, 16917010, 693.176f, 541.306f, 128.926f, uVar0, 6, 0, 0);
+			func_24(uParam0, 71172170, 693.08f, 540.205f, 128.926f, uVar0, 6, 1, 0);
+			func_24(uParam0, 31741750, 692.975f, 538.998f, 129.127f, uVar0, 6, 2, 0);
+			func_24(uParam0, 17617810, 692.871f, 537.808f, 129.127f, uVar0, 6, 0, 0);
+			func_24(uParam0, 79180180, 692.765f, 536.597f, 129.326f, uVar0, 6, 1, 0);
+			func_24(uParam0, 21831840, 692.66f, 535.391f, 129.326f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 25:
-			Var0 = { 0f, 0f, (func_26(-3.07f) + 180f) };
-			func_24(uParam0, 21321420, 702.065f, 541.218f, 128.927f, Var0, 6, 0, 0);
-			func_24(uParam0, 15216210, 702.14f, 540.116f, 128.927f, Var0, 6, 1, 0);
-			func_24(uParam0, 72182190, 702.223f, 538.907f, 129.127f, Var0, 6, 2, 0);
-			func_24(uParam0, 22022120, 702.304f, 537.715f, 129.127f, Var0, 6, 0, 0);
-			func_24(uParam0, 22223220, 702.387f, 536.502f, 129.327f, Var0, 6, 1, 0);
-			func_24(uParam0, 42252260, 703.116f, 526.841f, 129.618f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3.07f) + 180f };
+			func_24(uParam0, 21321420, 702.065f, 541.218f, 128.927f, uVar0, 6, 0, 0);
+			func_24(uParam0, 15216210, 702.14f, 540.116f, 128.927f, uVar0, 6, 1, 0);
+			func_24(uParam0, 72182190, 702.223f, 538.907f, 129.127f, uVar0, 6, 2, 0);
+			func_24(uParam0, 22022120, 702.304f, 537.715f, 129.127f, uVar0, 6, 0, 0);
+			func_24(uParam0, 22223220, 702.387f, 536.502f, 129.327f, uVar0, 6, 1, 0);
+			func_24(uParam0, 42252260, 703.116f, 526.841f, 129.618f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		case 26:
-			Var0 = { 0f, 0f, (func_26(-3f) + 180f) };
-			func_24(uParam0, 25325420, 708.727f, 541.922f, 128.926f, Var0, 6, 0, 0);
-			func_24(uParam0, 55256250, 709.881f, 539.828f, 128.926f, Var0, 6, 1, 0);
-			func_24(uParam0, 72582590, 709.05f, 539.628f, 129.127f, Var0, 6, 2, 0);
-			func_24(uParam0, 26026120, 709.217f, 538.445f, 129.127f, Var0, 6, 0, 0);
-			func_24(uParam0, 62263260, 709.386f, 537.241f, 129.326f, Var0, 6, 1, 0);
-			func_24(uParam0, 42652650, 709.555f, 536.043f, 129.326f, Var0, 6, 2, 0);
+			uVar0 = { 0f, 0f, func_26(-3f) + 180f };
+			func_24(uParam0, 25325420, 708.727f, 541.922f, 128.926f, uVar0, 6, 0, 0);
+			func_24(uParam0, 55256250, 709.881f, 539.828f, 128.926f, uVar0, 6, 1, 0);
+			func_24(uParam0, 72582590, 709.05f, 539.628f, 129.127f, uVar0, 6, 2, 0);
+			func_24(uParam0, 26026120, 709.217f, 538.445f, 129.127f, uVar0, 6, 0, 0);
+			func_24(uParam0, 62263260, 709.386f, 537.241f, 129.326f, uVar0, 6, 1, 0);
+			func_24(uParam0, 42652650, 709.555f, 536.043f, 129.326f, uVar0, 6, 2, 0);
 			break;
-		
+	
 		default:
 			break;
 	}
 }
 
-void func_23(var uParam0, struct<3> Param1, struct<3> Param4, int iParam7, float fParam8, float fParam9)//Position - 0x2420
+void func_23(var uParam0, float fParam1, float fParam2, float fParam3, var uParam4, var uParam5, var uParam6, int iParam7, float fParam8, float fParam9) // Position - 0x2420
 {
-	uParam0->f_1 = { Param1 };
-	uParam0->f_4 = { Param4 };
+	uParam0->f_1 = { fParam1 };
+	uParam0->f_4 = { uParam4 };
 	uParam0->f_7 = iParam7;
 	*uParam0 = 1;
 	uParam0->f_8 = fParam8;
 	uParam0->f_9 = fParam9;
 }
 
-void func_24(var uParam0, int iParam1, struct<3> Param2, struct<3> Param5, int iParam8, int iParam9, int iParam10)//Position - 0x2452
+void func_24(var uParam0, int iParam1, float fParam2, float fParam3, float fParam4, var uParam5, var uParam6, var uParam7, int iParam8, int iParam9, int iParam10) // Position - 0x2452
 {
 	if (uParam0->f_154 >= *uParam0)
-	{
 		return;
-	}
-	func_25(uParam0[uParam0->f_154 /*17*/], iParam1, Param2, Param5, iParam8, iParam9, iParam10);
-	uParam0->f_154++;
+
+	func_25(&uParam0->[uParam0->f_154 /*17*/], iParam1, fParam2, uParam5, iParam8, iParam9, iParam10);
+	uParam0->f_154 = uParam0->f_154 + 1;
 }
 
-void func_25(var uParam0, var uParam1, struct<3> Param2, struct<3> Param5, var uParam8, var uParam9, var uParam10)//Position - 0x248D
+void func_25(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, int iParam8, int iParam9, int iParam10) // Position - 0x248D
 {
-	*uParam0 = { Param2 };
-	uParam0->f_3 = { Param5 };
-	uParam0->f_6 = uParam8;
-	uParam0->f_7 = uParam1;
-	uParam0->f_8 = uParam9;
-	uParam0->f_9 = uParam10;
+	*uParam0 = { uParam2 };
+	uParam0->f_3 = { uParam5 };
+	uParam0->f_6 = iParam8;
+	uParam0->f_7 = iParam1;
+	uParam0->f_8 = iParam9;
+	uParam0->f_9 = iParam10;
 }
 
-float func_26(float fParam0)//Position - 0x24BF
+float func_26(float fParam0) // Position - 0x24BF
 {
-	return (fParam0 * 57.29578f);
+	return fParam0 * 57.29578f;
 }
 
-void func_27(var uParam0)//Position - 0x24CF
+void func_27(var uParam0) // Position - 0x24CF
 {
 	uParam0->f_154 = 0;
 	uParam0->f_155[0 /*11*/] = 0;
 	uParam0->f_155[1 /*11*/] = 0;
 }
 
-int func_28(char* sParam0, int iParam1, int iParam2, bool bParam3)//Position - 0x24EC
+int func_28(char* sParam0, int iParam1, int iParam2, bool bParam3) // Position - 0x24EC
 {
 	int iVar0;
-	
+
 	iVar0 = MISC::GET_GAME_TIMER() + 7500;
 	HUD::REQUEST_ADDITIONAL_TEXT(sParam0, iParam1);
+
 	if (HUD::HAS_ADDITIONAL_TEXT_LOADED(iParam1) && !bParam3)
-	{
 		return 1;
-	}
+
 	if (iParam2 == 0)
-	{
 		return 1;
-	}
+
 	while (!HUD::HAS_ADDITIONAL_TEXT_LOADED(iParam1))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
+	
 		if (MISC::GET_GAME_TIMER() > iVar0 && !HUD::HAS_ADDITIONAL_TEXT_LOADED(iParam1))
-		{
 			return 0;
-		}
 	}
+
 	return 1;
 }
 
-int func_29(char* sParam0, var uParam1, int iParam2)//Position - 0x2551
+int func_29(char* sParam0, var uParam1, int iParam2) // Position - 0x2551
 {
 	int iVar0;
-	
+
 	iVar0 = MISC::GET_GAME_TIMER() + 7500;
+
 	if (*uParam1 == 0)
-	{
 		*uParam1 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(sParam0);
-	}
+
 	if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*uParam1))
-	{
 		return 1;
-	}
+
 	if (iParam2 == 0)
-	{
 		return 1;
-	}
+
 	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*uParam1))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
+	
 		if (MISC::GET_GAME_TIMER() > iVar0 && !GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*uParam1))
-		{
 			return 0;
-		}
 	}
+
 	return 1;
 }
 
-int func_30(char* sParam0, int iParam1)//Position - 0x25B9
+int func_30(char* sParam0, int iParam1) // Position - 0x25B9
 {
 	int iVar0;
-	
+
 	iVar0 = MISC::GET_GAME_TIMER() + 7500;
 	STREAMING::REQUEST_ANIM_DICT(sParam0);
+
 	if (STREAMING::HAS_ANIM_DICT_LOADED(sParam0))
-	{
 		return 1;
-	}
+
 	if (iParam1 == 0)
-	{
 		return 1;
-	}
+
 	while (!STREAMING::HAS_ANIM_DICT_LOADED(sParam0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
+	
 		if (MISC::GET_GAME_TIMER() > iVar0 && !STREAMING::HAS_ANIM_DICT_LOADED(sParam0))
-		{
 			return 0;
-		}
 	}
+
 	return 1;
 }
 
-char* func_31(int iParam0)//Position - 0x2614
+char* func_31(int iParam0) // Position - 0x2614
 {
 	char* sVar0;
-	
+
 	switch (iParam0)
 	{
 		case 0:
 			sVar0 = "misslester1b_crowd@a_";
 			break;
-		
+	
 		case 1:
 			sVar0 = "misslester1b_crowd@b_";
 			break;
-		
+	
 		case 2:
 			sVar0 = "misslester1b_crowd@c_";
 			break;
-		
+	
 		case 3:
 			sVar0 = "misslester1b_crowd@d_";
 			break;
-		
+	
 		case 4:
 			sVar0 = "misslester1b_crowd@e_";
 			break;
-		
+	
 		case 5:
 			sVar0 = "misslester1b_crowd@f_";
 			break;
-		
+	
 		case 6:
 			sVar0 = "misslester1b_crowd@g_";
 			break;
-		
+	
 		case 7:
 			sVar0 = "misslester1b_crowd@h_";
 			break;
-		
+	
 		case 8:
 			sVar0 = "misslester1b_crowd@i_";
 			break;
-		
+	
 		case 9:
 			sVar0 = "misslester1b_crowd@j_";
 			break;
-		
+	
 		case 10:
 			sVar0 = "misslester1b_crowd@k_";
 			break;
-		
+	
 		case 11:
 			sVar0 = "misslester1b_crowd@l_";
 			break;
-		
+	
 		case 12:
 			sVar0 = "misslester1b_crowd@m_";
 			break;
 	}
+
 	return sVar0;
 }
 
-void func_32(int iParam0, int iParam1)//Position - 0x26E4
+void func_32(var uParam0, int iParam1) // Position - 0x26E4
 {
 	STREAMING::SET_PED_POPULATION_BUDGET(0);
-	STREAMING::SET_REDUCE_PED_MODEL_BUDGET(true);
+	STREAMING::SET_REDUCE_PED_MODEL_BUDGET(1);
 	STREAMING::SET_VEHICLE_POPULATION_BUDGET(0);
-	STREAMING::SET_REDUCE_VEHICLE_MODEL_BUDGET(true);
-	PLAYER::SET_DISPATCH_COPS_FOR_PLAYER(PLAYER::PLAYER_ID(), false);
-	PED::SET_CREATE_RANDOM_COPS(false);
-	VEHICLE::SET_ENABLE_VEHICLE_SLIPSTREAMING(true);
-	*iParam0 = PED::ADD_SCENARIO_BLOCKING_AREA(-7000f, -7000f, -100f, 7000f, 7000f, 315f, false, true, true, true, 1);
-	TASK::SET_SCENARIO_TYPE_ENABLED("DRIVE", false);
-	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(-7000f, -7000f, -100f, 7000f, 7000f, 315f, false, true);
+	STREAMING::SET_REDUCE_VEHICLE_MODEL_BUDGET(1);
+	PLAYER::SET_DISPATCH_COPS_FOR_PLAYER(PLAYER::PLAYER_ID(), 0);
+	PED::SET_CREATE_RANDOM_COPS(0);
+	VEHICLE::SET_ENABLE_VEHICLE_SLIPSTREAMING(1);
+	*uParam0 = PED::ADD_SCENARIO_BLOCKING_AREA(-7000f, -7000f, -100f, 7000f, 7000f, 315f, 0, 1, 1, 1, 1);
+	TASK::SET_SCENARIO_TYPE_ENABLED("DRIVE", 0);
+	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(-7000f, -7000f, -100f, 7000f, 7000f, 315f, 0, 1);
 	VEHICLE::REMOVE_VEHICLES_FROM_GENERATORS_IN_AREA(-7000f, -7000f, -100f, 7000f, 7000f, 315f, 0);
+
 	if (func_34(PLAYER::PLAYER_PED_ID()) && iParam1 == 1)
-	{
-		MISC::CLEAR_AREA_OF_PEDS(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 500f, 0);
-	}
+		MISC::CLEAR_AREA_OF_PEDS(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 500f, 0);
 }
 
-void func_33(bool bParam0)//Position - 0x27B4
+void func_33(int iParam0) // Position - 0x27B4
 {
-	MISC::ENABLE_DISPATCH_SERVICE(2, bParam0);
-	MISC::ENABLE_DISPATCH_SERVICE(3, bParam0);
-	MISC::ENABLE_DISPATCH_SERVICE(4, bParam0);
-	MISC::ENABLE_DISPATCH_SERVICE(5, bParam0);
-	MISC::ENABLE_DISPATCH_SERVICE(6, bParam0);
-	MISC::ENABLE_DISPATCH_SERVICE(7, bParam0);
-	MISC::ENABLE_DISPATCH_SERVICE(8, bParam0);
-	MISC::ENABLE_DISPATCH_SERVICE(9, bParam0);
-	MISC::ENABLE_DISPATCH_SERVICE(10, bParam0);
-	MISC::ENABLE_DISPATCH_SERVICE(11, bParam0);
-	MISC::ENABLE_DISPATCH_SERVICE(12, bParam0);
+	MISC::ENABLE_DISPATCH_SERVICE(2, iParam0);
+	MISC::ENABLE_DISPATCH_SERVICE(3, iParam0);
+	MISC::ENABLE_DISPATCH_SERVICE(4, iParam0);
+	MISC::ENABLE_DISPATCH_SERVICE(5, iParam0);
+	MISC::ENABLE_DISPATCH_SERVICE(6, iParam0);
+	MISC::ENABLE_DISPATCH_SERVICE(7, iParam0);
+	MISC::ENABLE_DISPATCH_SERVICE(8, iParam0);
+	MISC::ENABLE_DISPATCH_SERVICE(9, iParam0);
+	MISC::ENABLE_DISPATCH_SERVICE(10, iParam0);
+	MISC::ENABLE_DISPATCH_SERVICE(11, iParam0);
+	MISC::ENABLE_DISPATCH_SERVICE(12, iParam0);
 }
 
-bool func_34(int iParam0)//Position - 0x280E
+bool func_34(var uParam0) // Position - 0x280E
 {
-	if (!ENTITY::DOES_ENTITY_EXIST(iParam0))
-	{
-		return 0;
-	}
-	return !ENTITY::IS_ENTITY_DEAD(iParam0, false);
+	if (!ENTITY::DOES_ENTITY_EXIST(uParam0))
+		return false;
+
+	return !ENTITY::IS_ENTITY_DEAD(uParam0, 0);
 }
 
-void func_35(bool bParam0)//Position - 0x282C
+void func_35(bool bParam0) // Position - 0x282C
 {
 	if (bParam0)
 	{
 		func_41();
-		if (Global_21066.f_1 == 10 || Global_21066.f_1 == 9)
-		{
-			MISC::SET_BIT(&Global_8920, 16);
-		}
-		Global_21066.f_1 = 1;
+	
+		if (Global_21627.f_1 == 10 || Global_21627.f_1 == 9)
+			MISC::SET_BIT(&Global_9464, 16);
+	
+		Global_21627.f_1 = 1;
+	
 		if (func_40(0))
-		{
 			func_36(0);
-		}
 	}
-	else if (Global_21066.f_1 == 1)
+	else if (Global_21627.f_1 == 1)
 	{
-		if (!Global_21066.f_1 == 0)
-		{
-			Global_21066.f_1 = 3;
-		}
+		if (!(Global_21627.f_1 == 0))
+			Global_21627.f_1 = 3;
 	}
 }
 
-void func_36(int iParam0)//Position - 0x288F
+void func_36(int iParam0) // Position - 0x288F
 {
 	if (func_39())
-	{
 		return;
-	}
-	if (Global_21284)
-	{
+
+	if (Global_21859)
 		if (func_38())
-		{
-			func_37(1, 1);
-		}
+			func_37(true, true);
 		else
-		{
-			func_37(0, 0);
-		}
-	}
-	if (Global_21066.f_1 == 10 || Global_21066.f_1 == 9)
-	{
-		MISC::SET_BIT(&Global_8920, 16);
-	}
+			func_37(false, false);
+
+	if (Global_21627.f_1 == 10 || Global_21627.f_1 == 9)
+		MISC::SET_BIT(&Global_9464, 16);
+
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
-	{
-		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
-	}
-	Global_22425 = 5;
+		AUDIO::STOP_SCRIPTED_CONVERSATION(0);
+
+	Global_23000 = 5;
+
 	if (iParam0 == 1)
-	{
-		MISC::SET_BIT(&Global_8919, 30);
-	}
+		MISC::SET_BIT(&Global_9463, 30);
 	else
-	{
-		MISC::CLEAR_BIT(&Global_8919, 30);
-	}
+		MISC::CLEAR_BIT(&Global_9463, 30);
+
 	if (!func_15())
-	{
-		Global_21066.f_1 = 3;
-	}
+		Global_21627.f_1 = 3;
 }
 
-void func_37(bool bParam0, bool bParam1)//Position - 0x2919
+void func_37(bool bParam0, bool bParam1) // Position - 0x2919
 {
 	if (bParam0)
 	{
 		if (func_40(0))
 		{
-			Global_21284 = 1;
+			Global_21859 = true;
+		
 			if (bParam1)
-			{
-				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_21003);
-			}
-			Global_20994 = { Global_21012[Global_21011 /*3*/] };
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20994);
+				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_21564);
+		
+			Global_21555 = { Global_21573[Global_21572 /*3*/] };
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21555);
 		}
 	}
-	else if (Global_21284 == 1)
+	else if (Global_21859 == true)
 	{
-		Global_21284 = 0;
-		Global_20994 = { Global_21019[Global_21011 /*3*/] };
+		Global_21859 = false;
+		Global_21555 = { Global_21580[Global_21572 /*3*/] };
+	
 		if (bParam1)
-		{
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21003);
-		}
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21564);
 		else
-		{
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20994);
-		}
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21555);
 	}
 }
 
-bool func_38()//Position - 0x298D
+bool func_38() // Position - 0x298D
 {
-	return BitTest(Global_1957675, 5);
+	return IS_BIT_SET(Global_1964705, 5);
 }
 
-bool func_39()//Position - 0x299B
+bool func_39() // Position - 0x299B
 {
-	return BitTest(Global_1957675, 19);
+	return IS_BIT_SET(Global_1964705, 19);
 }
 
-int func_40(int iParam0)//Position - 0x29AA
+bool func_40(int iParam0) // Position - 0x29AA
 {
 	if (iParam0 == 1)
-	{
-		if (Global_21066.f_1 > 3)
-		{
-			if (BitTest(Global_8919, 14))
-			{
-				return 1;
-			}
+		if (Global_21627.f_1 > 3)
+			if (IS_BIT_SET(Global_9463, 14))
+				return true;
 			else
-			{
-				return 0;
-			}
-		}
+				return false;
 		else
-		{
-			return 0;
-		}
-	}
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) > 0)
-	{
-		return 1;
-	}
-	if (Global_21066.f_1 > 3)
-	{
-		return 1;
-	}
-	return 0;
+			return false;
+
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("CELLPHONE_FLASHHAND")) > 0)
+		return true;
+
+	if (Global_21627.f_1 > 3)
+		return true;
+
+	return false;
 }
 
-void func_41()//Position - 0x2A01
+void func_41() // Position - 0x2A01
 {
-	if (Global_21066.f_1 == 9 || Global_21066.f_1 == 10)
+	if (Global_21627.f_1 == 9 || Global_21627.f_1 == 10)
 	{
-		Global_22478 = 0;
-		Global_22474 = 1;
+		Global_23053 = false;
+		Global_23049 = 1;
 	}
 }
 
-void func_42()//Position - 0x2A2A
+void func_42() // Position - 0x2A2A
 {
 	func_43();
-	func_6(0, 1, 1, 0, 0, 0, 0);
+	func_6(false, true, true, 0, false, false, false);
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 
-void func_43()//Position - 0x2A45
+void func_43() // Position - 0x2A45
 {
 	int iVar0;
-	
+
 	if (CUTSCENE::IS_CUTSCENE_ACTIVE())
 	{
 		if (CUTSCENE::IS_CUTSCENE_PLAYING())
-		{
 			CUTSCENE::STOP_CUTSCENE_IMMEDIATELY();
-		}
+	
 		CUTSCENE::REMOVE_CUTSCENE();
 	}
-	func_53(&iLocal_6208);
+
+	func_53(&Static_6208);
 	HUD::RELEASE_NAMED_RENDERTARGET("Big_Disp");
 	STREAMING::REMOVE_IPL("LInvader");
-	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_6199);
-	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_6200);
+	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&Static_6199);
+	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&Static_6200);
 	MISC::CLEAR_WEATHER_TYPE_PERSIST();
-	iVar0 = 0;
-	while (iVar0 < Local_88.f_0)
+
+	for (iVar0 = 0; iVar0 < Static_88; iVar0 = iVar0 + 1)
 	{
-		func_50(&(Local_88[iVar0 /*178*/]));
-		iVar0++;
+		func_50(&Static_88[iVar0 /*178*/]);
 	}
+
 	iVar0 = 0;
-	iVar0 = 0;
-	while (iVar0 < Local_4896.f_0)
+
+	for (iVar0 = 0; iVar0 < Static_4896; iVar0 = iVar0 + 1)
 	{
-		func_47(&(Local_4896[iVar0 /*24*/]));
-		iVar0++;
+		func_47(&Static_4896[iVar0 /*24*/]);
 	}
+
 	iVar0 = 0;
-	iVar0 = 0;
-	while (iVar0 < Local_5618.f_0)
+
+	for (iVar0 = 0; iVar0 < Static_5618; iVar0 = iVar0 + 1)
 	{
-		func_47(&(Local_5618[iVar0 /*24*/]));
-		iVar0++;
+		func_47(&Static_5618[iVar0 /*24*/]);
 	}
+
 	iVar0 = 0;
-	iVar0 = 0;
-	while (iVar0 < iLocal_57)
+
+	for (iVar0 = 0; iVar0 < Static_57; iVar0 = iVar0 + 1)
 	{
-		func_46(iLocal_57[iVar0]);
-		iVar0++;
+		func_46(Static_57[iVar0]);
 	}
-	iVar0 = 0;
-	while (iVar0 <= 12)
+
+	for (iVar0 = 0; iVar0 <= 12; iVar0 = iVar0 + 1)
 	{
 		func_45(func_31(iVar0));
-		iVar0++;
 	}
-	func_44(iLocal_6211);
-	func_6(0, 1, 1, 0, 0, 0, 0);
+
+	func_44(Static_6211);
+	func_6(false, true, true, 0, false, false, false);
 }
 
-void func_44(int iParam0)//Position - 0x2B3B
+void func_44(var uParam0) // Position - 0x2B3B
 {
-	STREAMING::SET_REDUCE_PED_MODEL_BUDGET(false);
+	STREAMING::SET_REDUCE_PED_MODEL_BUDGET(0);
 	STREAMING::SET_PED_POPULATION_BUDGET(3);
-	STREAMING::SET_REDUCE_VEHICLE_MODEL_BUDGET(false);
+	STREAMING::SET_REDUCE_VEHICLE_MODEL_BUDGET(0);
 	STREAMING::SET_VEHICLE_POPULATION_BUDGET(3);
-	PLAYER::SET_DISPATCH_COPS_FOR_PLAYER(PLAYER::PLAYER_ID(), true);
-	PED::SET_CREATE_RANDOM_COPS(true);
-	VEHICLE::SET_ENABLE_VEHICLE_SLIPSTREAMING(false);
-	PED::REMOVE_SCENARIO_BLOCKING_AREA(iParam0, false);
-	TASK::SET_SCENARIO_TYPE_ENABLED("DRIVE", true);
-	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(-7000f, -7000f, -100f, 7000f, 7000f, 315f, true, true);
+	PLAYER::SET_DISPATCH_COPS_FOR_PLAYER(PLAYER::PLAYER_ID(), 1);
+	PED::SET_CREATE_RANDOM_COPS(1);
+	VEHICLE::SET_ENABLE_VEHICLE_SLIPSTREAMING(0);
+	PED::REMOVE_SCENARIO_BLOCKING_AREA(uParam0, 0);
+	TASK::SET_SCENARIO_TYPE_ENABLED("DRIVE", 1);
+	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(-7000f, -7000f, -100f, 7000f, 7000f, 315f, 1, 1);
 }
 
-void func_45(char* sParam0)//Position - 0x2B9E
+void func_45(char* sParam0) // Position - 0x2B9E
 {
 	STREAMING::REMOVE_ANIM_DICT(sParam0);
 }
 
-void func_46(int iParam0)//Position - 0x2BAC
+void func_46(int iParam0) // Position - 0x2BAC
 {
 	if (iParam0 != 0)
-	{
 		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iParam0);
-	}
 }
 
-void func_47(var uParam0)//Position - 0x2BC0
+void func_47(var uParam0) // Position - 0x2BC0
 {
 	int iVar0;
 	char* sVar1;
 	char* sVar2;
-	
+
 	sVar1 = func_49(uParam0->f_16);
 	sVar2 = func_48(uParam0->f_16);
-	iVar0 = 0;
-	while (iVar0 < uParam0->f_17)
+
+	for (iVar0 = 0; iVar0 < uParam0->f_17; iVar0 = iVar0 + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(uParam0->f_17[iVar0]) && !ENTITY::IS_ENTITY_DEAD(uParam0->f_17[iVar0], false))
-		{
+		if (ENTITY::DOES_ENTITY_EXIST(uParam0->f_17[iVar0]) && !ENTITY::IS_ENTITY_DEAD(uParam0->f_17[iVar0], 0))
 			ENTITY::STOP_ENTITY_ANIM(uParam0->f_17[iVar0], sVar2, sVar1, -1000f);
-		}
-		func_53(&(uParam0->f_17[iVar0]));
-		iVar0++;
+	
+		func_53(&uParam0->f_17[iVar0]);
 	}
 }
 
-char* func_48(int iParam0)//Position - 0x2C35
+char* func_48(int iParam0) // Position - 0x2C35
 {
 	char* sVar0;
-	
-	if (iParam0 == 0)
-	{
-	}
+
+	iParam0 == 0;
 	sVar0 = "001077_01_14";
 	return sVar0;
 }
 
-char* func_49(int iParam0)//Position - 0x2C4B
+char* func_49(int iParam0) // Position - 0x2C4B
 {
 	char* sVar0;
-	
-	if (iParam0 == 0)
-	{
-	}
+
+	iParam0 == 0;
 	sVar0 = "misslester1b_crowdlow@14@";
 	return sVar0;
 }
 
-void func_50(var uParam0)//Position - 0x2C60
+void func_50(var uParam0) // Position - 0x2C60
 {
 	int iVar0;
-	
-	iVar0 = 0;
-	while (iVar0 < *uParam0)
+
+	for (iVar0 = 0; iVar0 < *uParam0; iVar0 = iVar0 + 1)
 	{
-		func_52(uParam0[iVar0 /*17*/]);
-		iVar0++;
+		func_52(&uParam0->[iVar0 /*17*/]);
 	}
+
 	iVar0 = 0;
-	iVar0 = 0;
-	while (iVar0 < uParam0->f_155)
+
+	for (iVar0 = 0; iVar0 < uParam0->f_155; iVar0 = iVar0 + 1)
 	{
 		func_51(&(uParam0->f_155[iVar0 /*11*/].f_10));
-		iVar0++;
 	}
 }
 
-void func_51(int* iParam0)//Position - 0x2CAC
+void func_51(var uParam0) // Position - 0x2CAC
 {
-	if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(*uParam0))
 	{
-		if (!ENTITY::IS_ENTITY_DEAD(*iParam0, false))
-		{
-			ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(*iParam0, false, 1);
-		}
-		if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(*iParam0))
-		{
-			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(*iParam0, true, false);
-		}
-		PED::DELETE_PED(iParam0);
+		if (!ENTITY::IS_ENTITY_DEAD(*uParam0, 0))
+			ENTITY::SET_ENTITY_LOAD_COLLISION_FLAG(*uParam0, 0, 1);
+	
+		if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(*uParam0))
+			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(*uParam0, 1, 0);
+	
+		PED::DELETE_PED(uParam0);
 	}
 }
 
-void func_52(var uParam0)//Position - 0x2CED
+void func_52(var uParam0) // Position - 0x2CED
 {
 	int iVar0;
-	
-	iVar0 = 0;
-	while (iVar0 < uParam0->f_10)
+
+	for (iVar0 = 0; iVar0 < uParam0->f_10; iVar0 = iVar0 + 1)
 	{
-		func_51(&(uParam0->f_10[iVar0]));
-		iVar0++;
+		func_51(&uParam0->f_10[iVar0]);
 	}
 }
 
-void func_53(int* iParam0)//Position - 0x2D16
+void func_53(var uParam0) // Position - 0x2D16
 {
-	if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(*uParam0))
 	{
-		if (ENTITY::IS_ENTITY_ATTACHED_TO_ANY_PED(*iParam0))
-		{
-			ENTITY::DETACH_ENTITY(*iParam0, true, true);
-		}
-		OBJECT::DELETE_OBJECT(iParam0);
+		if (ENTITY::IS_ENTITY_ATTACHED_TO_ANY_PED(*uParam0))
+			ENTITY::DETACH_ENTITY(*uParam0, 1, 1);
+	
+		OBJECT::DELETE_OBJECT(uParam0);
 	}
 }
 
